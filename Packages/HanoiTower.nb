@@ -1,0 +1,1089 @@
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["HanoiTower(\:6c49\:8bfa\:5854)", \
+"Title",ExpressionUUID->"721d2ddc-6589-4077-b401-495055c42bff"],
+
+Cell[CellGroupData[{
+
+Cell["\:7a0b\:5e8f\:5305\:4ecb\:7ecd", \
+"Subchapter",ExpressionUUID->"d5b8fe0c-1274-4a1d-91a3-a2e0fb632203"],
+
+Cell["\<\
+Mathematica Package
+Created by Mathematica Plugin for IntelliJ IDEA
+Establish from GalAster's template
+
+Author:\:9171\:7d2b\:541b
+Creation Date:2017-11-25
+Copyright:CC4.0 BY+NA+NC
+
+\:8be5\:8f6f\:4ef6\:5305\:9075\:4eceCC\:534f\:8bae:\:7f72\:540d\:3001\:975e\
+\:5546\:4e1a\:6027\:4f7f\:7528\:3001\:76f8\:540c\:65b9\:5f0f\:5171\:4eab
+
+\:8fd9\:91cc\:5e94\:8be5\:586b\:8fd9\:4e2a\:51fd\:6570\:7684\:4ecb\:7ecd\
+\>", "Text",ExpressionUUID->"5183c0fc-961f-42cd-80f5-945bfa6e29e1"],
+
+Cell[CellGroupData[{
+
+Cell["\:51fd\:6570\:8bf4\:660e", \
+"Section",ExpressionUUID->"d33b00b8-1c84-4fe5-bec3-f09e2de1ac9a"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"HanoiGraph", "::", "usage"}], " ", "=", " ", 
+   "\"\<HanoiGraph[n]\:7ed9\:51fan\:9636\:6c49\:8bfa\:56fe\>\""}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"HanoiSteps", "::", "usage"}], " ", "=", " ", 
+   "\"\<\:7ed9\:51fa\:6c49\:8bfa\:5854\:7684\:6700\:5c11\:79fb\:52a8\:6b65\
+\:9aa4, n>4 \:7684\:60c5\:51b5\:5c1a\:672a\:8bc1\:660e.\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"HanoiMove", "::", "usage"}], " ", "=", " ", 
+   "\"\<\:7ed9\:51fa\:6c49\:8bfa\:5854\:72b6\:6001\:95f4\:7684\:6700\:4f18\
+\:79fb\:52a8\:65b9\:5f0f\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"HanoiShow", "::", "usage"}], " ", "=", " ", 
+   "\"\<\:53ef\:89c6\:5316\:5706\:76d8\:7684\:79fb\:52a8\:8fc7\:7a0b\>\""}], 
+  ";"}]}], "Code",
+ CellChangeTimes->{{3.7224789379407167`*^9, 
+  3.7224789382252007`*^9}},ExpressionUUID->"c4b44a9f-3c23-473d-84e1-\
+6af1b2d9e31f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:7a0b\:5e8f\:5305\:6b63\:4f53", \
+"Section",ExpressionUUID->"160d879b-bf46-4763-a1be-2fb83bb0cfa5"],
+
+Cell[CellGroupData[{
+
+Cell["\:4e3b\:8bbe\:7f6e", \
+"Subsection",ExpressionUUID->"edb56288-0232-4f4e-b149-77de891d6539"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"HanoiTower", "::", "usage"}], " ", "=", " ", 
+   "\"\<\:6c49\:8bfa\:5854\:7a0b\:5e8f\:5305, \:5305\:62ec\:53ef\:89c6\:5316\
+\:548c\:6700\:77ed\:8def\:5f84\:7b49.\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Begin", "[", "\"\<`HanoiTower`\>\"", "]"}], 
+  ";"}]}], "Code",ExpressionUUID->"94ffd245-87bd-4ad6-900c-f2737bc3e090"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:4e3b\:4f53\:4ee3\:7801", \
+"Subsection",ExpressionUUID->"10c05efc-23bc-4e31-9183-620fa364e641"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"HanoiTower$Version", "=", "\"\<V1.0.2\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"HanoiTower$LastUpdate", "=", "\"\<2017-12-17\>\""}], 
+  ";"}]}], "Code",
+ CellChangeTimes->{{3.7224790322751737`*^9, 
+  3.7224790324260902`*^9}},ExpressionUUID->"b6fb117b-e266-4f99-b020-\
+05804bb839b2"],
+
+Cell[CellGroupData[{
+
+Cell["HanoiGraph", \
+"Subsubsection",ExpressionUUID->"41622e17-f8ac-493c-9b1e-3a8dc0bd216e"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"AddNewRing", "[", 
+    RowBox[{"ops_", ",", "rod_"}], "]"}], ":=", 
+   RowBox[{"Map", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Append", "[", 
+       RowBox[{"#", ",", "rod"}], "]"}], "&"}], ",", "ops", ",", 
+     RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"LargestRingMove", "[", 
+    RowBox[{"n_", ",", 
+     RowBox[{"{", 
+      RowBox[{"a_", ",", "b_", ",", "c_"}], "}"}]}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Append", "[", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{"a", ",", 
+        RowBox[{"{", "n", "}"}]}], "]"}], ",", "b"}], "]"}], "<->", 
+    RowBox[{"Append", "[", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{"a", ",", 
+        RowBox[{"{", "n", "}"}]}], "]"}], ",", "c"}], "]"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"HanoiStep", "[", "ops_", "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"n", "=", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"ops", "==", 
+           RowBox[{"{", "}"}]}], ",", "0", ",", 
+          RowBox[{"Length", "@", 
+           RowBox[{"ops", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}]}], "]"}]}], ",", "a", 
+       ",", "b", ",", "c"}], "}"}], ",", "\n", "\t", 
+     RowBox[{"Flatten", "@", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"AddNewRing", "[", 
+           RowBox[{"ops", ",", "#"}], "]"}], "&"}], "/@", 
+         RowBox[{"{", 
+          RowBox[{"a", ",", "b", ",", "c"}], "}"}]}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"LargestRingMove", "[", 
+           RowBox[{"n", ",", 
+            RowBox[{"RotateLeft", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", "#"}], "]"}]}], 
+           "]"}], "&"}], "/@", 
+         RowBox[{"Range", "[", "3", "]"}]}]}], "}"}]}]}], "\n", "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"HanoiGraph", "[", 
+    RowBox[{"n_", ",", "ops___"}], "]"}], ":=", 
+   RowBox[{"Graph", "[", 
+    RowBox[{
+     RowBox[{"Nest", "[", 
+      RowBox[{"HanoiStep", ",", 
+       RowBox[{"{", "}"}], ",", "n"}], "]"}], ",", "ops"}], "]"}]}], 
+  ";"}]}], "Code",ExpressionUUID->"4fd20f0e-3a86-40f9-b870-8f5c9597a785"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["HanoiMove", \
+"Subsubsection",ExpressionUUID->"2be317e1-0a1c-4e52-a7af-ed4b8395f3e4"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Hanoi3Pillar", "[", 
+    RowBox[{"1", ",", "i_", ",", "j_"}], "]"}], ":=", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "j"}], "}"}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Hanoi3Pillar", "[", 
+    RowBox[{"n_", ",", "i_", ",", "j_"}], "]"}], ":=", 
+   RowBox[{"Join", "[", 
+    RowBox[{
+     RowBox[{"Hanoi3Pillar", "[", 
+      RowBox[{
+       RowBox[{"n", "-", "1"}], ",", "i", ",", 
+       RowBox[{"6", "-", "i", "-", "j"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "j"}], "}"}], "}"}], ",", 
+     RowBox[{"Hanoi3Pillar", "[", 
+      RowBox[{
+       RowBox[{"n", "-", "1"}], ",", 
+       RowBox[{"6", "-", "i", "-", "j"}], ",", "j"}], "]"}]}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Pillar3Disp", "[", 
+    RowBox[{"t_", ",", 
+     RowBox[{"{", 
+      RowBox[{"i_", ",", "j_"}], "}"}]}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"q", "=", "t"}], ",", "d"}], "}"}], ",", "\n", "\t", 
+     RowBox[{
+      RowBox[{"d", "=", 
+       RowBox[{"First", "[", 
+        RowBox[{"q", "[", 
+         RowBox[{"[", "i", "]"}], "]"}], "]"}]}], ";", "\n", "\t", 
+      RowBox[{
+       RowBox[{"q", "[", 
+        RowBox[{"[", "i", "]"}], "]"}], "=", 
+       RowBox[{"Rest", "[", 
+        RowBox[{"q", "[", 
+         RowBox[{"[", "i", "]"}], "]"}], "]"}]}], ";", "\n", "\t", 
+      RowBox[{
+       RowBox[{"q", "[", 
+        RowBox[{"[", "j", "]"}], "]"}], "=", 
+       RowBox[{"Prepend", "[", 
+        RowBox[{
+         RowBox[{"q", "[", 
+          RowBox[{"[", "j", "]"}], "]"}], ",", "d"}], "]"}]}], ";", "\n", 
+      "\t", "q"}]}], "\n", "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Options", "[", "HanoiMove", "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{"Pillar", "->", "3"}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"HanoiMove", "[", 
+    RowBox[{"n_Integer", ",", 
+     RowBox[{"OptionsPattern", "[", "]"}]}], "]"}], ":=", "\n", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"OptionValue", "[", "Pillar", "]"}], "==", "3"}], ",", "\n", 
+     "\t", 
+     RowBox[{"FoldList", "[", 
+      RowBox[{"Pillar3Disp", ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Range", "[", "n", "]"}], ",", 
+         RowBox[{"{", "}"}], ",", 
+         RowBox[{"{", "}"}]}], "}"}], ",", 
+       RowBox[{"Hanoi3Pillar", "[", 
+        RowBox[{"n", ",", "1", ",", "3"}], "]"}]}], "]"}], ",", "\n", "\t", 
+     RowBox[{"FrameStewartAlgorithm", "[", 
+      RowBox[{"n", ",", 
+       RowBox[{"OptionValue", "[", "Pillar", "]"}]}], "]"}]}], "\n", "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sumsP", "[", 
+    RowBox[{"s_", ",", "i_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"{", "}"}], " ", "/;", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"s", "<", "i"}], ")"}], "||", 
+     RowBox[{"(", 
+      RowBox[{"i", "==", "0"}], ")"}]}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sumsP", "[", 
+    RowBox[{"s_", ",", "s_"}], "]"}], ":=", 
+   RowBox[{"{", 
+    RowBox[{"Table", "[", 
+     RowBox[{"1", ",", 
+      RowBox[{"{", "s", "}"}]}], "]"}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sumsP", "[", 
+    RowBox[{"s_", ",", "1"}], "]"}], ":=", 
+   RowBox[{"{", 
+    RowBox[{"{", "s", "}"}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sumsP", "[", 
+    RowBox[{"s_", ",", "i_"}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "d", "}"}], ",", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"Map", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Join", "[", 
+             RowBox[{
+              RowBox[{"{", "d", "}"}], ",", "#"}], "]"}], "&"}], ",", 
+           RowBox[{"sumsP", "[", 
+            RowBox[{
+             RowBox[{"s", "-", "d"}], ",", 
+             RowBox[{"i", "-", "1"}]}], "]"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"d", ",", 
+           RowBox[{"s", "-", "i", "+", "1"}]}], "}"}]}], "]"}], ",", "1"}], 
+      "]"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"hanoiP", "[", 
+    RowBox[{"n_", ",", " ", "p_"}], "]"}], " ", ":=", " ", 
+   RowBox[{
+    RowBox[{"Join", "[", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{"1", ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"n", " ", "-", " ", "1"}], "}"}]}], "]"}], ",", " ", 
+      RowBox[{"Table", "[", 
+       RowBox[{"0", ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"p", " ", "-", " ", "n", " ", "-", " ", "1"}], "}"}]}], 
+       "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"2", "*", "n"}], " ", "-", " ", "1"}], "}"}]}], "]"}], " ", "/;",
+     " ", 
+    RowBox[{"n", " ", "<", " ", 
+     RowBox[{"p", " ", "-", " ", "1"}]}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"hanoiP", "[", 
+    RowBox[{"n_", ",", " ", "p_"}], "]"}], " ", ":=", " ", 
+   RowBox[{
+    RowBox[{"hanoiP", "[", 
+     RowBox[{"n", ",", " ", "p"}], "]"}], " ", "=", "\n", "    ", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"v", ",", "t", ",", "i"}], "}"}], ",", "\n", "\t", 
+      RowBox[{
+       RowBox[{"t", " ", "=", " ", 
+        RowBox[{"sumsP", "[", 
+         RowBox[{
+          RowBox[{"n", " ", "-", " ", "1"}], ",", " ", 
+          RowBox[{"p", " ", "-", " ", "2"}]}], "]"}]}], ";", "\n", "\t", 
+       RowBox[{"v", " ", "=", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Join", "[", 
+            RowBox[{"#1", ",", " ", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"2", "*", 
+                RowBox[{"Plus", " ", "@@", " ", 
+                 RowBox[{"Table", "[", 
+                  RowBox[{
+                   RowBox[{"Last", "[", 
+                    RowBox[{"hanoiP", "[", 
+                    RowBox[{
+                    RowBox[{"#1", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], ",", " ", 
+                    RowBox[{"p", " ", "-", " ", "i", " ", "+", " ", "1"}]}], 
+                    "]"}], "]"}], ",", " ", 
+                   RowBox[{"{", 
+                    RowBox[{"i", ",", " ", 
+                    RowBox[{"p", " ", "-", " ", "2"}]}], "}"}]}], "]"}]}]}], 
+               " ", "+", "1"}], "}"}]}], "]"}], " ", "&"}], " ", ")"}], " ", "/@",
+          " ", "t"}]}], ";", "\n", "\t", 
+       RowBox[{"First", "[", 
+        RowBox[{"Sort", "[", 
+         RowBox[{"v", ",", " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Last", "[", "#2", "]"}], " ", ">", " ", 
+            RowBox[{"Last", "[", "#1", "]"}]}], " ", "&"}]}], " ", "]"}], 
+        "]"}]}]}], "\n", "]"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"GenernizedHanoi", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "d_", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"a_", ",", "___", ",", "b_"}], "}"}]}], "}"}], "]"}], ":=", 
+   RowBox[{"{", 
+    RowBox[{"d", ",", "a", ",", "b"}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"GenernizedHanoi", "[", 
+    RowBox[{"{", 
+     RowBox[{"tower_", ",", "pegs_"}], "}"}], "]"}], ":=", "\n", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", "pat", ",", 
+       RowBox[{"lp", "=", 
+        RowBox[{"Length", "[", "pegs", "]"}]}], ",", "n", ",", 
+       RowBox[{"ans", "=", 
+        RowBox[{"{", "}"}]}], ",", "i", ",", "p", ",", "spread", ",", 
+       "back"}], "}"}], ",", "\n", "\t", 
+     RowBox[{
+      RowBox[{"a", "=", 
+       RowBox[{"Drop", "[", 
+        RowBox[{
+         RowBox[{"hanoiP", "[", 
+          RowBox[{
+           RowBox[{"Length", "[", "tower", "]"}], ",", "lp"}], "]"}], ",", 
+         RowBox[{"-", "1"}]}], "]"}]}], ";", "\n", "\t", 
+      RowBox[{"pat", "=", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"Take", "[", 
+          RowBox[{"tower", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"1", "+", 
+              RowBox[{"Sum", "[", 
+               RowBox[{
+                RowBox[{"a", "[", 
+                 RowBox[{"[", "i", "]"}], "]"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"i", ",", "1", ",", 
+                  RowBox[{"n", "-", "1"}]}], "}"}]}], "]"}]}], ",", 
+             RowBox[{"Sum", "[", 
+              RowBox[{
+               RowBox[{"a", "[", 
+                RowBox[{"[", "i", "]"}], "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}]}], "}"}]}], 
+          "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"n", ",", 
+           RowBox[{"lp", "-", "2"}]}], "}"}]}], "]"}]}], ";", "\n", "\t", 
+      RowBox[{"spread", "=", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"p", "=", 
+           RowBox[{"Drop", "[", 
+            RowBox[{"pegs", ",", 
+             RowBox[{"{", 
+              RowBox[{"2", ",", "n"}], "}"}]}], "]"}]}], ";", "\n", "\t\t", 
+          RowBox[{"i", "=", 
+           RowBox[{"Last", "[", "p", "]"}]}], ";", "\n", "\t\t", 
+          RowBox[{
+           RowBox[{"p", "[", 
+            RowBox[{"[", 
+             RowBox[{"-", "1"}], "]"}], "]"}], "=", 
+           RowBox[{"p", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ";", "\n", "\t\t", 
+          RowBox[{
+           RowBox[{"p", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "=", "i"}], ";", "\n", "\t\t", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"pat", "[", 
+             RowBox[{"[", "n", "]"}], "]"}], ",", "p"}], "}"}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"n", ",", 
+           RowBox[{"lp", "-", "2"}]}], "}"}]}], "]"}]}], ";", "\n", "\t", 
+      RowBox[{"spread", "=", 
+       RowBox[{"Cases", "[", 
+        RowBox[{"spread", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", "__", "}"}], ",", "_"}], "}"}]}], "]"}]}], ";", "\n", 
+      "\t", 
+      RowBox[{"back", "=", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"First", "[", "#1", "]"}], ",", 
+            RowBox[{"Join", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"Last", "[", 
+                RowBox[{"Last", "[", "#1", "]"}], "]"}], "}"}], ",", 
+              RowBox[{"Complement", "[", 
+               RowBox[{
+                RowBox[{"Last", "[", "#1", "]"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"Last", "[", 
+                   RowBox[{"Last", "[", "#1", "]"}], "]"}], ",", 
+                  RowBox[{"Last", "[", "pegs", "]"}]}], "}"}]}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"Last", "[", "pegs", "]"}], "}"}]}], "]"}]}], "}"}], 
+          "&"}], ")"}], "/@", 
+        RowBox[{"Reverse", "[", "spread", "]"}]}]}], ";", "\n", "\t", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"ans", ",", 
+           RowBox[{"GenernizedHanoi", "[", "#1", "]"}]}], "]"}], "&"}], ")"}],
+        "/@", "spread"}], ";", "\n", "\t", 
+      RowBox[{"AppendTo", "[", 
+       RowBox[{"ans", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Last", "[", "tower", "]"}], ",", 
+          RowBox[{"First", "[", "pegs", "]"}], ",", 
+          RowBox[{"Last", "[", "pegs", "]"}]}], "}"}]}], "]"}], ";", "\n", 
+      "\t", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"ans", ",", 
+           RowBox[{"GenernizedHanoi", "[", "#1", "]"}]}], "]"}], "&"}], ")"}],
+        "/@", "back"}], ";", 
+      RowBox[{"Partition", "[", 
+       RowBox[{
+        RowBox[{"Flatten", "[", "ans", "]"}], ",", "3"}], "]"}]}]}], "\n", 
+    "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"FrameStewartAlgorithm", "[", 
+    RowBox[{"numDisks_", ",", "numPegs_"}], "]"}], ":=", "\n", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"t", ",", 
+       RowBox[{"sH", "=", 
+        RowBox[{"GenernizedHanoi", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Range", "[", "numDisks", "]"}], ",", 
+           RowBox[{"Range", "[", "numPegs", "]"}]}], "}"}], "]"}]}]}], "}"}], 
+     ",", "\n", "\t", 
+     RowBox[{"FoldList", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"t", "=", "#1"}], ";", 
+          RowBox[{
+           RowBox[{"t", "[", 
+            RowBox[{"[", 
+             RowBox[{"#2", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], "=", 
+           RowBox[{"Rest", "[", 
+            RowBox[{"t", "[", 
+             RowBox[{"[", 
+              RowBox[{"#2", "[", 
+               RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], "]"}]}], ";", 
+          RowBox[{
+           RowBox[{"t", "[", 
+            RowBox[{"[", 
+             RowBox[{"Last", "[", "#2", "]"}], "]"}], "]"}], "=", "\n", "\t", 
+           RowBox[{"Prepend", "[", 
+            RowBox[{
+             RowBox[{"t", "[", 
+              RowBox[{"[", 
+               RowBox[{"Last", "[", "#2", "]"}], "]"}], "]"}], ",", 
+             RowBox[{"First", "[", "#2", "]"}]}], "]"}]}], ";", "t"}], ")"}], 
+        "&"}], ",", 
+       RowBox[{"Join", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"Range", "[", "numDisks", "]"}], "}"}], ",", "\n", "\t", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"{", "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"numPegs", "-", "1"}], "}"}]}], "]"}]}], "]"}], ",", 
+       "sH"}], "]"}]}], "\n", "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"HanoiNum2Abc", "[", 
+    RowBox[{"{", 
+     RowBox[{"A_", ",", "B_", ",", "C_"}], "}"}], "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", "b", ",", "c", ",", "i"}], "}"}], ",", "\n", "\t", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Piecewise", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"a", ",", 
+            RowBox[{"MemberQ", "[", 
+             RowBox[{"A", ",", "i"}], "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"b", ",", 
+            RowBox[{"MemberQ", "[", 
+             RowBox[{"B", ",", "i"}], "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"c", ",", "True"}], "}"}]}], "}"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{"Max", "[", 
+          RowBox[{"A", ",", "B", ",", "C"}], "]"}]}], "}"}]}], "]"}]}], "\n", 
+    "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"HanoiAbc2Num", "[", "abc_", "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Flatten", "[", 
+        RowBox[{"Position", "[", 
+         RowBox[{"abc", ",", "#1"}], "]"}], "]"}], "&"}], "/@", 
+      RowBox[{"{", 
+       RowBox[{"a", ",", "b", ",", "c"}], "}"}]}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"HanoiMove", "[", 
+    RowBox[{"start_List", ",", "finish_List"}], "]"}], ":=", "\n", "\t", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "enc", ",", "dec", ",", "input", ",", "s1", ",", "s2", ",", "path", ",",
+        "states"}], "}"}], ",", "\n", "\t", 
+     RowBox[{
+      RowBox[{"enc", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Thread", "[", 
+          RowBox[{
+           RowBox[{"Flatten", "@", 
+            RowBox[{"Sort", "@", "#"}]}], "->", 
+           RowBox[{"Range", "@", 
+            RowBox[{"Length", "[", "#", "]"}]}]}], "]"}], "&"}], "[", 
+        RowBox[{"Flatten", "[", "start", "]"}], "]"}]}], ";", "\n", "\t", 
+      RowBox[{"dec", "=", 
+       RowBox[{"Reverse", "/@", "enc"}]}], ";", "\n", "\t", 
+      RowBox[{"input", "=", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"start", ",", "finish"}], "}"}], "/.", "enc"}]}], ";", "\n", 
+      "\t", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"s1", ",", "s2"}], "}"}], "=", 
+       RowBox[{"HanoiNum2Abc", "/@", "input"}]}], ";", "\n", "\t", 
+      RowBox[{"path", "=", 
+       RowBox[{"FindShortestPath", "[", 
+        RowBox[{
+         RowBox[{"HanoiGraph", "[", 
+          RowBox[{"Length", "[", 
+           RowBox[{"Union", "[", 
+            RowBox[{"Flatten", "[", "input", "]"}], "]"}], "]"}], "]"}], ",", 
+         "s1", ",", "s2"}], "]"}]}], ";", "\n", "\t", 
+      RowBox[{"states", "=", 
+       RowBox[{
+        RowBox[{"HanoiAbc2Num", "/@", "path"}], "/.", "dec"}]}]}]}], "\n", 
+    "]"}]}], ";"}]}], "Code",
+ CellChangeTimes->{{3.722481795556719*^9, 
+  3.7224818023862057`*^9}},ExpressionUUID->"e8920d3e-dd14-4be2-b44c-\
+93001db94d06"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["HanoiShow", \
+"Subsubsection",ExpressionUUID->"e5dbdbc6-0f1c-4b67-8c83-964f62b5dceb"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"DrawBackground", "[", 
+     RowBox[{"firststate_", ",", "tablestyle_List", ",", "pillarstyle_List"}],
+      "]"}], ":=", "\n", 
+    RowBox[{"Block", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "pn", ",", "gap", ",", "xs", ",", "HanoiTable", ",", "height", ",", 
+        "thickness", ",", "HanoiPillar", ",", "i"}], "}"}], ",", "\n", "\t\t", 
+      RowBox[{
+       RowBox[{"pn", "=", 
+        RowBox[{"Length", "@", "firststate"}]}], ";", "\n", "\t\t", 
+       RowBox[{"gap", "=", 
+        RowBox[{"1.", "/", 
+         RowBox[{"GoldenRatio", "^", "2"}]}]}], ";", "\n", "\t\t", 
+       RowBox[{"xs", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"1", "+", "gap"}], ")"}], "i"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", 
+              RowBox[{"-", "#"}], ",", "#"}], "}"}]}], "]"}], "&"}], "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"pn", "-", "1"}], ")"}], "/", "2"}], "]"}]}], ";", "\n", 
+       "\t", 
+       RowBox[{"HanoiTable", "=", 
+        RowBox[{"Rectangle", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "pn"}], 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"gap", "+", "1"}], ")"}], "/", "2"}]}], ",", "0"}], 
+           "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"pn", " ", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"gap", "+", "1"}], ")"}], "/", "2"}]}], ",", 
+            RowBox[{
+             RowBox[{"-", "pn"}], 
+             RowBox[{"(", 
+              RowBox[{"gap", "+", "1"}], ")"}], 
+             RowBox[{"gap", "^", "2.5"}]}]}], "}"}]}], "]"}]}], ";", "\n", 
+       "\t\t", 
+       RowBox[{"height", "=", 
+        RowBox[{
+         RowBox[{"gap", "^", "2"}], 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Length", "@", 
+            RowBox[{"Flatten", "@", "firststate"}]}], "+", "1"}], ")"}]}]}], 
+       ";", "\n", "\t\t", 
+       RowBox[{"thickness", "=", 
+        RowBox[{"height", " ", 
+         RowBox[{"gap", "^", "2.5"}]}]}], ";", "\n", "\t", 
+       RowBox[{
+        RowBox[{"HanoiPillar", "[", "x0_", "]"}], ":=", 
+        RowBox[{"Rectangle", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "thickness"}], "/", "2"}], "+", "x0"}], ",", 
+            "height"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"thickness", "/", "2"}], "+", "x0"}], ",", "0"}], 
+           "}"}]}], "]"}]}], ";", "\n", "\t", 
+       RowBox[{"Flatten", "[", 
+        RowBox[{"{", "\n", "\t\t", 
+         RowBox[{
+         "tablestyle", ",", "HanoiTable", ",", "\n", "\t\t", "pillarstyle", 
+          ",", 
+          RowBox[{"HanoiPillar", "/@", "xs"}]}], "\n", "\t", "}"}], "]"}]}]}],
+      "\n", "]"}]}], ";"}], "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"y", "\[Equal]", 
+     RowBox[{
+      RowBox[{"k", " ", "x"}], "+", "b"}]}], "/.", 
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"1", "\[Equal]", 
+         RowBox[{"b", "+", 
+          RowBox[{"k", " ", "max"}]}]}], ",", 
+        RowBox[{
+         RowBox[{"1", "/", "3"}], "\[Equal]", 
+         RowBox[{"b", "+", 
+          RowBox[{"k", " ", "min"}]}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"b", ",", "k"}], "}"}]}], "]"}]}], "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"mapping", "[", 
+    RowBox[{"set_", ",", "x_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Max", "[", "set", "]"}], "-", 
+      RowBox[{"3", 
+       RowBox[{"Min", "[", "set", "]"}]}], "+", 
+      RowBox[{"2", "x"}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"3.0", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Max", "[", "set", "]"}], "-", 
+        RowBox[{"Min", "[", "set", "]"}]}], ")"}]}], ")"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Options", "[", "HanoiShow", "]"}], "=", 
+   RowBox[{"{", "\n", "\t", 
+    RowBox[{
+     RowBox[{"TableStyle", "->", 
+      RowBox[{"{", "Brown", "}"}]}], ",", "\n", "\t", 
+     RowBox[{"PillarStyle", "->", 
+      RowBox[{"{", 
+       RowBox[{"RGBColor", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"205", ",", "79", ",", "18"}], "}"}], "/", "255"}], "]"}], 
+       "}"}]}], ",", "\n", "\t", 
+     RowBox[{"DiskColor", "->", 
+      RowBox[{"ColorData", "[", "3", "]"}]}]}], "\n", "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"HanoiShow", "[", 
+    RowBox[{"states_", ",", 
+     RowBox[{"OptionsPattern", "[", "]"}]}], "]"}], ":=", "\n", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "firststate", ",", "background", ",", "newstates", ",", "pn", ",", 
+       "gap", ",", "xs", ",", "HanoiDisk", ",", "DrawState", ",", "i"}], 
+      "}"}], ",", "\n", "\t", 
+     RowBox[{
+      RowBox[{"firststate", "=", 
+       RowBox[{"First", "@", "states"}]}], ";", "\n", "\t", 
+      RowBox[{"background", "=", 
+       RowBox[{
+        RowBox[{"DrawBackground", "[", 
+         RowBox[{"firststate", ",", 
+          RowBox[{"OptionValue", "[", "TableStyle", "]"}], ",", 
+          RowBox[{"OptionValue", "[", "PillarStyle", "]"}]}], "]"}], "//", 
+        "Graphics"}]}], ";", "\n", "\t", 
+      RowBox[{"newstates", "=", 
+       RowBox[{"Map", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"mapping", "[", 
+           RowBox[{"firststate", ",", "#"}], "]"}], "&"}], ",", "states", ",",
+          "1"}], "]"}]}], ";", "\n", "\t", 
+      RowBox[{"pn", "=", 
+       RowBox[{"Length", "@", "firststate"}]}], ";", "\n", "\t", 
+      RowBox[{"gap", "=", 
+       RowBox[{"1.", "/", 
+        RowBox[{"GoldenRatio", "^", "2"}]}]}], ";", "\n", "\t", 
+      RowBox[{"xs", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"1", "+", "gap"}], ")"}], "i"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", 
+             RowBox[{"-", "#"}], ",", "#"}], "}"}]}], "]"}], "&"}], "[", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"pn", "-", "1"}], ")"}], "/", "2"}], "]"}]}], ";", "\n", 
+      "\t", 
+      RowBox[{
+       RowBox[{"HanoiDisk", "[", 
+        RowBox[{"width_", ",", 
+         RowBox[{"{", 
+          RowBox[{"x0_", ",", "y0_"}], "}"}]}], "]"}], ":=", 
+       RowBox[{"{", "\n", "\t\t", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"y", "\[Equal]", 
+           RowBox[{
+            RowBox[{"k", " ", "x"}], "+", "b"}]}], "/.", 
+          RowBox[{"Solve", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"1", "\[Equal]", 
+               RowBox[{"b", "+", 
+                RowBox[{"k", " ", "1"}]}]}], ",", 
+              RowBox[{"0", "\[Equal]", 
+               RowBox[{"b", "+", 
+                RowBox[{"k", " ", 
+                 RowBox[{"3", "/", "10"}]}]}]}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"b", ",", "k"}], "}"}]}], "]"}]}], "*)"}], "\n", "\t\t", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"OptionValue", "[", "DiskColor", "]"}], "[", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"10", " ", "width"}], "-", "3"}], ")"}], "/", "7"}], 
+          "]"}], ",", "\n", "\t\t", 
+         RowBox[{"Rectangle", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "width"}], "/", "2"}], "+", 
+              RowBox[{"xs", "[", 
+               RowBox[{"[", "x0", "]"}], "]"}]}], ",", 
+             RowBox[{
+              RowBox[{"gap", "^", "2"}], "y0"}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"width", "/", "2"}], "+", 
+              RowBox[{"xs", "[", 
+               RowBox[{"[", "x0", "]"}], "]"}]}], ",", 
+             RowBox[{
+              RowBox[{"gap", "^", "2"}], 
+              RowBox[{"(", 
+               RowBox[{"y0", "-", "1"}], ")"}]}]}], "}"}], ",", 
+           RowBox[{"RoundingRadius", "->", "0.05"}]}], "]"}]}], "\n", "\t", 
+        "}"}]}], ";", "\n", "\t", 
+      RowBox[{
+       RowBox[{"DrawState", "[", "state_", "]"}], ":=", " ", 
+       RowBox[{"Block", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"disks", ",", "color"}], "}"}], ",", "\n", "\t\t", 
+         RowBox[{
+          RowBox[{"disks", "=", 
+           RowBox[{"MapIndexed", "[", 
+            RowBox[{"HanoiDisk", ",", 
+             RowBox[{"Reverse", "/@", "state"}], ",", 
+             RowBox[{"{", "2", "}"}]}], "]"}]}], ";", "\n", "\t\t", 
+          RowBox[{"Show", "[", 
+           RowBox[{"background", ",", " ", 
+            RowBox[{
+             RowBox[{"Flatten", "@", "disks"}], "//", "Graphics"}]}], 
+           "]"}]}]}], "\n", "\t", "]"}]}], ";", "\n", "\t", 
+      RowBox[{"DrawState", "/@", "newstates"}]}]}], "\n", "]"}]}], 
+  ";"}]}], "Code",ExpressionUUID->"3cdc3bad-5612-48e4-a2ef-37f55c659b68"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["HanoiSteps", \
+"Subsubsection",ExpressionUUID->"0e022188-0595-4e90-869a-6bf8ac46dd1e"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"H3", "[", "n_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"2", "^", "n"}], "-", "1"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"H4", "[", "n_", "]"}], ":=", 
+   RowBox[{"Evaluate", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"2", "^", "t"}], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"2", "n"}], "-", "4", "-", 
+          RowBox[{"t", "^", "2"}], "+", 
+          RowBox[{"3", "t"}]}], ")"}], "/", "4"}]}], "+", "1"}], "/.", 
+     RowBox[{"t", "->", 
+      RowBox[{"Round", "@", 
+       RowBox[{"Sqrt", "[", 
+        RowBox[{"2", "n"}], "]"}]}]}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"H5", "[", "n_", "]"}], ":=", 
+   RowBox[{"Evaluate", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"2", "^", "t"}], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"12", "+", 
+          RowBox[{"6", "n"}], "-", 
+          RowBox[{"8", "t"}], "+", 
+          RowBox[{"3", 
+           RowBox[{"t", "^", "2"}]}], "-", 
+          RowBox[{"t", "^", "3"}]}], ")"}], "/", "12"}]}], "-", "1"}], "/.", 
+     RowBox[{"t", "->", 
+      RowBox[{"Floor", "@", 
+       RowBox[{"Root", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"#", "^", "3"}], "-", "#", "-", 
+           RowBox[{"6", "n"}]}], "&"}], ",", "1"}], "]"}]}]}]}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"FrameStewartSteps", "[", 
+    RowBox[{"1", ",", "k_"}], "]"}], ":=", " ", "1"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"FrameStewartSteps", "[", 
+    RowBox[{"n_", ",", "3"}], "]"}], ":=", " ", 
+   RowBox[{"H3", "[", "n", "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"FrameStewartSteps", "[", 
+    RowBox[{"n_", ",", "k_"}], "]"}], ":=", " ", 
+   RowBox[{
+    RowBox[{"FrameStewartSteps", "[", 
+     RowBox[{"n", ",", "k"}], "]"}], "=", " ", 
+    RowBox[{"Min", "@", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"2", 
+         RowBox[{"FrameStewartSteps", "[", 
+          RowBox[{"m", ",", "k"}], "]"}]}], "+", 
+        RowBox[{"FrameStewartSteps", "[", 
+         RowBox[{
+          RowBox[{"n", "-", "m"}], ",", 
+          RowBox[{"k", "-", "1"}]}], "]"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"m", ",", "1", ",", 
+         RowBox[{"n", "-", "1"}]}], "}"}]}], "]"}]}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"HanoiSteps", "[", 
+    RowBox[{"n_Integer", ",", 
+     RowBox[{"1", "|", "2"}]}], "]"}], ":=", 
+   RowBox[{"\"\<\:8be5\:60c5\:51b5\:65e0\:89e3\>\"", "!"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"HanoiSteps", "[", "n_Integer", "]"}], ":=", 
+   RowBox[{"HanoiSteps", "[", 
+    RowBox[{"n", ",", "3"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"HanoiSteps", "[", 
+    RowBox[{"n_Integer", ",", "p_Integer"}], "]"}], ":=", "\n", "    ", 
+   RowBox[{"Switch", "[", 
+    RowBox[{"p", ",", "\n", "\t    ", "3", ",", 
+     RowBox[{"H3", "[", "n", "]"}], ",", "\n", "\t    ", "4", ",", 
+     RowBox[{"H4", "[", "n", "]"}], ",", "\n", "\t    ", "5", ",", 
+     RowBox[{"H5", "[", "n", "]"}], ",", "\n", "\t    ", "_", ",", 
+     RowBox[{"FrameStewartSteps", "[", 
+      RowBox[{"n", ",", "p"}], "]"}]}], "\n", "]"}]}], 
+  ";"}]}], "Code",ExpressionUUID->"a2668bf7-024e-4ff5-8e3d-383d627509bf"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:9644\:52a0\:8bbe\:7f6e", \
+"Subsection",ExpressionUUID->"8f7fec02-e92b-4125-9976-f00d8796305c"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"End", "[", "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"SetAttributes", "[", "\n", "\t", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "HanoiTower", ",", "HanoiGraph", ",", "HanoiMove", ",", "HanoiShow", ",",
+       "HanoiSteps"}], "}"}], ",", "\n", "\t", 
+    RowBox[{"{", 
+     RowBox[{"Protected", ",", "ReadProtected"}], "}"}]}], "\n", "]"}], 
+  ";"}]}], "Code",
+ CellChangeTimes->{{3.722478942397479*^9, 3.722478943338229*^9}, {
+  3.722479001291229*^9, 
+  3.7224790022876873`*^9}},ExpressionUUID->"0fe469f1-14dc-4e20-8ace-\
+d64951412b2c"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionSeparator",ExpressionUUID->"c1c40d33-7577-4742-a9c1-\
+247c39a0432b"]
+},
+WindowSize->{775, 873},
+WindowMargins->{{564, Automatic}, {Automatic, 54}},
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (2017\:5e7410\:67082\
+\:65e5)",
+StyleDefinitions->FrontEnd`FileName[{"BTools"}, "CodePackage.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+
