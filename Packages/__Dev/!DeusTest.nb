@@ -1,0 +1,1346 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     84213,       1336]
+NotebookOptionsPosition[     82720,       1299]
+NotebookOutlinePosition[     83425,       1323]
+CellTagsIndexPosition[     83338,       1318]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Deus`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.722492471830044*^9, 
+  3.7224924867112894`*^9}},ExpressionUUID->"b9df9055-dde2-4043-b633-\
+291ef2f3eecd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"??", " ", "Deus`*"}]], "Input",
+ CellChangeTimes->{{3.7224926368622074`*^9, 
+  3.722492641347437*^9}},ExpressionUUID->"d2b286b1-9fa0-4fe7-914b-\
+74407ab0f0d4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ DynamicModuleBox[{Typeset`open$$ = True}, 
+  PaneSelectorBox[{False->
+   RowBox[{
+    OpenerBox[Dynamic[Typeset`open$$],
+     ImageSize->Small], 
+    StyleBox["Deus`", "InfoHeading"]}], True->GridBox[{
+     {
+      RowBox[{
+       OpenerBox[Dynamic[Typeset`open$$],
+        ImageSize->Small], 
+       StyleBox["Deus`", "InfoHeading"]}]},
+     {GridBox[{
+        {
+         ButtonBox["HanoiGraph",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info43722521441-9590364", {"HanoiGraph", "Deus`"}},
+          ButtonNote->"Deus`"], 
+         ButtonBox["HanoiShow",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info43722521441-9590364", {"HanoiShow", "Deus`"}},
+          ButtonNote->"Deus`"], 
+         ButtonBox["HanoiTower",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info43722521441-9590364", {"HanoiTower", "Deus`"}},
+          ButtonNote->"Deus`"], 
+         ButtonBox["Magic3D",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info43722521441-9590364", {"Magic3D", "Deus`"}},
+          ButtonNote->"Deus`"], 
+         ButtonBox["Magic3DShow",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info43722521441-9590364", {"Magic3DShow", "Deus`"}},
+          ButtonNote->"Deus`"], 
+         ButtonBox["MagicSquare",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info43722521441-9590364", {"MagicSquare", "Deus`"}},
+          ButtonNote->"Deus`"]},
+        {
+         ButtonBox["HanoiMove",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info43722521441-9590364", {"HanoiMove", "Deus`"}},
+          ButtonNote->"Deus`"], 
+         ButtonBox["HanoiSteps",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info43722521441-9590364", {"HanoiSteps", "Deus`"}},
+          ButtonNote->"Deus`"], 
+         ButtonBox["Magic",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info43722521441-9590364", {"Magic", "Deus`"}},
+          ButtonNote->"Deus`"], 
+         ButtonBox["Magic3DQ",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info43722521441-9590364", {"Magic3DQ", "Deus`"}},
+          ButtonNote->"Deus`"], 
+         ButtonBox["MagicQ",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info43722521441-9590364", {"MagicQ", "Deus`"}},
+          ButtonNote->"Deus`"], ""}
+       },
+       DefaultBaseStyle->"InfoGrid",
+       GridBoxItemSize->{"Columns" -> {{
+            Scaled[0.15833333333333333`]}}}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}]}, 
+   Dynamic[Typeset`open$$],
+   ImageSize->Automatic]]], "Print", "InfoCell",
+ CellChangeTimes->{
+  3.7224926417731786`*^9},ExpressionUUID->"8769b13f-2c0e-4d25-bcea-\
+e9396659ed0a"],
+
+Cell["Deus`MagicSquare", "Print", "PrintUsage",
+ CellTags->
+  "Info43722521441-9590364",ExpressionUUID->"0d611f75-8592-4fcb-9420-\
+d5ab69ecb7e6"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {
+        RowBox[{
+         RowBox[{"HoldPattern", "[", "MagicSquare", "]"}], ":=", 
+         RowBox[{"Deus`Private`Package`PackageLoadPackage", "[", 
+          RowBox[{
+           RowBox[{"HoldPattern", "[", "MagicSquare", "]"}], 
+           ",", "\<\"Deus`\"\>", ",", 
+           
+           RowBox[{"\<\"C:\\\\Users\\\\28059\\\\AppData\\\\Roaming\\\\\
+Mathematica\\\\Paclets\\\\Applications\\\\Deus\\\\Packages\\\\MagicSquare.m\"\
+\>", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"HoldPattern", "[", "Magic", "]"}], ",", 
+              RowBox[{"HoldPattern", "[", "Magic3D", "]"}], ",", 
+              RowBox[{"HoldPattern", "[", "Magic3DShow", "]"}], ",", 
+              RowBox[{"HoldPattern", "[", "MagicQ", "]"}], ",", 
+              RowBox[{"HoldPattern", "[", "Magic3DQ", "]"}], ",", 
+              RowBox[{"HoldPattern", "[", "MagicSquare", "]"}]}], "}"}]}]}], 
+          "]"}]}]}
+      },
+      BaselinePosition->{Baseline, {1, 1}},
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{"Columns" -> {{
+           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[Deus`MagicSquare],
+  Editable->False]], "Print",
+ CellTags->
+  "Info43722521441-9590364",ExpressionUUID->"dc521583-eb92-41b0-9408-\
+2953a9e0cb7b"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"HanoiGraph", "[", "5", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Magic", "[", "5", "]"}]}], "Input",
+ CellChangeTimes->{{3.7224926485196896`*^9, 
+  3.7224926962714996`*^9}},ExpressionUUID->"fb445ecf-e19a-4c99-8642-\
+638c40e1635c"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{{
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`c}}, {
+      Null, CompressedData["
+1:eJwVx9N2I1AAAMDUtrVtatu2bSN1U9u2bdu2bdu28QN77tOcgcK89GGIEAgE
+jgCBABEQEZGQEJBRUFBRkdHQ0TEw0DBA0TGxsLCxMXFwcfHwcPAJCAgJ8QlB
+CYiIiUlIiEjJyMjJSSkoKamoKKhAKclR0fCxiKlpaP79o6alo4NCaekZGBgZ
+6RlBGZiYmVlYmFjZ2NjZWTk4Obm4OLhAObl5eHh5ufn4+QUE+ASFhISFBYVB
+hQSg9BzMPCKiomJiIuISEpKS4lLS0jIyUjKg0rJycvLysgqKikpKCsoqKqqq
+yqqgKmrq6hoaappaWtramjq6unp6OnqgutqSUspy6kp4FII0ovoGBoaG+kbG
+xiYmRqZmZubmpuagZhaWllZWFtY2Nra21nYwmL29nT0ozMHR0cnJwdnFxdXV
+2Q0Od3d3cweFu5qY2lk6enh6enl5ePv4+Pp6+/n7BwT4BYD6BwYFBQcHhoSG
+hoWFhEdEREaGR4JGREVHx8RExcbFxcfHJiQmJiUlJIEmxvv6hQdFJ6ekpKYm
+p6WnZ2SkZWZlZWdnZoNm5eTm5uXl5BcUFBbmFxUXl5QUlYAWl5aVlZeXVlRW
+VlVVVNfU1NZW14LWVGVkFuWWFdq6JXim1NXXNzTUNTY1NTc3trS2trW1tIG2
+tnd0dHa2d3V39/R09fb19ff39oP2DQwODg0NDI+MjI4Oj42PT0yMTYCOjza3
+9HYMTk5NTU9PzszOzs3NzC8sLC7OL4IuLC0vr6wsra6tra+vbmxubm1tbIFu
+bu/s7O5u7+3vHxzsHR4dHR8fHoMeHczNbyzvnJyenp2dnF9cXF6eX11f39xc
+3YBe397d3d/fPjw+Pj09PL+8vL4+v4K+vL2/f3y8fX59fX9//vz+/v39/IH+
+fl9ePd+9P/WMHU6drrPrVBvU/wdx8Fwi
+       "]}]]}, 
+    TagBox[GraphicsGroupBox[GraphicsComplexBox[CompressedData["
+1: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
+7q+YONJJdFzI/G27CPgvxb9gbw==
+       "], {
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+         {Arrowheads[0.], ArrowBox[{1, 2}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{1, 3}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{1, 4}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{2, 3}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{3, 9}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{4, 5}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{4, 6}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{5, 6}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{5, 8}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{6, 24}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{7, 8}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{7, 9}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{7, 16}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{8, 9}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{10, 11}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{10, 12}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{10, 13}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{11, 12}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{11, 20}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{12, 18}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{13, 14}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{13, 15}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{14, 15}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{14, 17}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{15, 69}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{16, 17}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{16, 18}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{17, 18}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{19, 20}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{19, 21}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{19, 22}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{20, 21}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{21, 27}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{22, 23}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{22, 24}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{23, 24}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{23, 26}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{25, 26}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{25, 27}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{25, 52}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{26, 27}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{28, 29}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{28, 30}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{28, 31}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{29, 30}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{29, 56}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{30, 36}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{31, 32}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{31, 33}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{32, 33}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{32, 35}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{33, 51}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{34, 35}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{34, 36}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{34, 43}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{35, 36}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{37, 38}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{37, 39}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{37, 40}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{38, 39}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{38, 47}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{39, 45}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{40, 41}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{40, 42}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{41, 42}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{41, 44}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{42, 204}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{43, 44}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{43, 45}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{44, 45}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{46, 47}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{46, 48}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{46, 49}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{47, 48}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{48, 54}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{49, 50}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{49, 51}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{50, 51}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{50, 53}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{52, 53}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{52, 54}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{53, 54}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{55, 56}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{55, 57}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{55, 58}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{56, 57}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{57, 63}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{58, 59}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{58, 60}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{59, 60}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{59, 62}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{60, 78}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{61, 62}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{61, 63}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{61, 70}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{62, 63}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{64, 65}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{64, 66}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{64, 67}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{65, 66}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{65, 74}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{66, 72}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{67, 68}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{67, 69}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{68, 69}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{68, 71}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{70, 71}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{70, 72}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{71, 72}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{73, 74}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{73, 75}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{73, 76}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{74, 75}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{75, 81}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{76, 77}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{76, 78}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{77, 78}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{77, 80}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{79, 80}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{79, 81}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{79, 160}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{80, 81}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{82, 83}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{82, 84}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{82, 85}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{83, 84}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{83, 164}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{84, 90}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{85, 86}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{85, 87}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{86, 87}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{86, 89}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{87, 105}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{88, 89}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{88, 90}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{88, 97}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{89, 90}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{91, 92}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{91, 93}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{91, 94}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{92, 93}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{92, 101}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{93, 99}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{94, 95}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{94, 96}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{95, 96}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{95, 98}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{96, 150}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{97, 98}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{97, 99}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{98, 99}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{100, 101}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{100, 102}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{100, 103}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{101, 102}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{102, 108}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{103, 104}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{103, 105}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{104, 105}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{104, 107}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{106, 107}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{106, 108}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{106, 133}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{107, 108}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{109, 110}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{109, 111}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{109, 112}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{110, 111}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{110, 137}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{111, 117}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{112, 113}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{112, 114}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{113, 114}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{113, 116}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{114, 132}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{115, 116}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{115, 117}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{115, 124}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{116, 117}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{118, 119}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{118, 120}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{118, 121}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{119, 120}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{119, 128}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{120, 126}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{121, 122}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{121, 123}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{122, 123}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{122, 125}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{124, 125}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{124, 126}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{125, 126}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{127, 128}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{127, 129}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{127, 130}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{128, 129}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{129, 135}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{130, 131}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{130, 132}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{131, 132}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{131, 134}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{133, 134}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{133, 135}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{134, 135}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{136, 137}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{136, 138}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{136, 139}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{137, 138}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{138, 144}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{139, 140}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{139, 141}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{140, 141}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{140, 143}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{141, 159}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{142, 143}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{142, 144}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{142, 151}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{143, 144}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{145, 146}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{145, 147}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{145, 148}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{146, 147}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{146, 155}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{147, 153}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{148, 149}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{148, 150}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{149, 150}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{149, 152}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{151, 152}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{151, 153}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{152, 153}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{154, 155}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{154, 156}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{154, 157}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{155, 156}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{156, 162}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{157, 158}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{157, 159}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{158, 159}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{158, 161}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{160, 161}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{160, 162}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{161, 162}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{163, 164}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{163, 165}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{163, 166}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{164, 165}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{165, 171}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{166, 167}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{166, 168}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{167, 168}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{167, 170}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{168, 186}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{169, 170}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{169, 171}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{169, 178}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{170, 171}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{172, 173}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{172, 174}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{172, 175}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{173, 174}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{173, 182}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{174, 180}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{175, 176}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{175, 177}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{176, 177}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{176, 179}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{177, 231}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{178, 179}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{178, 180}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{179, 180}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{181, 182}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{181, 183}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{181, 184}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{182, 183}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{183, 189}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{184, 185}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{184, 186}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{185, 186}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{185, 188}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{187, 188}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{187, 189}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{187, 214}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{188, 189}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{190, 191}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{190, 192}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{190, 193}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{191, 192}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{191, 218}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{192, 198}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{193, 194}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{193, 195}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{194, 195}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{194, 197}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{195, 213}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{196, 197}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{196, 198}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{196, 205}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{197, 198}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{199, 200}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{199, 201}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{199, 202}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{200, 201}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{200, 209}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{201, 207}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{202, 203}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{202, 204}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{203, 204}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{203, 206}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{205, 206}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{205, 207}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{206, 207}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{208, 209}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{208, 210}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{208, 211}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{209, 210}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{210, 216}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{211, 212}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{211, 213}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{212, 213}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{212, 215}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{214, 215}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{214, 216}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{215, 216}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{217, 218}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{217, 219}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{217, 220}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{218, 219}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{219, 225}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{220, 221}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{220, 222}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{221, 222}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{221, 224}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{222, 240}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{223, 224}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{223, 225}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{223, 232}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{224, 225}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{226, 227}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{226, 228}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{226, 229}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{227, 228}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{227, 236}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{228, 234}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{229, 230}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{229, 231}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{230, 231}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{230, 233}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{232, 233}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{232, 234}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{233, 234}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{235, 236}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{235, 237}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{235, 238}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{236, 237}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{237, 243}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{238, 239}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{238, 240}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{239, 240}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{239, 242}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{241, 242}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{241, 243}, 0.11073248789989482`]}, 
+         {Arrowheads[0.], ArrowBox[{242, 243}, 0.11073248789989482`]}}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         DiskBox[1, 0.11073248789989482], DiskBox[2, 0.11073248789989482], 
+         DiskBox[3, 0.11073248789989482], DiskBox[4, 0.11073248789989482], 
+         DiskBox[5, 0.11073248789989482], DiskBox[6, 0.11073248789989482], 
+         DiskBox[7, 0.11073248789989482], DiskBox[8, 0.11073248789989482], 
+         DiskBox[9, 0.11073248789989482], DiskBox[10, 0.11073248789989482], 
+         DiskBox[11, 0.11073248789989482], DiskBox[12, 0.11073248789989482], 
+         DiskBox[13, 0.11073248789989482], DiskBox[14, 0.11073248789989482], 
+         DiskBox[15, 0.11073248789989482], DiskBox[16, 0.11073248789989482], 
+         DiskBox[17, 0.11073248789989482], DiskBox[18, 0.11073248789989482], 
+         DiskBox[19, 0.11073248789989482], DiskBox[20, 0.11073248789989482], 
+         DiskBox[21, 0.11073248789989482], DiskBox[22, 0.11073248789989482], 
+         DiskBox[23, 0.11073248789989482], DiskBox[24, 0.11073248789989482], 
+         DiskBox[25, 0.11073248789989482], DiskBox[26, 0.11073248789989482], 
+         DiskBox[27, 0.11073248789989482], DiskBox[28, 0.11073248789989482], 
+         DiskBox[29, 0.11073248789989482], DiskBox[30, 0.11073248789989482], 
+         DiskBox[31, 0.11073248789989482], DiskBox[32, 0.11073248789989482], 
+         DiskBox[33, 0.11073248789989482], DiskBox[34, 0.11073248789989482], 
+         DiskBox[35, 0.11073248789989482], DiskBox[36, 0.11073248789989482], 
+         DiskBox[37, 0.11073248789989482], DiskBox[38, 0.11073248789989482], 
+         DiskBox[39, 0.11073248789989482], DiskBox[40, 0.11073248789989482], 
+         DiskBox[41, 0.11073248789989482], DiskBox[42, 0.11073248789989482], 
+         DiskBox[43, 0.11073248789989482], DiskBox[44, 0.11073248789989482], 
+         DiskBox[45, 0.11073248789989482], DiskBox[46, 0.11073248789989482], 
+         DiskBox[47, 0.11073248789989482], DiskBox[48, 0.11073248789989482], 
+         DiskBox[49, 0.11073248789989482], DiskBox[50, 0.11073248789989482], 
+         DiskBox[51, 0.11073248789989482], DiskBox[52, 0.11073248789989482], 
+         DiskBox[53, 0.11073248789989482], DiskBox[54, 0.11073248789989482], 
+         DiskBox[55, 0.11073248789989482], DiskBox[56, 0.11073248789989482], 
+         DiskBox[57, 0.11073248789989482], DiskBox[58, 0.11073248789989482], 
+         DiskBox[59, 0.11073248789989482], DiskBox[60, 0.11073248789989482], 
+         DiskBox[61, 0.11073248789989482], DiskBox[62, 0.11073248789989482], 
+         DiskBox[63, 0.11073248789989482], DiskBox[64, 0.11073248789989482], 
+         DiskBox[65, 0.11073248789989482], DiskBox[66, 0.11073248789989482], 
+         DiskBox[67, 0.11073248789989482], DiskBox[68, 0.11073248789989482], 
+         DiskBox[69, 0.11073248789989482], DiskBox[70, 0.11073248789989482], 
+         DiskBox[71, 0.11073248789989482], DiskBox[72, 0.11073248789989482], 
+         DiskBox[73, 0.11073248789989482], DiskBox[74, 0.11073248789989482], 
+         DiskBox[75, 0.11073248789989482], DiskBox[76, 0.11073248789989482], 
+         DiskBox[77, 0.11073248789989482], DiskBox[78, 0.11073248789989482], 
+         DiskBox[79, 0.11073248789989482], DiskBox[80, 0.11073248789989482], 
+         DiskBox[81, 0.11073248789989482], DiskBox[82, 0.11073248789989482], 
+         DiskBox[83, 0.11073248789989482], DiskBox[84, 0.11073248789989482], 
+         DiskBox[85, 0.11073248789989482], DiskBox[86, 0.11073248789989482], 
+         DiskBox[87, 0.11073248789989482], DiskBox[88, 0.11073248789989482], 
+         DiskBox[89, 0.11073248789989482], DiskBox[90, 0.11073248789989482], 
+         DiskBox[91, 0.11073248789989482], DiskBox[92, 0.11073248789989482], 
+         DiskBox[93, 0.11073248789989482], DiskBox[94, 0.11073248789989482], 
+         DiskBox[95, 0.11073248789989482], DiskBox[96, 0.11073248789989482], 
+         DiskBox[97, 0.11073248789989482], DiskBox[98, 0.11073248789989482], 
+         DiskBox[99, 0.11073248789989482], DiskBox[100, 0.11073248789989482], 
+         DiskBox[101, 0.11073248789989482], DiskBox[102, 0.11073248789989482],
+          DiskBox[103, 0.11073248789989482], 
+         DiskBox[104, 0.11073248789989482], DiskBox[105, 0.11073248789989482],
+          DiskBox[106, 0.11073248789989482], 
+         DiskBox[107, 0.11073248789989482], DiskBox[108, 0.11073248789989482],
+          DiskBox[109, 0.11073248789989482], 
+         DiskBox[110, 0.11073248789989482], DiskBox[111, 0.11073248789989482],
+          DiskBox[112, 0.11073248789989482], 
+         DiskBox[113, 0.11073248789989482], DiskBox[114, 0.11073248789989482],
+          DiskBox[115, 0.11073248789989482], 
+         DiskBox[116, 0.11073248789989482], DiskBox[117, 0.11073248789989482],
+          DiskBox[118, 0.11073248789989482], 
+         DiskBox[119, 0.11073248789989482], DiskBox[120, 0.11073248789989482],
+          DiskBox[121, 0.11073248789989482], 
+         DiskBox[122, 0.11073248789989482], DiskBox[123, 0.11073248789989482],
+          DiskBox[124, 0.11073248789989482], 
+         DiskBox[125, 0.11073248789989482], DiskBox[126, 0.11073248789989482],
+          DiskBox[127, 0.11073248789989482], 
+         DiskBox[128, 0.11073248789989482], DiskBox[129, 0.11073248789989482],
+          DiskBox[130, 0.11073248789989482], 
+         DiskBox[131, 0.11073248789989482], DiskBox[132, 0.11073248789989482],
+          DiskBox[133, 0.11073248789989482], 
+         DiskBox[134, 0.11073248789989482], DiskBox[135, 0.11073248789989482],
+          DiskBox[136, 0.11073248789989482], 
+         DiskBox[137, 0.11073248789989482], DiskBox[138, 0.11073248789989482],
+          DiskBox[139, 0.11073248789989482], 
+         DiskBox[140, 0.11073248789989482], DiskBox[141, 0.11073248789989482],
+          DiskBox[142, 0.11073248789989482], 
+         DiskBox[143, 0.11073248789989482], DiskBox[144, 0.11073248789989482],
+          DiskBox[145, 0.11073248789989482], 
+         DiskBox[146, 0.11073248789989482], DiskBox[147, 0.11073248789989482],
+          DiskBox[148, 0.11073248789989482], 
+         DiskBox[149, 0.11073248789989482], DiskBox[150, 0.11073248789989482],
+          DiskBox[151, 0.11073248789989482], 
+         DiskBox[152, 0.11073248789989482], DiskBox[153, 0.11073248789989482],
+          DiskBox[154, 0.11073248789989482], 
+         DiskBox[155, 0.11073248789989482], DiskBox[156, 0.11073248789989482],
+          DiskBox[157, 0.11073248789989482], 
+         DiskBox[158, 0.11073248789989482], DiskBox[159, 0.11073248789989482],
+          DiskBox[160, 0.11073248789989482], 
+         DiskBox[161, 0.11073248789989482], DiskBox[162, 0.11073248789989482],
+          DiskBox[163, 0.11073248789989482], 
+         DiskBox[164, 0.11073248789989482], DiskBox[165, 0.11073248789989482],
+          DiskBox[166, 0.11073248789989482], 
+         DiskBox[167, 0.11073248789989482], DiskBox[168, 0.11073248789989482],
+          DiskBox[169, 0.11073248789989482], 
+         DiskBox[170, 0.11073248789989482], DiskBox[171, 0.11073248789989482],
+          DiskBox[172, 0.11073248789989482], 
+         DiskBox[173, 0.11073248789989482], DiskBox[174, 0.11073248789989482],
+          DiskBox[175, 0.11073248789989482], 
+         DiskBox[176, 0.11073248789989482], DiskBox[177, 0.11073248789989482],
+          DiskBox[178, 0.11073248789989482], 
+         DiskBox[179, 0.11073248789989482], DiskBox[180, 0.11073248789989482],
+          DiskBox[181, 0.11073248789989482], 
+         DiskBox[182, 0.11073248789989482], DiskBox[183, 0.11073248789989482],
+          DiskBox[184, 0.11073248789989482], 
+         DiskBox[185, 0.11073248789989482], DiskBox[186, 0.11073248789989482],
+          DiskBox[187, 0.11073248789989482], 
+         DiskBox[188, 0.11073248789989482], DiskBox[189, 0.11073248789989482],
+          DiskBox[190, 0.11073248789989482], 
+         DiskBox[191, 0.11073248789989482], DiskBox[192, 0.11073248789989482],
+          DiskBox[193, 0.11073248789989482], 
+         DiskBox[194, 0.11073248789989482], DiskBox[195, 0.11073248789989482],
+          DiskBox[196, 0.11073248789989482], 
+         DiskBox[197, 0.11073248789989482], DiskBox[198, 0.11073248789989482],
+          DiskBox[199, 0.11073248789989482], 
+         DiskBox[200, 0.11073248789989482], DiskBox[201, 0.11073248789989482],
+          DiskBox[202, 0.11073248789989482], 
+         DiskBox[203, 0.11073248789989482], DiskBox[204, 0.11073248789989482],
+          DiskBox[205, 0.11073248789989482], 
+         DiskBox[206, 0.11073248789989482], DiskBox[207, 0.11073248789989482],
+          DiskBox[208, 0.11073248789989482], 
+         DiskBox[209, 0.11073248789989482], DiskBox[210, 0.11073248789989482],
+          DiskBox[211, 0.11073248789989482], 
+         DiskBox[212, 0.11073248789989482], DiskBox[213, 0.11073248789989482],
+          DiskBox[214, 0.11073248789989482], 
+         DiskBox[215, 0.11073248789989482], DiskBox[216, 0.11073248789989482],
+          DiskBox[217, 0.11073248789989482], 
+         DiskBox[218, 0.11073248789989482], DiskBox[219, 0.11073248789989482],
+          DiskBox[220, 0.11073248789989482], 
+         DiskBox[221, 0.11073248789989482], DiskBox[222, 0.11073248789989482],
+          DiskBox[223, 0.11073248789989482], 
+         DiskBox[224, 0.11073248789989482], DiskBox[225, 0.11073248789989482],
+          DiskBox[226, 0.11073248789989482], 
+         DiskBox[227, 0.11073248789989482], DiskBox[228, 0.11073248789989482],
+          DiskBox[229, 0.11073248789989482], 
+         DiskBox[230, 0.11073248789989482], DiskBox[231, 0.11073248789989482],
+          DiskBox[232, 0.11073248789989482], 
+         DiskBox[233, 0.11073248789989482], DiskBox[234, 0.11073248789989482],
+          DiskBox[235, 0.11073248789989482], 
+         DiskBox[236, 0.11073248789989482], DiskBox[237, 0.11073248789989482],
+          DiskBox[238, 0.11073248789989482], 
+         DiskBox[239, 0.11073248789989482], DiskBox[240, 0.11073248789989482],
+          DiskBox[241, 0.11073248789989482], 
+         DiskBox[242, 0.11073248789989482], 
+         DiskBox[243, 0.11073248789989482]}}]],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{{3.722492656324294*^9, 
+  3.7224926976364436`*^9}},ExpressionUUID->"dd6fb97d-2b1c-408e-ad6d-\
+940aa0c867a8"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"17", ",", "24", ",", "1", ",", "8", ",", "15"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"23", ",", "5", ",", "7", ",", "14", ",", "16"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "6", ",", "13", ",", "20", ",", "22"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "12", ",", "19", ",", "21", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"11", ",", "18", ",", "25", ",", "2", ",", "9"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.722492656324294*^9, 
+  3.722492697662963*^9}},ExpressionUUID->"45acef41-313c-4440-badf-\
+2790b6aab739"]
+}, Open  ]]
+},
+WindowSize->{759, 835},
+WindowMargins->{{500, Automatic}, {71, Automatic}},
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (2017\:5e7410\:67082\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info43722521441-9590364"->{
+  Cell[3775, 107, 145, 3, 45, "Print",ExpressionUUID->"0d611f75-8592-4fcb-9420-d5ab69ecb7e6",
+   CellTags->"Info43722521441-9590364"],
+  Cell[3923, 112, 1656, 40, 73, "Print",ExpressionUUID->"dc521583-eb92-41b0-9408-2953a9e0cb7b",
+   CellTags->"Info43722521441-9590364"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info43722521441-9590364", 83042, 1310}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 198, 4, 27, "Input",ExpressionUUID->"b9df9055-dde2-4043-b633-291ef2f3eecd"],
+Cell[CellGroupData[{
+Cell[781, 28, 183, 4, 27, "Input",ExpressionUUID->"d2b286b1-9fa0-4fe7-914b-74407ab0f0d4"],
+Cell[CellGroupData[{
+Cell[989, 36, 2783, 69, 102, "Print",ExpressionUUID->"8769b13f-2c0e-4d25-bcea-e9396659ed0a"],
+Cell[3775, 107, 145, 3, 45, "Print",ExpressionUUID->"0d611f75-8592-4fcb-9420-d5ab69ecb7e6",
+ CellTags->"Info43722521441-9590364"],
+Cell[3923, 112, 1656, 40, 73, "Print",ExpressionUUID->"dc521583-eb92-41b0-9408-2953a9e0cb7b",
+ CellTags->"Info43722521441-9590364"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5628, 158, 254, 5, 46, "Input",ExpressionUUID->"fb445ecf-e19a-4c99-8642-638c40e1635c"],
+Cell[5885, 165, 76173, 1113, 336, "Output",ExpressionUUID->"dd6fb97d-2b1c-408e-ad6d-940aa0c867a8"],
+Cell[82061, 1280, 643, 16, 31, "Output",ExpressionUUID->"45acef41-313c-4440-badf-2790b6aab739"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
