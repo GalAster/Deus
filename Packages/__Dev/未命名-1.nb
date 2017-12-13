@@ -1,0 +1,399 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15417,        389]
+NotebookOptionsPosition[     14636,        357]
+NotebookOutlinePosition[     14993,        373]
+CellTagsIndexPosition[     14950,        370]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"people", "=", 
+   RowBox[{"WolframLanguageData", "[", 
+    RowBox[{"All", ",", "\"\<EponymousPeople\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"rank", "=", 
+   RowBox[{"Reverse", "[", 
+    RowBox[{"SortBy", "[", 
+     RowBox[{
+      RowBox[{"Tally", "[", 
+       RowBox[{"DeleteMissing", "[", 
+        RowBox[{"Flatten", "[", "people", "]"}], "]"}], "]"}], ",", "Last"}], 
+     "]"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6888533972373605`*^9, 3.688853397684926*^9}, {
+  3.688853427767339*^9, 3.6888534309155865`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"rank", "[", 
+  RowBox[{"[", 
+   RowBox[{"1", ";;", "5"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.68885343595463*^9, 3.6888534435554047`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Entity", "[", 
+      RowBox[{"\<\"Person\"\>", ",", " ", "\<\"CarlJacobi::s2884\"\>"}], 
+      "]"}], ",", " ", "28"}], "}"}], ",", " ", "\n", "  ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Entity", "[", 
+      RowBox[{"\<\"Person\"\>", ",", 
+       " ", "\<\"Jean-Baptiste-JosephFourier::kcgs4\"\>"}], "]"}], ",", " ", 
+     "25"}], "}"}], ",", " ", "\n", "  ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Entity", "[", 
+      RowBox[{"\<\"Person\"\>", ",", " ", "\<\"GeorgeBoole::p56jt\"\>"}], 
+      "]"}], ",", " ", "15"}], "}"}], ",", " ", "\n", "  ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Entity", "[", 
+      RowBox[{"\<\"Person\"\>", ",", 
+       " ", "\<\"EmileLeonardMathieu::4552g\"\>"}], "]"}], ",", " ", "12"}], 
+    "}"}], ",", " ", "\n", "  ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Entity", "[", 
+      RowBox[{"\<\"Person\"\>", ",", 
+       " ", "\<\"CarlFriedrichGauss::4vctc\"\>"}], "]"}], ",", " ", "12"}], 
+    "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.688853443971384*^9, 3.6888534710409117`*^9}},
+ FormatType->"InputForm"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EntityList", "[", 
+  RowBox[{"Entity", "[", 
+   RowBox[{"\"\<WolframLanguageSymbol\>\"", ",", " ", "\n", "   ", 
+    RowBox[{"{", 
+     RowBox[{"\"\<EponymousPeople\>\"", " ", "->", " ", 
+      RowBox[{"ContainsAny", "[", 
+       RowBox[{"{", 
+        RowBox[{"Entity", "[", 
+         RowBox[{
+         "\"\<Person\>\"", ",", " ", "\"\<EmileLeonardMathieu::4552g\>\""}], 
+         "]"}], "}"}], "]"}]}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.688853467595031*^9, 3.688853478868727*^9}, {
+   3.688853539050618*^9, 3.6888536000611787`*^9}, 3.688853754823622*^9},
+ FormatType->"InputForm"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"\"MathieuC\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"MathieuC\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"MathieuC\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"MathieuCharacteristicA\"",RowBox[{"Entity", "[", 
+       RowBox[{
+        "\"WolframLanguageSymbol\"", ",", "\"MathieuCharacteristicA\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"MathieuCharacteristicA\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"MathieuCharacteristicB\"",RowBox[{"Entity", "[", 
+       RowBox[{
+        "\"WolframLanguageSymbol\"", ",", "\"MathieuCharacteristicB\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"MathieuCharacteristicB\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"MathieuCharacteristicExponent\"",RowBox[{"Entity", "[", 
+       RowBox[{
+        "\"WolframLanguageSymbol\"", ",", 
+         "\"MathieuCharacteristicExponent\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"MathieuCharacteristicExponent\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"MathieuCPrime\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"MathieuCPrime\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"MathieuCPrime\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"MathieuGroupM11\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"MathieuGroupM11\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"MathieuGroupM11\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"MathieuGroupM12\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"MathieuGroupM12\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"MathieuGroupM12\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"MathieuGroupM22\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"MathieuGroupM22\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"MathieuGroupM22\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"MathieuGroupM23\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"MathieuGroupM23\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"MathieuGroupM23\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"MathieuGroupM24\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"MathieuGroupM24\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"MathieuGroupM24\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"MathieuS\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"MathieuS\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"MathieuS\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"MathieuSPrime\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"MathieuSPrime\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"MathieuSPrime\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"]}], "}"}]], "Output",
+ CellChangeTimes->{3.6888534565900927`*^9, 3.688853759506914*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EntityList", "[", 
+  RowBox[{"Entity", "[", 
+   RowBox[{"\"\<WolframLanguageSymbol\>\"", ",", " ", "\n", "   ", 
+    RowBox[{"{", 
+     RowBox[{"\"\<EponymousPeople\>\"", " ", "->", " ", 
+      RowBox[{"ContainsAny", "[", 
+       RowBox[{"{", 
+        RowBox[{"Entity", "[", 
+         RowBox[{
+         "\"\<Person\>\"", ",", " ", "\"\<CarlFriedrichGauss::4vctc\>\""}], 
+         "]"}], "}"}], "]"}]}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.68885361826714*^9, 3.6888536323623433`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"\"DGaussianWavelet\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"DGaussianWavelet\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"DGaussianWavelet\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"FractionalGaussianNoiseProcess\"",RowBox[{"Entity", "[", 
+       RowBox[{
+        "\"WolframLanguageSymbol\"", ",", 
+         "\"FractionalGaussianNoiseProcess\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"FractionalGaussianNoiseProcess\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"GaussianFilter\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"GaussianFilter\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \\\"GaussianFilter\\\"]\
+\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"GaussianIntegers\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"GaussianIntegers\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"GaussianIntegers\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"GaussianMatrix\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"GaussianMatrix\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \\\"GaussianMatrix\\\"]\
+\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{
+    "\"GaussianOrthogonalMatrixDistribution\"",RowBox[{"Entity", "[", 
+       RowBox[{
+        "\"WolframLanguageSymbol\"", ",", 
+         "\"GaussianOrthogonalMatrixDistribution\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"GaussianOrthogonalMatrixDistribution\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{
+    "\"GaussianSymplecticMatrixDistribution\"",RowBox[{"Entity", "[", 
+       RowBox[{
+        "\"WolframLanguageSymbol\"", ",", 
+         "\"GaussianSymplecticMatrixDistribution\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"GaussianSymplecticMatrixDistribution\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"GaussianUnitaryMatrixDistribution\"",RowBox[{"Entity", "[", 
+       RowBox[{
+        "\"WolframLanguageSymbol\"", ",", 
+         "\"GaussianUnitaryMatrixDistribution\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"GaussianUnitaryMatrixDistribution\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"GaussianWindow\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"GaussianWindow\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \\\"GaussianWindow\\\"]\
+\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"InverseGaussianDistribution\"",RowBox[{"Entity", "[", 
+       RowBox[{
+        "\"WolframLanguageSymbol\"", ",", "\"InverseGaussianDistribution\""}],
+        "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"InverseGaussianDistribution\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"LaplacianGaussianFilter\"",RowBox[{"Entity", "[", 
+       RowBox[{
+        "\"WolframLanguageSymbol\"", ",", "\"LaplacianGaussianFilter\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"LaplacianGaussianFilter\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"TsallisQGaussianDistribution\"",RowBox[{"Entity", "[", 
+       RowBox[{
+        "\"WolframLanguageSymbol\"", ",", 
+         "\"TsallisQGaussianDistribution\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"TsallisQGaussianDistribution\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"]}], "}"}]], "Output",
+ CellChangeTimes->{{3.6888536219700027`*^9, 3.6888536370313015`*^9}}]
+}, Open  ]],
+
+Cell[BoxData["MathieuC"], "Input",
+ CellChangeTimes->{{3.688853774377023*^9, 3.68885378469726*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Grid", "[", 
+  RowBox[{
+   RowBox[{"rank", "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ";;", "10"}], "]"}], "]"}], ",", 
+   RowBox[{"Alignment", "\[Rule]", "Left"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6888539586895685`*^9, 3.688853991880126*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TemplateBox[{"\"Carl Jacobi\"",RowBox[{"Entity", "[", 
+         RowBox[{"\"Person\"", ",", "\"CarlJacobi::s2884\""}], "]"}],
+       "\"Entity[\\\"Person\\\", \\\"CarlJacobi::s2884\\\"]\"","\"person\""},
+      "Entity"], "28"},
+    {
+     TemplateBox[{
+      "\"Jean\[Hyphen]Baptiste\[Hyphen]Joseph Fourier\"",
+       RowBox[{"Entity", "[", 
+         RowBox[{
+          "\"Person\"", ",", "\"Jean-Baptiste-JosephFourier::kcgs4\""}], 
+         "]"}],"\"Entity[\\\"Person\\\", \
+\\\"Jean-Baptiste-JosephFourier::kcgs4\\\"]\"","\"person\""},
+      "Entity"], "25"},
+    {
+     TemplateBox[{"\"George Boole\"",RowBox[{"Entity", "[", 
+         RowBox[{"\"Person\"", ",", "\"GeorgeBoole::p56jt\""}], "]"}],
+       "\"Entity[\\\"Person\\\", \\\"GeorgeBoole::p56jt\\\"]\"","\"person\""},
+      "Entity"], "15"},
+    {
+     TemplateBox[{"\"Emile L\[EAcute]onard Mathieu\"",RowBox[{"Entity", "[", 
+         RowBox[{"\"Person\"", ",", "\"EmileLeonardMathieu::4552g\""}], "]"}],
+       "\"Entity[\\\"Person\\\", \\\"EmileLeonardMathieu::4552g\\\"]\"",
+       "\"person\""},
+      "Entity"], "12"},
+    {
+     TemplateBox[{"\"Carl Friedrich Gauss\"",RowBox[{"Entity", "[", 
+         RowBox[{"\"Person\"", ",", "\"CarlFriedrichGauss::4vctc\""}], "]"}],
+       "\"Entity[\\\"Person\\\", \\\"CarlFriedrichGauss::4vctc\\\"]\"",
+       "\"person\""},
+      "Entity"], "12"},
+    {
+     TemplateBox[{"\"Lejeune Dirichlet\"",RowBox[{"Entity", "[", 
+         RowBox[{"\"Person\"", ",", "\"LejeuneDirichlet::457j9\""}], "]"}],
+       "\"Entity[\\\"Person\\\", \\\"LejeuneDirichlet::457j9\\\"]\"",
+       "\"person\""},
+      "Entity"], "10"},
+    {
+     TemplateBox[{"\"Friedrich Wilhelm Bessel\"",RowBox[{"Entity", "[", 
+         RowBox[{"\"Person\"", ",", "\"FriedrichWilhelmBessel::77y7v\""}], 
+         "]"}],"\"Entity[\\\"Person\\\", \
+\\\"FriedrichWilhelmBessel::77y7v\\\"]\"","\"person\""},
+      "Entity"], "10"},
+    {
+     TemplateBox[{
+      "\"Sim\[EAcute]on\[Hyphen]Denis Poisson\"",RowBox[{"Entity", "[", 
+         RowBox[{"\"Person\"", ",", "\"Simeon-DenisPoisson::r7bbr\""}], "]"}],
+       "\"Entity[\\\"Person\\\", \\\"Simeon-DenisPoisson::r7bbr\\\"]\"",
+       "\"person\""},
+      "Entity"], "9"},
+    {
+     TemplateBox[{"\"Leonhard Euler\"",RowBox[{"Entity", "[", 
+         RowBox[{"\"Person\"", ",", "\"LeonhardEuler::39r8r\""}], "]"}],
+       "\"Entity[\\\"Person\\\", \\\"LeonhardEuler::39r8r\\\"]\"",
+       "\"person\""},
+      "Entity"], "8"},
+    {
+     TemplateBox[{"\"Karl Weierstrass\"",RowBox[{"Entity", "[", 
+         RowBox[{"\"Person\"", ",", "\"KarlWeierstrass::v982v\""}], "]"}],
+       "\"Entity[\\\"Person\\\", \\\"KarlWeierstrass::v982v\\\"]\"",
+       "\"person\""},
+      "Entity"], "7"}
+   },
+   AutoDelete->False,
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{{3.6888539592898684`*^9, 3.6888539922791433`*^9}}]
+}, Open  ]],
+
+Cell[BoxData["MathieuCPrime"], "Input",
+ CellChangeTimes->{{3.688854372580465*^9, 3.6888543735802703`*^9}, 
+   3.6888640412681837`*^9}]
+},
+WindowSize->{759, 833},
+WindowMargins->{{Automatic, 226}, {49, Automatic}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (2016\:5e748\:670817\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 594, 16, 84, "Input"],
+Cell[CellGroupData[{
+Cell[1177, 40, 172, 4, 30, "Input"],
+Cell[1352, 46, 1154, 32, 95, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2543, 83, 626, 14, 81, "Input"],
+Cell[3172, 99, 3480, 67, 109, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6689, 171, 526, 12, 84, "Input"],
+Cell[7218, 185, 3857, 79, 142, "Output"]
+}, Open  ]],
+Cell[11090, 267, 99, 1, 47, "Input"],
+Cell[CellGroupData[{
+Cell[11214, 272, 274, 7, 47, "Input"],
+Cell[11491, 281, 2991, 69, 322, "Output"]
+}, Open  ]],
+Cell[14497, 353, 135, 2, 47, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
