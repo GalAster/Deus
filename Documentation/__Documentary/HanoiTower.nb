@@ -1,0 +1,3527 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    184349,       3519]
+NotebookOptionsPosition[    161465,       3167]
+NotebookOutlinePosition[    161885,       3184]
+CellTagsIndexPosition[    161842,       3181]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["HanoiTower Documentation Template", "Title",ExpressionUUID->"b1fadaca-2b67-4e47-9fba-0bef5f3853d9"],
+
+Cell[BoxData[
+ RowBox[{"<<", "Deus`"}]], "Input",ExpressionUUID->"23a55324-2cbb-45a9-baf9-1e96fd0afe48"],
+
+Cell[BoxData[
+ RowBox[{"$DocActive", "=", "\"\<Deus\>\"", ";"}]], "Input",ExpressionUUID->"b5521474-f15e-4a1a-a1e8-4ae4b641c726"]
+}, Open  ]],
+
+Cell["", "BlockSeparator",ExpressionUUID->"c2ec6056-fdf4-4998-9a1f-5247b980ef54"],
+
+Cell[CellGroupData[{
+
+Cell["HanoiGraph", "DocSection",ExpressionUUID->"1defdecd-046e-474b-b130-8ce06ecbc869"],
+
+Cell[BoxData[
+ RowBox[{"HanoiGraph", "[", "n", "]"}]], "UsageInput",ExpressionUUID->"93af0506-757e-450d-ae54-fde84d6e700a"],
+
+Cell["HanoiGraph[n]\:7ed9\:51fan\:9636\:6c49\:8bfa\:56fe", "UsageText",ExpressionUUID->"bbe2e772-d5bd-4003-b2c8-021f67ca6c8d"],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",ExpressionUUID->"86bfb3b6-57c7-4a7a-89ed-87718cfc453c"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiGraph", InlineRef]],ExpressionUUID->
+  "32c0f2b5-6349-41de-b294-9cc522fdaca5"],
+ " has ",
+ "1",
+ " call",
+ " pattern"
+}], "DetailsItem",ExpressionUUID->"8a0bb31b-8466-4946-aa7d-f7590eb9722c"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiGraph", InlineRef]],ExpressionUUID->
+  "cb3a9bb2-9326-4024-a6a5-42a802cce5cb"],
+ " has an internal ",
+ Cell[BoxData[
+  FormBox["SubValues", InlineRef]],ExpressionUUID->
+  "964ff542-4d32-430a-9f8e-13e2c9afa3f3"],
+ " pattern"
+}], "DetailsItem",ExpressionUUID->"28e9efd9-c500-4e71-95df-54845ff4dcc5"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiGraph", InlineRef]],ExpressionUUID->
+  "ad5a5a23-408b-42c3-ab49-4510949d8d65"],
+ " has the following ",
+ Cell[BoxData[
+  FormBox["Attributes", InlineRef]],ExpressionUUID->
+  "4114e59d-6c73-4fcd-8c4a-c271023669b1"]
+}], "DetailsItem",ExpressionUUID->"2449167c-3c2e-4d30-86b4-d4a5d40c7ae3"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox["Protected", 
+  InlineRef]],ExpressionUUID->"ff74428b-ffd0-4dcd-a0e8-e22db7a57a55"]], \
+"DetailsRow",ExpressionUUID->"4587ad37-faa3-4610-8230-74c5e6b58363"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox["ReadProtected", 
+  InlineRef]],ExpressionUUID->"95ee98ff-9371-4e8a-829a-b4824fe680f7"]], \
+"DetailsRow",ExpressionUUID->"1be71865-9ce8-4474-a96e-c6a5d2991714"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiGraph", InlineRef]],ExpressionUUID->
+  "a368dee5-964f-4e9b-90ef-b3fc913f4861"],
+ " is a formatted symbol"
+}], "DetailsItem",ExpressionUUID->"a1fdfe70-4db9-408a-9603-1ad3c0a85b6b"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Basic Examples", "ExampleSection",ExpressionUUID->"0403e338-7517-4578-b124-6577ca925f24"],
+
+Cell["Load Deus.", "ExampleText",ExpressionUUID->"49249b9a-6aca-4435-ba8e-96eef3000886"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Deus`\>\"", "]"}]], "ExamplesInput",
+ InitializationCell->
+  True,ExpressionUUID->"88e83576-8f71-4cc6-af20-73d06c070dc2"],
+
+Cell["\:7ed8\:5236 5 \:9636\:6c49\:8bfa\:56fe.", "ExampleText",ExpressionUUID->"0b482cb2-ea82-4a57-93dd-3002169743db"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HanoiGraph", "[", 
+  RowBox[{"5", ",", 
+   RowBox[{"GraphLayout", "\[Rule]", "\"\<SpringEmbedding\>\""}]}], 
+  "]"}]], "ExamplesInput",
+ CellLabel->"In[79]:=",ExpressionUUID->"86534fc6-ac3d-4434-a969-21246e1e39ef"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{{
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`a}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`b}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`a, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`b, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`a,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`b,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`a, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`b, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`c, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`a, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`c}, {
+       Deus`Private`Package`b, Deus`Private`Package`c, Deus`Private`Package`c,
+         Deus`Private`Package`c, Deus`Private`Package`c}}, {
+      Null, CompressedData["
+1:eJwVx9N2I1AAAMDUtrVtatu2bSN1U9u2bdu2bdu28QN77tOcgcK89GGIEAgE
+jgCBABEQEZGQEJBRUFBRkdHQ0TEw0DBA0TGxsLCxMXFwcfHwcPAJCAgJ8QlB
+CYiIiUlIiEjJyMjJSSkoKamoKKhAKclR0fCxiKlpaP79o6alo4NCaekZGBgZ
+6RlBGZiYmVlYmFjZ2NjZWTk4Obm4OLhAObl5eHh5ufn4+QUE+ASFhISFBYVB
+hQSg9BzMPCKiomJiIuISEpKS4lLS0jIyUjKg0rJycvLysgqKikpKCsoqKqqq
+yqqgKmrq6hoaappaWtramjq6unp6OnqgutqSUspy6kp4FII0ovoGBoaG+kbG
+xiYmRqZmZubmpuagZhaWllZWFtY2Nra21nYwmL29nT0ozMHR0cnJwdnFxdXV
+2Q0Od3d3cweFu5qY2lk6enh6enl5ePv4+Pp6+/n7BwT4BYD6BwYFBQcHhoSG
+hoWFhEdEREaGR4JGREVHx8RExcbFxcfHJiQmJiUlJIEmxvv6hQdFJ6ekpKYm
+p6WnZ2SkZWZlZWdnZoNm5eTm5uXl5BcUFBbmFxUXl5QUlYAWl5aVlZeXVlRW
+VlVVVNfU1NZW14LWVGVkFuWWFdq6JXim1NXXNzTUNTY1NTc3trS2trW1tIG2
+tnd0dHa2d3V39/R09fb19ff39oP2DQwODg0NDI+MjI4Oj42PT0yMTYCOjza3
+9HYMTk5NTU9PzszOzs3NzC8sLC7OL4IuLC0vr6wsra6tra+vbmxubm1tbIFu
+bu/s7O5u7+3vHxzsHR4dHR8fHoMeHczNbyzvnJyenp2dnF9cXF6eX11f39xc
+3YBe397d3d/fPjw+Pj09PL+8vL4+v4K+vL2/f3y8fX59fX9//vz+/v39/IH+
+fl9ePd+9P/WMHU6drrPrVBvU/wdx8Fwi
+       "]}, {GraphLayout -> "SpringEmbedding"}]]}, 
+    TagBox[GraphicsGroupBox[GraphicsComplexBox[CompressedData["
+1:eJw113k01A3UB/CJZKmY7EsYO5MxYxbDWH7fSIlE25NUkohKwiN5JElliZan
+jURKkpB60CqyE6IspRCFIbJEsvP2nvO+95x77v/33nPu56q5HdnsIUAikcb+
+5P9Wno0zxzOfDlqx/5CBgCnGfhY+kTphgAr3eNMPWaZw6pXOz7GigbqjeaZ6
+gQdIV1w1CWEgzkPDi2PAw5Xds68X0ugooxTY2Vwxwbah5Tfcaxh4KBc97rXe
+BA/u3XWOOLoKnDxzrWNWJrjLaPwy4UZDqNpzY9V/TXAw/sHU9DJ9BDLvfPXV
+42FTyvim+dpVaHrLJLxfcfBlaNDV9DoNm1/121/+xsGxlL+TL9H0kf8+Uikv
+zghmgz3HPNP1kBL0hmbwhYPPzqfDKhi6yJFUuDGUZoRQ7o/cn091cP9X6bvJ
+HA50Leatdmygwulj7Y8ve43RJ+hL9xfVg1BS9w23W1x8pRhovf9Axea6lRfL
+Q7kw/uAgLRzMgAWdO8JKNEKb9+69Kv/SQbVyerC5m4MAR0uZVw8ZyHn2bffZ
+Yg7evyq++FjNENdm4giBCC5K2lgBHcJMTGvUB+18wMWlFXOjh/YZooHyZsHw
+oDGeXb2o9v05E7s2Tgw0F3Ewk3tn1eIgJqgTVrS7uUY4rNS5esdrQzAfmdpH
+9XIg+vBoY2QUAwUhtLCq93S0U44J3yqh4614UViquwHc8itXCtUxIFVd8sT8
+BQ0xZU39XrMMZGxl2Ed3MOCSxjlHrTNEog498OYFBgZNNV048YZQ3FmeNh5h
+CP6RUZZVIxORpE4j4jYNEpeKJ+5zmShy9E/ME6SDv8Xk9OEWQ+x2fHzFcw8N
+YwcL7PksI/homHhTLzOwqZGyuSqZgzOTHMsr7obwPjM77mHPQXFjV/TCSQaq
+x1KbHc4bIf6syc0IHToiNrdenKri4ETrv5XT92ngPjlp8uW5EbwCPqlzmDT4
+yTyq8//MQqjcKb8D72jgFPhLDBewUf7Ss49/ioZbs8cmLOPZeCq+6HsmQUfe
+ybktPXZsRK30+u/lfSaeeboGZepxUHSjmGXpxsTwfPSywVo2VlMLXQV2sfC0
+2ztgE50FY7Pj7T/CmTgW+mOTyjkmGGkFCmpKLEQpKh8upDPB3bzhY40dE7GO
+v6+m7GShyzf1l+83NhS7Jgv7tVjYu+dtxe9JFhKyt9//rc5G2dBKtdcmbJRU
+T9kJNKzCTpXUEN/HNCS/W5WhlE5DltbsmKubAap4lu3hW/XRwjMnq9TSsY1o
+lit/rYch0/jadHsaxM5I3PKZ1kX35cyEomED2KtPRUpU6+Dae1vOg7M0zO8o
+O9+hRYXIh8JzYScNQZ452LKsTA+SSQUdeyMYKCvQcwlyX4VwJ72cmc8MjCy1
+JTvf10B8p0JJvhULG3PaW4cn1FHxPp+iasNEaF7A96bHmiAHJn4iX2ZiiXP9
+Fu6oJmK17KcrNdmIoX+vPj6kDYtkTdJkHwsXRp4GyARrQzL4BX/vezacpKwu
+6Qzq4vEjxlwNmAho8f2+j66Llt5+KU1xFkz6/uHHD2jD/6X4t1x/JhzrnbOb
+StShlfB3bJ4HAwKMU5JrZdQRJuS5b5mNIT7XWdpMjFMwS6iHT/sxkLDkgZuu
+sSbcReeSIqTpmD1jYiw9oYE7glc3522jwaKC/qE2XwvqbeudarP+7OeV/tz7
+QhQkD9FW3f+uD4MTBuuEOtXg+cqdX+lDQ/6N8hdtGynIYEYxtb8Z4KdLco2O
+kT4oZ3z+Jnu1EPUOnzbslTSAr/Izal0Hnwj77lRfWqAP14BLcxcrfhPtclMx
+7dpUkJxv1rWnVRGiKjKDMnv1UFUqtnVy9QiRYEwOJuvpoqiwLCZHpYGg+n6k
+K2VTUZJ9b89QtAjsdB4vX8ygQqyf130rhoQR4TTvwx9WIepU8/nbMwJYY7Qi
+S3efJuamX768byoJdebVA/u+aKBsY9i/LgnL8XyFkGx8sRYidRrar4iSsebk
+CsW5OC2I5unEepTIgGqsNPtfpg5cyvLqng7KIjk122C3njb4yyZVuwIVoBLY
+eKy7Rg/yW8Z4dEEygnqjeBJL9KD4+1Da9gwpWO+3k3Se1cGXa4L111+Q0fhR
+wFu4TAO6ticTxLbOEbZh6UtOUzSw0vKr4T2vJag/EX2i68/8wqP6ws0ekWB7
+m6UolKaJzpyThSqp34l3NWOtMb80QPq/ALVwOGtOCzj1ISvDs5I4Grz+rkCZ
+KsLayy9EybYT3ikOKUffqoFEd59e7VdE7ISKfqyJGsjWvIRvn38S0mOqt1fr
+iSP19KLM5Qqy6JxZ57HEaymiLY73H6pUQG1ryTpyhRDMR/33HxWRQx//nyXc
+3BXoeiifcCRbEluDWyuVCXFY1nol3LUlo6JN7bLXgiSWfboddjBZHCT783WC
+JrOENmu4UaFCAkHWDbTIjUJ4lvWwNa6UjJbduyNe15MQbtSuyE2SAimFfETs
+v3ki7M0WK7trlYR7RE+hackShLEe2pf2fCT6pBJF7jSQ4ORdFyMwNkJ0vu9h
+s0N/EGGj51MOjTQQruVKPpR17wlGEElZoHac+P8+kS4k3SwO6iD6eMuX/2r5
+RSRyppbYGIjAMSW7suZND5HYdmFm9rgASHlOeBM5SdRJ3m60cCAhdaRzRzNF
+Eu8q4+M3Ow8Ta0YWD3wykECRQu4hneuNRE6cylRkmBTCkkRqbo8VE/5abpzS
+fik0DVtPfJMm4en+W3rrreRAlt4YPcUSwFXb6ddbpqWRcyrxmVONMLK1gvyE
+jyuhs9b9eJLMV0L7ztChop/ykM8OWbc/+hdxIbL45ItcOVBE3d1rwt8Rz0OX
+eh4xJSNTcj3frJmCWg99PmuxBNJLhcYLspSx8b/4y+6qUnAe3dHjka+CppPH
+/b07VqD49EyA3Ud1XP80siPGSQZHS9LHCjPVkZi1kToQIo3Q9SJbz/ppIuN6
+mJ/nZ0VseEV/suOtCmrJ48KZsvJYSpXNS+mhQPeWomHLdjn07rYNLdupgunB
+n5fE5jXgslP5puBJdQT+dgixqlDHP45SZ1UkNTGcNbvYnKMOug+/NGqTOiRG
+rs1/K9KEbVRpZWY4BW3btFfe42lgv6f7+utzyoidfJsou1ILPm+d4zPUlDEe
+edd201MVDA/HFY3vVcHL9O3pZxXVQFWcKSxIVoaI4AXToXcUbFi+3mx/DAXH
+nYL2aNNVkdhcUdC8QRvOd0sOzlxWQ/r5PeMepVpwTyQMjv6gwMNT+/nzAB0E
+XLxaUPREEX9NNr/5K14b1SGi62Vi5XHmbFZeMlkXxvfsvEdHZdF9LPSEjLk2
+PsxQ/MOVVODMje0TXrQKIglUlXMGSpDubTuz6ZEeBBVG517tVcWtwJiYc7p6
+kH7eE9xfyoDTtu3RN3N+E/nHJMmqSgxA423m4io+Uemt/HtWzBCkNXbX63Jb
+iOTuJF0ztiGy2ta0lkwLQCYunfpUhImQeSvjdfdJMFvgd2qXGaKQKS+9OlkE
+T5/UNr+XYoHk62UlENtEHJ1ZaqUbwIT83k61qvgR4vHh0xqe0kyEHbjonMyr
+IX6d4hinShohdXzKujdyEWZGj+VGRHMQ2CL42JoqjPwQyYuu5hxkBciPVT2Z
+J76f82knIo3wXKy7Ojh/jKi50yI+YmUEkoBPUKZAPZFyvOTIZy4XI0KaV/lC
+XUQIvzngNJUNVMkdoByvJwjzG7+eMjgII6XqP3Z8SriynGQ6G9i4HShWmrXi
+B9FxaeniFhYbP5hrRcfsybjca5bzVZsD9dnc7kuO4sh/WxV2u4MNhahfJ5ou
+SUKivmb5PhkWRG/NTrz+Sob7M+2kwT/eWG2fMONRLgWXOFeSiwETc8slTerk
+yKDyJXflD7GQ0eLckJSjAK8IWksIkwUX27yr1bJysLN54KVEsKHR5KdjvUQW
+Gh7t4vjjcgtVzxDHl6qI27NZOVPWFCSqwuGdJSrIa8wJsvnKQwBPwG2Pixo0
+/x5JklIzAclz8Q19c1WoZI+86O//42LZHtHdW9SgZlQX8oUwRjP3VJnZFVXw
+Xbrji0pMMMRm5mv80ET1xpkdsX/c39l/q6RJQwNDVmVKd3x54LoHi9ju1EC5
+DKUvb48Rwlss2J3PdZC/acYyQ8oIGmnjK2sFtJFR0rvdU4KLX5KLu8wStZHS
+cTdj97gRMtZ3mXcG6mHWpynwyQIXZfrJs5PiVHxY+2m/pQUXLeLS8s1bVuEV
+MfW6UdkEt9OHMPFQG/1nMy7kPDJGQKznAPe4Lg5WXLlipW+MhWuX6f7T2mha
+5BGX8o6DnVm5PQ7n1aH/5lp2bxgHhbrRTl9tNLE1TcHl3gAbNmuzdXOy1LHV
+QsdgINoIvrG/2j81UHD9xTtPlrcRgstsxxyoKjg4eD5QxpaLRw0htTIiqpDT
+nlc2PszGqOy84I3Dygiw65hetIsDi/CFuf79KiiK32754DIbJJsVa5dmUhB4
+XenAVhszbD/ypVrZVB76B8+0vbloiqsXFF7c4CvCyVK4y8fcFCmrLx6zN5BD
+fYpbl+igGew9JXpsv0lD7FF/lqKbGYZ455T8JlcgxG/wqJ6tOcpLpOY/MVfA
+tu+hoLoDD3WJL+9Fr/vjA6lWEWFrU0SKl/ZG7lkBcu1rXt9NHhyKf/jdfyyF
+I2v2T43Y8hCmOeiuxW0hiPNeZ8usTMH4N1v0nPM3Imu0LG9zIg82g+mt1elj
+xCun4I8u5iZw9dWrqc/4c68dlwXP9BgjjKP33Tpzgji0i9Z8Zr0xHPNeU/7O
+5RPyL6yrP38wAfX0Rd2im6KY3nWjaODPn7hBsqq8vFMQEQsD/T/UeOje7dMQ
++3sR2HHDgUdFzUFZ/e7nnMRv4qtInW6RoxlcUwVkS0J6iDNr5jT+IszxzvKV
+sJ5DJ7F/pFah6oo5Upq9ZPcsCKDqybqbrYcssPjtLPfUHiGke19pcaw0B+MI
+Z8JiQAzUbHmFAR0C5Ef8Jc/HB4i+Aw8miTYLbNi2XyylfIZgqjcZn7a2gKNF
+bNqyT93E/wCEz7Ti
+       "], {
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+         {Arrowheads[0.], ArrowBox[{1, 2}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{1, 3}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{1, 4}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{2, 3}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{3, 9}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{4, 5}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{4, 6}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{5, 6}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{5, 8}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{6, 24}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{7, 8}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{7, 9}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{7, 16}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{8, 9}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{10, 11}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{10, 12}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{10, 13}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{11, 12}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{11, 20}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{12, 18}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{13, 14}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{13, 15}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{14, 15}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{14, 17}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{15, 69}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{16, 17}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{16, 18}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{17, 18}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{19, 20}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{19, 21}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{19, 22}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{20, 21}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{21, 27}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{22, 23}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{22, 24}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{23, 24}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{23, 26}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{25, 26}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{25, 27}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{25, 52}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{26, 27}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{28, 29}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{28, 30}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{28, 31}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{29, 30}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{29, 56}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{30, 36}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{31, 32}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{31, 33}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{32, 33}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{32, 35}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{33, 51}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{34, 35}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{34, 36}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{34, 43}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{35, 36}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{37, 38}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{37, 39}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{37, 40}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{38, 39}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{38, 47}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{39, 45}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{40, 41}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{40, 42}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{41, 42}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{41, 44}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{42, 204}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{43, 44}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{43, 45}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{44, 45}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{46, 47}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{46, 48}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{46, 49}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{47, 48}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{48, 54}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{49, 50}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{49, 51}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{50, 51}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{50, 53}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{52, 53}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{52, 54}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{53, 54}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{55, 56}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{55, 57}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{55, 58}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{56, 57}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{57, 63}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{58, 59}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{58, 60}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{59, 60}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{59, 62}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{60, 78}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{61, 62}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{61, 63}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{61, 70}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{62, 63}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{64, 65}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{64, 66}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{64, 67}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{65, 66}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{65, 74}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{66, 72}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{67, 68}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{67, 69}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{68, 69}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{68, 71}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{70, 71}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{70, 72}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{71, 72}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{73, 74}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{73, 75}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{73, 76}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{74, 75}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{75, 81}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{76, 77}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{76, 78}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{77, 78}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{77, 80}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{79, 80}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{79, 81}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{79, 160}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{80, 81}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{82, 83}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{82, 84}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{82, 85}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{83, 84}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{83, 164}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{84, 90}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{85, 86}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{85, 87}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{86, 87}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{86, 89}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{87, 105}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{88, 89}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{88, 90}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{88, 97}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{89, 90}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{91, 92}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{91, 93}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{91, 94}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{92, 93}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{92, 101}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{93, 99}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{94, 95}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{94, 96}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{95, 96}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{95, 98}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{96, 150}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{97, 98}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{97, 99}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{98, 99}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{100, 101}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{100, 102}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{100, 103}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{101, 102}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{102, 108}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{103, 104}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{103, 105}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{104, 105}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{104, 107}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{106, 107}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{106, 108}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{106, 133}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{107, 108}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{109, 110}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{109, 111}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{109, 112}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{110, 111}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{110, 137}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{111, 117}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{112, 113}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{112, 114}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{113, 114}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{113, 116}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{114, 132}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{115, 116}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{115, 117}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{115, 124}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{116, 117}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{118, 119}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{118, 120}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{118, 121}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{119, 120}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{119, 128}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{120, 126}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{121, 122}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{121, 123}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{122, 123}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{122, 125}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{124, 125}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{124, 126}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{125, 126}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{127, 128}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{127, 129}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{127, 130}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{128, 129}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{129, 135}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{130, 131}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{130, 132}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{131, 132}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{131, 134}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{133, 134}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{133, 135}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{134, 135}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{136, 137}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{136, 138}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{136, 139}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{137, 138}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{138, 144}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{139, 140}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{139, 141}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{140, 141}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{140, 143}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{141, 159}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{142, 143}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{142, 144}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{142, 151}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{143, 144}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{145, 146}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{145, 147}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{145, 148}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{146, 147}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{146, 155}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{147, 153}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{148, 149}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{148, 150}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{149, 150}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{149, 152}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{151, 152}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{151, 153}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{152, 153}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{154, 155}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{154, 156}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{154, 157}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{155, 156}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{156, 162}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{157, 158}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{157, 159}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{158, 159}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{158, 161}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{160, 161}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{160, 162}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{161, 162}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{163, 164}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{163, 165}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{163, 166}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{164, 165}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{165, 171}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{166, 167}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{166, 168}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{167, 168}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{167, 170}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{168, 186}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{169, 170}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{169, 171}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{169, 178}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{170, 171}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{172, 173}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{172, 174}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{172, 175}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{173, 174}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{173, 182}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{174, 180}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{175, 176}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{175, 177}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{176, 177}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{176, 179}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{177, 231}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{178, 179}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{178, 180}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{179, 180}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{181, 182}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{181, 183}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{181, 184}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{182, 183}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{183, 189}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{184, 185}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{184, 186}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{185, 186}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{185, 188}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{187, 188}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{187, 189}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{187, 214}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{188, 189}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{190, 191}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{190, 192}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{190, 193}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{191, 192}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{191, 218}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{192, 198}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{193, 194}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{193, 195}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{194, 195}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{194, 197}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{195, 213}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{196, 197}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{196, 198}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{196, 205}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{197, 198}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{199, 200}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{199, 201}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{199, 202}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{200, 201}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{200, 209}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{201, 207}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{202, 203}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{202, 204}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{203, 204}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{203, 206}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{205, 206}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{205, 207}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{206, 207}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{208, 209}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{208, 210}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{208, 211}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{209, 210}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{210, 216}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{211, 212}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{211, 213}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{212, 213}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{212, 215}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{214, 215}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{214, 216}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{215, 216}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{217, 218}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{217, 219}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{217, 220}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{218, 219}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{219, 225}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{220, 221}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{220, 222}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{221, 222}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{221, 224}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{222, 240}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{223, 224}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{223, 225}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{223, 232}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{224, 225}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{226, 227}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{226, 228}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{226, 229}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{227, 228}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{227, 236}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{228, 234}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{229, 230}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{229, 231}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{230, 231}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{230, 233}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{232, 233}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{232, 234}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{233, 234}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{235, 236}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{235, 237}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{235, 238}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{236, 237}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{237, 243}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{238, 239}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{238, 240}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{239, 240}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{239, 242}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{241, 242}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{241, 243}, 0.10541280823561201`]}, 
+         {Arrowheads[0.], ArrowBox[{242, 243}, 0.10541280823561201`]}}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         DiskBox[1, 0.10541280823561201], DiskBox[2, 0.10541280823561201], 
+         DiskBox[3, 0.10541280823561201], DiskBox[4, 0.10541280823561201], 
+         DiskBox[5, 0.10541280823561201], DiskBox[6, 0.10541280823561201], 
+         DiskBox[7, 0.10541280823561201], DiskBox[8, 0.10541280823561201], 
+         DiskBox[9, 0.10541280823561201], DiskBox[10, 0.10541280823561201], 
+         DiskBox[11, 0.10541280823561201], DiskBox[12, 0.10541280823561201], 
+         DiskBox[13, 0.10541280823561201], DiskBox[14, 0.10541280823561201], 
+         DiskBox[15, 0.10541280823561201], DiskBox[16, 0.10541280823561201], 
+         DiskBox[17, 0.10541280823561201], DiskBox[18, 0.10541280823561201], 
+         DiskBox[19, 0.10541280823561201], DiskBox[20, 0.10541280823561201], 
+         DiskBox[21, 0.10541280823561201], DiskBox[22, 0.10541280823561201], 
+         DiskBox[23, 0.10541280823561201], DiskBox[24, 0.10541280823561201], 
+         DiskBox[25, 0.10541280823561201], DiskBox[26, 0.10541280823561201], 
+         DiskBox[27, 0.10541280823561201], DiskBox[28, 0.10541280823561201], 
+         DiskBox[29, 0.10541280823561201], DiskBox[30, 0.10541280823561201], 
+         DiskBox[31, 0.10541280823561201], DiskBox[32, 0.10541280823561201], 
+         DiskBox[33, 0.10541280823561201], DiskBox[34, 0.10541280823561201], 
+         DiskBox[35, 0.10541280823561201], DiskBox[36, 0.10541280823561201], 
+         DiskBox[37, 0.10541280823561201], DiskBox[38, 0.10541280823561201], 
+         DiskBox[39, 0.10541280823561201], DiskBox[40, 0.10541280823561201], 
+         DiskBox[41, 0.10541280823561201], DiskBox[42, 0.10541280823561201], 
+         DiskBox[43, 0.10541280823561201], DiskBox[44, 0.10541280823561201], 
+         DiskBox[45, 0.10541280823561201], DiskBox[46, 0.10541280823561201], 
+         DiskBox[47, 0.10541280823561201], DiskBox[48, 0.10541280823561201], 
+         DiskBox[49, 0.10541280823561201], DiskBox[50, 0.10541280823561201], 
+         DiskBox[51, 0.10541280823561201], DiskBox[52, 0.10541280823561201], 
+         DiskBox[53, 0.10541280823561201], DiskBox[54, 0.10541280823561201], 
+         DiskBox[55, 0.10541280823561201], DiskBox[56, 0.10541280823561201], 
+         DiskBox[57, 0.10541280823561201], DiskBox[58, 0.10541280823561201], 
+         DiskBox[59, 0.10541280823561201], DiskBox[60, 0.10541280823561201], 
+         DiskBox[61, 0.10541280823561201], DiskBox[62, 0.10541280823561201], 
+         DiskBox[63, 0.10541280823561201], DiskBox[64, 0.10541280823561201], 
+         DiskBox[65, 0.10541280823561201], DiskBox[66, 0.10541280823561201], 
+         DiskBox[67, 0.10541280823561201], DiskBox[68, 0.10541280823561201], 
+         DiskBox[69, 0.10541280823561201], DiskBox[70, 0.10541280823561201], 
+         DiskBox[71, 0.10541280823561201], DiskBox[72, 0.10541280823561201], 
+         DiskBox[73, 0.10541280823561201], DiskBox[74, 0.10541280823561201], 
+         DiskBox[75, 0.10541280823561201], DiskBox[76, 0.10541280823561201], 
+         DiskBox[77, 0.10541280823561201], DiskBox[78, 0.10541280823561201], 
+         DiskBox[79, 0.10541280823561201], DiskBox[80, 0.10541280823561201], 
+         DiskBox[81, 0.10541280823561201], DiskBox[82, 0.10541280823561201], 
+         DiskBox[83, 0.10541280823561201], DiskBox[84, 0.10541280823561201], 
+         DiskBox[85, 0.10541280823561201], DiskBox[86, 0.10541280823561201], 
+         DiskBox[87, 0.10541280823561201], DiskBox[88, 0.10541280823561201], 
+         DiskBox[89, 0.10541280823561201], DiskBox[90, 0.10541280823561201], 
+         DiskBox[91, 0.10541280823561201], DiskBox[92, 0.10541280823561201], 
+         DiskBox[93, 0.10541280823561201], DiskBox[94, 0.10541280823561201], 
+         DiskBox[95, 0.10541280823561201], DiskBox[96, 0.10541280823561201], 
+         DiskBox[97, 0.10541280823561201], DiskBox[98, 0.10541280823561201], 
+         DiskBox[99, 0.10541280823561201], DiskBox[100, 0.10541280823561201], 
+         DiskBox[101, 0.10541280823561201], DiskBox[102, 0.10541280823561201],
+          DiskBox[103, 0.10541280823561201], 
+         DiskBox[104, 0.10541280823561201], DiskBox[105, 0.10541280823561201],
+          DiskBox[106, 0.10541280823561201], 
+         DiskBox[107, 0.10541280823561201], DiskBox[108, 0.10541280823561201],
+          DiskBox[109, 0.10541280823561201], 
+         DiskBox[110, 0.10541280823561201], DiskBox[111, 0.10541280823561201],
+          DiskBox[112, 0.10541280823561201], 
+         DiskBox[113, 0.10541280823561201], DiskBox[114, 0.10541280823561201],
+          DiskBox[115, 0.10541280823561201], 
+         DiskBox[116, 0.10541280823561201], DiskBox[117, 0.10541280823561201],
+          DiskBox[118, 0.10541280823561201], 
+         DiskBox[119, 0.10541280823561201], DiskBox[120, 0.10541280823561201],
+          DiskBox[121, 0.10541280823561201], 
+         DiskBox[122, 0.10541280823561201], DiskBox[123, 0.10541280823561201],
+          DiskBox[124, 0.10541280823561201], 
+         DiskBox[125, 0.10541280823561201], DiskBox[126, 0.10541280823561201],
+          DiskBox[127, 0.10541280823561201], 
+         DiskBox[128, 0.10541280823561201], DiskBox[129, 0.10541280823561201],
+          DiskBox[130, 0.10541280823561201], 
+         DiskBox[131, 0.10541280823561201], DiskBox[132, 0.10541280823561201],
+          DiskBox[133, 0.10541280823561201], 
+         DiskBox[134, 0.10541280823561201], DiskBox[135, 0.10541280823561201],
+          DiskBox[136, 0.10541280823561201], 
+         DiskBox[137, 0.10541280823561201], DiskBox[138, 0.10541280823561201],
+          DiskBox[139, 0.10541280823561201], 
+         DiskBox[140, 0.10541280823561201], DiskBox[141, 0.10541280823561201],
+          DiskBox[142, 0.10541280823561201], 
+         DiskBox[143, 0.10541280823561201], DiskBox[144, 0.10541280823561201],
+          DiskBox[145, 0.10541280823561201], 
+         DiskBox[146, 0.10541280823561201], DiskBox[147, 0.10541280823561201],
+          DiskBox[148, 0.10541280823561201], 
+         DiskBox[149, 0.10541280823561201], DiskBox[150, 0.10541280823561201],
+          DiskBox[151, 0.10541280823561201], 
+         DiskBox[152, 0.10541280823561201], DiskBox[153, 0.10541280823561201],
+          DiskBox[154, 0.10541280823561201], 
+         DiskBox[155, 0.10541280823561201], DiskBox[156, 0.10541280823561201],
+          DiskBox[157, 0.10541280823561201], 
+         DiskBox[158, 0.10541280823561201], DiskBox[159, 0.10541280823561201],
+          DiskBox[160, 0.10541280823561201], 
+         DiskBox[161, 0.10541280823561201], DiskBox[162, 0.10541280823561201],
+          DiskBox[163, 0.10541280823561201], 
+         DiskBox[164, 0.10541280823561201], DiskBox[165, 0.10541280823561201],
+          DiskBox[166, 0.10541280823561201], 
+         DiskBox[167, 0.10541280823561201], DiskBox[168, 0.10541280823561201],
+          DiskBox[169, 0.10541280823561201], 
+         DiskBox[170, 0.10541280823561201], DiskBox[171, 0.10541280823561201],
+          DiskBox[172, 0.10541280823561201], 
+         DiskBox[173, 0.10541280823561201], DiskBox[174, 0.10541280823561201],
+          DiskBox[175, 0.10541280823561201], 
+         DiskBox[176, 0.10541280823561201], DiskBox[177, 0.10541280823561201],
+          DiskBox[178, 0.10541280823561201], 
+         DiskBox[179, 0.10541280823561201], DiskBox[180, 0.10541280823561201],
+          DiskBox[181, 0.10541280823561201], 
+         DiskBox[182, 0.10541280823561201], DiskBox[183, 0.10541280823561201],
+          DiskBox[184, 0.10541280823561201], 
+         DiskBox[185, 0.10541280823561201], DiskBox[186, 0.10541280823561201],
+          DiskBox[187, 0.10541280823561201], 
+         DiskBox[188, 0.10541280823561201], DiskBox[189, 0.10541280823561201],
+          DiskBox[190, 0.10541280823561201], 
+         DiskBox[191, 0.10541280823561201], DiskBox[192, 0.10541280823561201],
+          DiskBox[193, 0.10541280823561201], 
+         DiskBox[194, 0.10541280823561201], DiskBox[195, 0.10541280823561201],
+          DiskBox[196, 0.10541280823561201], 
+         DiskBox[197, 0.10541280823561201], DiskBox[198, 0.10541280823561201],
+          DiskBox[199, 0.10541280823561201], 
+         DiskBox[200, 0.10541280823561201], DiskBox[201, 0.10541280823561201],
+          DiskBox[202, 0.10541280823561201], 
+         DiskBox[203, 0.10541280823561201], DiskBox[204, 0.10541280823561201],
+          DiskBox[205, 0.10541280823561201], 
+         DiskBox[206, 0.10541280823561201], DiskBox[207, 0.10541280823561201],
+          DiskBox[208, 0.10541280823561201], 
+         DiskBox[209, 0.10541280823561201], DiskBox[210, 0.10541280823561201],
+          DiskBox[211, 0.10541280823561201], 
+         DiskBox[212, 0.10541280823561201], DiskBox[213, 0.10541280823561201],
+          DiskBox[214, 0.10541280823561201], 
+         DiskBox[215, 0.10541280823561201], DiskBox[216, 0.10541280823561201],
+          DiskBox[217, 0.10541280823561201], 
+         DiskBox[218, 0.10541280823561201], DiskBox[219, 0.10541280823561201],
+          DiskBox[220, 0.10541280823561201], 
+         DiskBox[221, 0.10541280823561201], DiskBox[222, 0.10541280823561201],
+          DiskBox[223, 0.10541280823561201], 
+         DiskBox[224, 0.10541280823561201], DiskBox[225, 0.10541280823561201],
+          DiskBox[226, 0.10541280823561201], 
+         DiskBox[227, 0.10541280823561201], DiskBox[228, 0.10541280823561201],
+          DiskBox[229, 0.10541280823561201], 
+         DiskBox[230, 0.10541280823561201], DiskBox[231, 0.10541280823561201],
+          DiskBox[232, 0.10541280823561201], 
+         DiskBox[233, 0.10541280823561201], DiskBox[234, 0.10541280823561201],
+          DiskBox[235, 0.10541280823561201], 
+         DiskBox[236, 0.10541280823561201], DiskBox[237, 0.10541280823561201],
+          DiskBox[238, 0.10541280823561201], 
+         DiskBox[239, 0.10541280823561201], DiskBox[240, 0.10541280823561201],
+          DiskBox[241, 0.10541280823561201], 
+         DiskBox[242, 0.10541280823561201], 
+         DiskBox[243, 0.10541280823561201]}}]],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "ExamplesOutput",
+ CellLabel->"Out[79]=",ExpressionUUID->"307f4b72-16ef-4127-9846-b52200e4757f"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Advance", "ExampleSection",ExpressionUUID->"7c120ef9-1ed8-4ec2-9546-5099359bf85c"],
+
+Cell["\:6c49\:8bfa\:56fe\:5177\:6709\:81ea\:76f8\:4f3c\:7ed3\:6784.", \
+"ExampleText",ExpressionUUID->"e537ccdb-e195-4b1d-9153-97c1e12f1a0d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"HanoiGraph", "[", 
+     RowBox[{"#", ",", 
+      RowBox[{"GraphLayout", "\[Rule]", "\"\<SpringEmbedding\>\""}]}], "]"}], 
+    "&"}], "/@", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}]}], "//", 
+  "Multicolumn"}]], "ExamplesInput",
+ CellLabel->"In[27]:=",ExpressionUUID->"9aec283a-605f-4984-9665-94cdd7e4d595"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     GraphicsBox[
+      NamespaceBox["NetworkGraphics",
+       DynamicModuleBox[{Typeset`graph = HoldComplete[
+         Graph[{{Deus`Private`Package`c}, {Deus`Private`Package`a}, {
+           Deus`Private`Package`b}}, {Null, {{1, 2}, {2, 3}, {3, 1}}}, {
+          GraphLayout -> "SpringEmbedding"}]]}, 
+        TagBox[
+         GraphicsGroupBox[
+          GraphicsComplexBox[{{0., 0.007245968777091161}, {0.5062620668607208,
+            0.8696256529477526}, {0.9999737476240027, 0.}}, {
+            {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+             {Arrowheads[0.], ArrowBox[{1, 2}, 0.012729665807253555`]}, 
+             {Arrowheads[0.], ArrowBox[{1, 3}, 0.012729665807253555`]}, 
+             {Arrowheads[0.], ArrowBox[{2, 3}, 0.012729665807253555`]}}, 
+            {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+             DiskBox[1, 0.012729665807253555], 
+             DiskBox[2, 0.012729665807253555], 
+             DiskBox[3, 0.012729665807253555]}}]],
+         MouseAppearanceTag["NetworkGraphics"]],
+        AllowKernelInitialization->False]],
+      DefaultBaseStyle->{
+       "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> 
+        Hue[0.8, 1., 0.6]},
+      FormatType->TraditionalForm,
+      FrameTicks->None], 
+     GraphicsBox[
+      NamespaceBox["NetworkGraphics",
+       DynamicModuleBox[{Typeset`graph = HoldComplete[
+         Graph[{{
+           Deus`Private`Package`c, Deus`Private`Package`a, 
+            Deus`Private`Package`a}, {
+           Deus`Private`Package`a, Deus`Private`Package`a, 
+            Deus`Private`Package`a}, {
+           Deus`Private`Package`b, Deus`Private`Package`a, 
+            Deus`Private`Package`a}, {
+           Deus`Private`Package`c, Deus`Private`Package`b, 
+            Deus`Private`Package`a}, {
+           Deus`Private`Package`a, Deus`Private`Package`b, 
+            Deus`Private`Package`a}, {
+           Deus`Private`Package`b, Deus`Private`Package`b, 
+            Deus`Private`Package`a}, {
+           Deus`Private`Package`c, Deus`Private`Package`c, 
+            Deus`Private`Package`a}, {
+           Deus`Private`Package`a, Deus`Private`Package`c, 
+            Deus`Private`Package`a}, {
+           Deus`Private`Package`b, Deus`Private`Package`c, 
+            Deus`Private`Package`a}, {
+           Deus`Private`Package`c, Deus`Private`Package`a, 
+            Deus`Private`Package`b}, {
+           Deus`Private`Package`a, Deus`Private`Package`a, 
+            Deus`Private`Package`b}, {
+           Deus`Private`Package`b, Deus`Private`Package`a, 
+            Deus`Private`Package`b}, {
+           Deus`Private`Package`c, Deus`Private`Package`b, 
+            Deus`Private`Package`b}, {
+           Deus`Private`Package`a, Deus`Private`Package`b, 
+            Deus`Private`Package`b}, {
+           Deus`Private`Package`b, Deus`Private`Package`b, 
+            Deus`Private`Package`b}, {
+           Deus`Private`Package`c, Deus`Private`Package`c, 
+            Deus`Private`Package`b}, {
+           Deus`Private`Package`a, Deus`Private`Package`c, 
+            Deus`Private`Package`b}, {
+           Deus`Private`Package`b, Deus`Private`Package`c, 
+            Deus`Private`Package`b}, {
+           Deus`Private`Package`c, Deus`Private`Package`a, 
+            Deus`Private`Package`c}, {
+           Deus`Private`Package`a, Deus`Private`Package`a, 
+            Deus`Private`Package`c}, {
+           Deus`Private`Package`b, Deus`Private`Package`a, 
+            Deus`Private`Package`c}, {
+           Deus`Private`Package`c, Deus`Private`Package`b, 
+            Deus`Private`Package`c}, {
+           Deus`Private`Package`a, Deus`Private`Package`b, 
+            Deus`Private`Package`c}, {
+           Deus`Private`Package`b, Deus`Private`Package`b, 
+            Deus`Private`Package`c}, {
+           Deus`Private`Package`c, Deus`Private`Package`c, 
+            Deus`Private`Package`c}, {
+           Deus`Private`Package`a, Deus`Private`Package`c, 
+            Deus`Private`Package`c}, {
+           Deus`Private`Package`b, Deus`Private`Package`c, 
+            Deus`Private`Package`c}}, {
+          Null, {{1, 2}, {2, 3}, {3, 1}, {4, 5}, {5, 6}, {6, 4}, {7, 8}, {8, 
+           9}, {9, 7}, {9, 3}, {1, 4}, {5, 8}, {10, 11}, {11, 12}, {12, 10}, {
+           13, 14}, {14, 15}, {15, 13}, {16, 17}, {17, 18}, {18, 16}, {18, 
+           12}, {10, 13}, {14, 17}, {19, 20}, {20, 21}, {21, 19}, {22, 23}, {
+           23, 24}, {24, 22}, {25, 26}, {26, 27}, {27, 25}, {27, 21}, {19, 
+           22}, {23, 26}, {24, 6}, {7, 16}, {11, 20}}}, {
+          GraphLayout -> "SpringEmbedding"}]]}, 
+        TagBox[GraphicsGroupBox[GraphicsComplexBox[CompressedData["
+1:eJwBwQE+/iFib1JlAgAAABsAAAACAAAAaClsJE9u7D/gpgyfLJzDPwAAAAAA
+AAAAJKvfcL+q1j/oTH1xw+/RPw3m99a5pPM/ELV/vBbB/j9AVNe8MFumP44D
+gsIU8wBA6M0QqLdj7T9AKifhw7AGQEB7JDCHus4/CDnI9hS09T/C/XvqXeYG
+QEXErzy7EPk/gaIe+LtW/j+EgMm9vfrmP8RnvgSPagFA3q6GiHmEEkBWpylH
+iGMSQHy9SrE6lBNANIaOH+ucDUBBKQCZSaQPQKbXdyV6BxBA1DEyqikhEEA+
+RT+/pNAVQBAYFkNCYQZANkZi8hHlFUB2JEDsXGsLQKyQx2YRjRhAjAo0OrEj
+/j/KKb+sCPQNQF6Fy7hvZAFAYfLQG2mKEkAoViQecqQGQPrBnOWIGhBAooSX
+BTmuFEDDCGb0h4X9P5iA7YY8lRVAbhWBjadwBkB4Z6+dzhkYQMJnT7IV4QBA
+396hrBZkEkBKVhWZ0xTsP7k22dIlGBNAAAAAAAAAAAB3UOc/rOYOQBAUP8qD
+J8w/wNNTgMXVGkA40RFm58DRPw6ImKB0QRdAYH6G2YNWtz9ycTQLjcYZQHJR
++9pwc/I/ViG69A==
+           "], {
+            {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+             {Arrowheads[0.], ArrowBox[{1, 2}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{1, 3}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{1, 4}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{2, 3}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{3, 9}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{4, 5}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{4, 6}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{5, 6}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{5, 8}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{6, 24}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{7, 8}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{7, 9}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{7, 16}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{8, 9}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{10, 11}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{10, 12}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{10, 13}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{11, 12}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{11, 20}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{12, 18}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{13, 14}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{13, 15}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{14, 15}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{14, 17}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{16, 17}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{16, 18}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{17, 18}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{19, 20}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{19, 21}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{19, 22}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{20, 21}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{21, 27}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{22, 23}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{22, 24}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{23, 24}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{23, 26}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{25, 26}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{25, 27}, 0.052002871294740696`]}, 
+             {Arrowheads[0.], ArrowBox[{26, 27}, 0.052002871294740696`]}}, 
+            {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+             DiskBox[1, 0.052002871294740696], 
+             DiskBox[2, 0.052002871294740696], 
+             DiskBox[3, 0.052002871294740696], 
+             DiskBox[4, 0.052002871294740696], 
+             DiskBox[5, 0.052002871294740696], 
+             DiskBox[6, 0.052002871294740696], 
+             DiskBox[7, 0.052002871294740696], 
+             DiskBox[8, 0.052002871294740696], 
+             DiskBox[9, 0.052002871294740696], 
+             DiskBox[10, 0.052002871294740696], 
+             DiskBox[11, 0.052002871294740696], 
+             DiskBox[12, 0.052002871294740696], 
+             DiskBox[13, 0.052002871294740696], 
+             DiskBox[14, 0.052002871294740696], 
+             DiskBox[15, 0.052002871294740696], 
+             DiskBox[16, 0.052002871294740696], 
+             DiskBox[17, 0.052002871294740696], 
+             DiskBox[18, 0.052002871294740696], 
+             DiskBox[19, 0.052002871294740696], 
+             DiskBox[20, 0.052002871294740696], 
+             DiskBox[21, 0.052002871294740696], 
+             DiskBox[22, 0.052002871294740696], 
+             DiskBox[23, 0.052002871294740696], 
+             DiskBox[24, 0.052002871294740696], 
+             DiskBox[25, 0.052002871294740696], 
+             DiskBox[26, 0.052002871294740696], 
+             DiskBox[27, 0.052002871294740696]}}]],
+         MouseAppearanceTag["NetworkGraphics"]],
+        AllowKernelInitialization->False]],
+      DefaultBaseStyle->{
+       "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> 
+        Hue[0.8, 1., 0.6]},
+      FormatType->TraditionalForm,
+      FrameTicks->None]},
+    {
+     GraphicsBox[
+      NamespaceBox["NetworkGraphics",
+       DynamicModuleBox[{Typeset`graph = HoldComplete[
+         Graph[{{Deus`Private`Package`c, Deus`Private`Package`a}, {
+           Deus`Private`Package`a, Deus`Private`Package`a}, {
+           Deus`Private`Package`b, Deus`Private`Package`a}, {
+           Deus`Private`Package`c, Deus`Private`Package`b}, {
+           Deus`Private`Package`a, Deus`Private`Package`b}, {
+           Deus`Private`Package`b, Deus`Private`Package`b}, {
+           Deus`Private`Package`c, Deus`Private`Package`c}, {
+           Deus`Private`Package`a, Deus`Private`Package`c}, {
+           Deus`Private`Package`b, Deus`Private`Package`c}}, {
+          Null, {{1, 2}, {2, 3}, {3, 1}, {4, 5}, {5, 6}, {6, 4}, {7, 8}, {8, 
+           9}, {9, 7}, {9, 3}, {1, 4}, {5, 8}}}, {
+          GraphLayout -> "SpringEmbedding"}]]}, 
+        TagBox[
+         GraphicsGroupBox[
+          GraphicsComplexBox[{{0.8265221712708418, 1.8851766045067042`}, {
+           1.3829160291414202`, 2.594521494198127}, {1.9572000732935413`, 
+           1.8995811124100404`}, {0.3146940026672962, 0.9719935326973447}, {
+           0.8925076234525116, 0.}, {0., 0.1271787705787134}, {
+           2.828239493066575, 0.16320971985056942`}, {1.9392614462467204`, 
+           0.013335339521919565`}, {2.492125727484855, 0.9997333801225251}}, {
+            {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+             {Arrowheads[0.], ArrowBox[{1, 2}, 0.028994977000485783`]}, 
+             {Arrowheads[0.], ArrowBox[{1, 3}, 0.028994977000485783`]}, 
+             {Arrowheads[0.], ArrowBox[{1, 4}, 0.028994977000485783`]}, 
+             {Arrowheads[0.], ArrowBox[{2, 3}, 0.028994977000485783`]}, 
+             {Arrowheads[0.], ArrowBox[{3, 9}, 0.028994977000485783`]}, 
+             {Arrowheads[0.], ArrowBox[{4, 5}, 0.028994977000485783`]}, 
+             {Arrowheads[0.], ArrowBox[{4, 6}, 0.028994977000485783`]}, 
+             {Arrowheads[0.], ArrowBox[{5, 6}, 0.028994977000485783`]}, 
+             {Arrowheads[0.], ArrowBox[{5, 8}, 0.028994977000485783`]}, 
+             {Arrowheads[0.], ArrowBox[{7, 8}, 0.028994977000485783`]}, 
+             {Arrowheads[0.], ArrowBox[{7, 9}, 0.028994977000485783`]}, 
+             {Arrowheads[0.], ArrowBox[{8, 9}, 0.028994977000485783`]}}, 
+            {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+             DiskBox[1, 0.028994977000485783], 
+             DiskBox[2, 0.028994977000485783], 
+             DiskBox[3, 0.028994977000485783], 
+             DiskBox[4, 0.028994977000485783], 
+             DiskBox[5, 0.028994977000485783], 
+             DiskBox[6, 0.028994977000485783], 
+             DiskBox[7, 0.028994977000485783], 
+             DiskBox[8, 0.028994977000485783], 
+             DiskBox[9, 0.028994977000485783]}}]],
+         MouseAppearanceTag["NetworkGraphics"]],
+        AllowKernelInitialization->False]],
+      DefaultBaseStyle->{
+       "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> 
+        Hue[0.8, 1., 0.6]},
+      FormatType->TraditionalForm,
+      FrameTicks->None], 
+     GraphicsBox[
+      NamespaceBox["NetworkGraphics",
+       DynamicModuleBox[{Typeset`graph = HoldComplete[
+         Graph[{{
+           Deus`Private`Package`c, Deus`Private`Package`a, 
+            Deus`Private`Package`a, Deus`Private`Package`a}, {
+           Deus`Private`Package`a, Deus`Private`Package`a, 
+            Deus`Private`Package`a, Deus`Private`Package`a}, {
+           Deus`Private`Package`b, Deus`Private`Package`a, 
+            Deus`Private`Package`a, Deus`Private`Package`a}, {
+           Deus`Private`Package`c, Deus`Private`Package`b, 
+            Deus`Private`Package`a, Deus`Private`Package`a}, {
+           Deus`Private`Package`a, Deus`Private`Package`b, 
+            Deus`Private`Package`a, Deus`Private`Package`a}, {
+           Deus`Private`Package`b, Deus`Private`Package`b, 
+            Deus`Private`Package`a, Deus`Private`Package`a}, {
+           Deus`Private`Package`c, Deus`Private`Package`c, 
+            Deus`Private`Package`a, Deus`Private`Package`a}, {
+           Deus`Private`Package`a, Deus`Private`Package`c, 
+            Deus`Private`Package`a, Deus`Private`Package`a}, {
+           Deus`Private`Package`b, Deus`Private`Package`c, 
+            Deus`Private`Package`a, Deus`Private`Package`a}, {
+           Deus`Private`Package`c, Deus`Private`Package`a, 
+            Deus`Private`Package`b, Deus`Private`Package`a}, {
+           Deus`Private`Package`a, Deus`Private`Package`a, 
+            Deus`Private`Package`b, Deus`Private`Package`a}, {
+           Deus`Private`Package`b, Deus`Private`Package`a, 
+            Deus`Private`Package`b, Deus`Private`Package`a}, {
+           Deus`Private`Package`c, Deus`Private`Package`b, 
+            Deus`Private`Package`b, Deus`Private`Package`a}, {
+           Deus`Private`Package`a, Deus`Private`Package`b, 
+            Deus`Private`Package`b, Deus`Private`Package`a}, {
+           Deus`Private`Package`b, Deus`Private`Package`b, 
+            Deus`Private`Package`b, Deus`Private`Package`a}, {
+           Deus`Private`Package`c, Deus`Private`Package`c, 
+            Deus`Private`Package`b, Deus`Private`Package`a}, {
+           Deus`Private`Package`a, Deus`Private`Package`c, 
+            Deus`Private`Package`b, Deus`Private`Package`a}, {
+           Deus`Private`Package`b, Deus`Private`Package`c, 
+            Deus`Private`Package`b, Deus`Private`Package`a}, {
+           Deus`Private`Package`c, Deus`Private`Package`a, 
+            Deus`Private`Package`c, Deus`Private`Package`a}, {
+           Deus`Private`Package`a, Deus`Private`Package`a, 
+            Deus`Private`Package`c, Deus`Private`Package`a}, {
+           Deus`Private`Package`b, Deus`Private`Package`a, 
+            Deus`Private`Package`c, Deus`Private`Package`a}, {
+           Deus`Private`Package`c, Deus`Private`Package`b, 
+            Deus`Private`Package`c, Deus`Private`Package`a}, {
+           Deus`Private`Package`a, Deus`Private`Package`b, 
+            Deus`Private`Package`c, Deus`Private`Package`a}, {
+           Deus`Private`Package`b, Deus`Private`Package`b, 
+            Deus`Private`Package`c, Deus`Private`Package`a}, {
+           Deus`Private`Package`c, Deus`Private`Package`c, 
+            Deus`Private`Package`c, Deus`Private`Package`a}, {
+           Deus`Private`Package`a, Deus`Private`Package`c, 
+            Deus`Private`Package`c, Deus`Private`Package`a}, {
+           Deus`Private`Package`b, Deus`Private`Package`c, 
+            Deus`Private`Package`c, Deus`Private`Package`a}, {
+           Deus`Private`Package`c, Deus`Private`Package`a, 
+            Deus`Private`Package`a, Deus`Private`Package`b}, {
+           Deus`Private`Package`a, Deus`Private`Package`a, 
+            Deus`Private`Package`a, Deus`Private`Package`b}, {
+           Deus`Private`Package`b, Deus`Private`Package`a, 
+            Deus`Private`Package`a, Deus`Private`Package`b}, {
+           Deus`Private`Package`c, Deus`Private`Package`b, 
+            Deus`Private`Package`a, Deus`Private`Package`b}, {
+           Deus`Private`Package`a, Deus`Private`Package`b, 
+            Deus`Private`Package`a, Deus`Private`Package`b}, {
+           Deus`Private`Package`b, Deus`Private`Package`b, 
+            Deus`Private`Package`a, Deus`Private`Package`b}, {
+           Deus`Private`Package`c, Deus`Private`Package`c, 
+            Deus`Private`Package`a, Deus`Private`Package`b}, {
+           Deus`Private`Package`a, Deus`Private`Package`c, 
+            Deus`Private`Package`a, Deus`Private`Package`b}, {
+           Deus`Private`Package`b, Deus`Private`Package`c, 
+            Deus`Private`Package`a, Deus`Private`Package`b}, {
+           Deus`Private`Package`c, Deus`Private`Package`a, 
+            Deus`Private`Package`b, Deus`Private`Package`b}, {
+           Deus`Private`Package`a, Deus`Private`Package`a, 
+            Deus`Private`Package`b, Deus`Private`Package`b}, {
+           Deus`Private`Package`b, Deus`Private`Package`a, 
+            Deus`Private`Package`b, Deus`Private`Package`b}, {
+           Deus`Private`Package`c, Deus`Private`Package`b, 
+            Deus`Private`Package`b, Deus`Private`Package`b}, {
+           Deus`Private`Package`a, Deus`Private`Package`b, 
+            Deus`Private`Package`b, Deus`Private`Package`b}, {
+           Deus`Private`Package`b, Deus`Private`Package`b, 
+            Deus`Private`Package`b, Deus`Private`Package`b}, {
+           Deus`Private`Package`c, Deus`Private`Package`c, 
+            Deus`Private`Package`b, Deus`Private`Package`b}, {
+           Deus`Private`Package`a, Deus`Private`Package`c, 
+            Deus`Private`Package`b, Deus`Private`Package`b}, {
+           Deus`Private`Package`b, Deus`Private`Package`c, 
+            Deus`Private`Package`b, Deus`Private`Package`b}, {
+           Deus`Private`Package`c, Deus`Private`Package`a, 
+            Deus`Private`Package`c, Deus`Private`Package`b}, {
+           Deus`Private`Package`a, Deus`Private`Package`a, 
+            Deus`Private`Package`c, Deus`Private`Package`b}, {
+           Deus`Private`Package`b, Deus`Private`Package`a, 
+            Deus`Private`Package`c, Deus`Private`Package`b}, {
+           Deus`Private`Package`c, Deus`Private`Package`b, 
+            Deus`Private`Package`c, Deus`Private`Package`b}, {
+           Deus`Private`Package`a, Deus`Private`Package`b, 
+            Deus`Private`Package`c, Deus`Private`Package`b}, {
+           Deus`Private`Package`b, Deus`Private`Package`b, 
+            Deus`Private`Package`c, Deus`Private`Package`b}, {
+           Deus`Private`Package`c, Deus`Private`Package`c, 
+            Deus`Private`Package`c, Deus`Private`Package`b}, {
+           Deus`Private`Package`a, Deus`Private`Package`c, 
+            Deus`Private`Package`c, Deus`Private`Package`b}, {
+           Deus`Private`Package`b, Deus`Private`Package`c, 
+            Deus`Private`Package`c, Deus`Private`Package`b}, {
+           Deus`Private`Package`c, Deus`Private`Package`a, 
+            Deus`Private`Package`a, Deus`Private`Package`c}, {
+           Deus`Private`Package`a, Deus`Private`Package`a, 
+            Deus`Private`Package`a, Deus`Private`Package`c}, {
+           Deus`Private`Package`b, Deus`Private`Package`a, 
+            Deus`Private`Package`a, Deus`Private`Package`c}, {
+           Deus`Private`Package`c, Deus`Private`Package`b, 
+            Deus`Private`Package`a, Deus`Private`Package`c}, {
+           Deus`Private`Package`a, Deus`Private`Package`b, 
+            Deus`Private`Package`a, Deus`Private`Package`c}, {
+           Deus`Private`Package`b, Deus`Private`Package`b, 
+            Deus`Private`Package`a, Deus`Private`Package`c}, {
+           Deus`Private`Package`c, Deus`Private`Package`c, 
+            Deus`Private`Package`a, Deus`Private`Package`c}, {
+           Deus`Private`Package`a, Deus`Private`Package`c, 
+            Deus`Private`Package`a, Deus`Private`Package`c}, {
+           Deus`Private`Package`b, Deus`Private`Package`c, 
+            Deus`Private`Package`a, Deus`Private`Package`c}, {
+           Deus`Private`Package`c, Deus`Private`Package`a, 
+            Deus`Private`Package`b, Deus`Private`Package`c}, {
+           Deus`Private`Package`a, Deus`Private`Package`a, 
+            Deus`Private`Package`b, Deus`Private`Package`c}, {
+           Deus`Private`Package`b, Deus`Private`Package`a, 
+            Deus`Private`Package`b, Deus`Private`Package`c}, {
+           Deus`Private`Package`c, Deus`Private`Package`b, 
+            Deus`Private`Package`b, Deus`Private`Package`c}, {
+           Deus`Private`Package`a, Deus`Private`Package`b, 
+            Deus`Private`Package`b, Deus`Private`Package`c}, {
+           Deus`Private`Package`b, Deus`Private`Package`b, 
+            Deus`Private`Package`b, Deus`Private`Package`c}, {
+           Deus`Private`Package`c, Deus`Private`Package`c, 
+            Deus`Private`Package`b, Deus`Private`Package`c}, {
+           Deus`Private`Package`a, Deus`Private`Package`c, 
+            Deus`Private`Package`b, Deus`Private`Package`c}, {
+           Deus`Private`Package`b, Deus`Private`Package`c, 
+            Deus`Private`Package`b, Deus`Private`Package`c}, {
+           Deus`Private`Package`c, Deus`Private`Package`a, 
+            Deus`Private`Package`c, Deus`Private`Package`c}, {
+           Deus`Private`Package`a, Deus`Private`Package`a, 
+            Deus`Private`Package`c, Deus`Private`Package`c}, {
+           Deus`Private`Package`b, Deus`Private`Package`a, 
+            Deus`Private`Package`c, Deus`Private`Package`c}, {
+           Deus`Private`Package`c, Deus`Private`Package`b, 
+            Deus`Private`Package`c, Deus`Private`Package`c}, {
+           Deus`Private`Package`a, Deus`Private`Package`b, 
+            Deus`Private`Package`c, Deus`Private`Package`c}, {
+           Deus`Private`Package`b, Deus`Private`Package`b, 
+            Deus`Private`Package`c, Deus`Private`Package`c}, {
+           Deus`Private`Package`c, Deus`Private`Package`c, 
+            Deus`Private`Package`c, Deus`Private`Package`c}, {
+           Deus`Private`Package`a, Deus`Private`Package`c, 
+            Deus`Private`Package`c, Deus`Private`Package`c}, {
+           Deus`Private`Package`b, Deus`Private`Package`c, 
+            Deus`Private`Package`c, Deus`Private`Package`c}}, {
+          Null, {{1, 2}, {2, 3}, {3, 1}, {4, 5}, {5, 6}, {6, 4}, {7, 8}, {8, 
+           9}, {9, 7}, {9, 3}, {1, 4}, {5, 8}, {10, 11}, {11, 12}, {12, 10}, {
+           13, 14}, {14, 15}, {15, 13}, {16, 17}, {17, 18}, {18, 16}, {18, 
+           12}, {10, 13}, {14, 17}, {19, 20}, {20, 21}, {21, 19}, {22, 23}, {
+           23, 24}, {24, 22}, {25, 26}, {26, 27}, {27, 25}, {27, 21}, {19, 
+           22}, {23, 26}, {24, 6}, {7, 16}, {11, 20}, {28, 29}, {29, 30}, {30,
+            28}, {31, 32}, {32, 33}, {33, 31}, {34, 35}, {35, 36}, {36, 34}, {
+           36, 30}, {28, 31}, {32, 35}, {37, 38}, {38, 39}, {39, 37}, {40, 
+           41}, {41, 42}, {42, 40}, {43, 44}, {44, 45}, {45, 43}, {45, 39}, {
+           37, 40}, {41, 44}, {46, 47}, {47, 48}, {48, 46}, {49, 50}, {50, 
+           51}, {51, 49}, {52, 53}, {53, 54}, {54, 52}, {54, 48}, {46, 49}, {
+           50, 53}, {51, 33}, {34, 43}, {38, 47}, {55, 56}, {56, 57}, {57, 
+           55}, {58, 59}, {59, 60}, {60, 58}, {61, 62}, {62, 63}, {63, 61}, {
+           63, 57}, {55, 58}, {59, 62}, {64, 65}, {65, 66}, {66, 64}, {67, 
+           68}, {68, 69}, {69, 67}, {70, 71}, {71, 72}, {72, 70}, {72, 66}, {
+           64, 67}, {68, 71}, {73, 74}, {74, 75}, {75, 73}, {76, 77}, {77, 
+           78}, {78, 76}, {79, 80}, {80, 81}, {81, 79}, {81, 75}, {73, 76}, {
+           77, 80}, {78, 60}, {61, 70}, {65, 74}, {69, 15}, {25, 52}, {29, 
+           56}}}, {GraphLayout -> "SpringEmbedding"}]]}, 
+        TagBox[GraphicsGroupBox[GraphicsComplexBox[CompressedData["
+1:eJw1knk0FHgAx4cacg1mHE0MM+bAONtUtpXft6gnRSgRspokynNV2paYsi9X
+q7abip4r106ObkpyVc7NOlKOCrVoiJKWtPa93e973/f97/O+3/e+HFGo225Z
+CoXiOu9/8+ibbyemtumgJ8ZmZBHTGCvM+1jFjSzQFkrsLoULEcRrYxRz2Yj0
+czIeWmKM9q3eqTcGFoORYPXglxBDNGTwtpxL0YH5M2lMg40ApZWMvSXXtSHd
+G2IryeJj5J1sZ9ksB8Mf87m3rvEx+olWc1KZDVHv4OnHtgK8FVqNPv6Rg8YI
+lwxBhCFWSQanlQo4UPHpUeJuYKHR0232eKM+HOp9Z1e/ZMG2uUGU5MyBwDFk
+49UdbNS9yh2IecoFSb1bxixnIY4+ZAJ7Pup/td3nKGLjQLXjgpJCPio+hLuu
+7NPFXIBrqak5Fx3VEe7lb7m47+QdmR/Og+RkgPd6LwMwrPrXSfMNUL7nZ4qZ
+wABBgcWaVAYTrmb6/DOebJjv171vOKgDjqZT9LIOFvSqHSsSfBdjXV3gel8b
+FhLGFCPjvbXgUtpb4s8xgNuzRsXPT+kokGbZprobYPPVcu2kzZqorxni4w0X
+t9vbmGxPNTiO80RpXbq4SerD24zUEctX3f56fl9Ak8thfz0NeE2UfWH/zsKh
+c3klWZOL0e2VnTyRMkEOhzpXFZ/Vgbgqzz9hbQ/xn/207GKTNh6mFPWlz1SR
+FtnmnItLtVE4axP8XkUG4heaYy7PGZizEPutyfxKzO6IxUtGNSBgqiw8fUoO
+hsO5AdYrVCHupjZ90Kwhup2rOmvZdNz40l62zGKYSONudoyfYoDyn9TOCy9d
+pg6RDsUDWz4nyuDjTgeHlzKfSEJ28pF938vj1NrMZovL08QybaBvJnOOiJU9
+UiqT/iAFRDf4r5FJ0lp8JXowcpTA+rbLmGcd+Z/Lpvpq/UbtItJnLjzJIzmw
+YxMnZKOaSX9XL7OrYI5QqD7PF6YWkbCkqLyBdgrsh9MDmNXvScrbjFA9Zype
+dTor/LleDWp5ZXHN/rPEKm30nf0LGkqHVPwZTBnMhAxJCoUM8KvO6PZa0BAf
+F7vbZIcqwpT0yP4H6nA47rj8oCwdHQsiDm+ZoePotYAGRTcVTAepe2hvVcZL
+dzMzOVMmvp0OunookYbwFu27rtGaELl1x352l8PZ4pCGC8la6LNO25TewoGf
+zaaoIN9qIt6mpZHcrY9xk2HLJ5U9ZCqzVrLHhoPgRs6SE80TZOresYfLR7mg
+qAk6PzwREwXR7jvSbB5mc/y3vk4YJkvHc8Po89dh037KPpNSQ8os+s5X2nFx
+JGODcm2hHEQb5aMkT7iwKSqiund8JR+ZgVQFPQMs+Bb3Uc5CBq050gclYmOo
+e2Gym8lAvkZUg3C5ELG1liK9mzSEpuv0W4UYwTW+1W5olRq23ZPE2640gpWH
+NN73qBamVBLv0owF0I/h9v0dpQmLBiHDqUKAOKPbJwyFTAQ2ZKe1ruFhWtmQ
+fmiXChLb8kbSB3mo3n7d6IdFdOyoCOt+ZCWAUrtCloOPKgy0Wt/M5QrxiGkd
+zfKcIyH5bhvs9ExwK7CidIQmj8wLHc5u3qboCgwMNnOXAaNuYuLifP8aycFU
+RZ/35GmFZb98jzEoSWPlTaY5JG/PotgWWSOIYx9+p1ncRHYNb94eV2aG4iv5
+zjcm28mx1bQBvxET9Nes2GluX02MZfw9VpqYQXknk6Gxf5L8A34vLz8=
+           "], {
+            {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+             {Arrowheads[0.], ArrowBox[{1, 2}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{1, 3}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{1, 4}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{2, 3}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{3, 9}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{4, 5}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{4, 6}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{5, 6}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{5, 8}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{6, 24}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{7, 8}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{7, 9}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{7, 16}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{8, 9}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{10, 11}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{10, 12}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{10, 13}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{11, 12}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{11, 20}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{12, 18}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{13, 14}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{13, 15}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{14, 15}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{14, 17}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{15, 69}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{16, 17}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{16, 18}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{17, 18}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{19, 20}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{19, 21}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{19, 22}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{20, 21}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{21, 27}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{22, 23}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{22, 24}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{23, 24}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{23, 26}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{25, 26}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{25, 27}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{25, 52}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{26, 27}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{28, 29}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{28, 30}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{28, 31}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{29, 30}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{29, 56}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{30, 36}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{31, 32}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{31, 33}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{32, 33}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{32, 35}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{33, 51}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{34, 35}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{34, 36}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{34, 43}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{35, 36}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{37, 38}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{37, 39}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{37, 40}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{38, 39}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{38, 47}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{39, 45}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{40, 41}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{40, 42}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{41, 42}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{41, 44}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{43, 44}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{43, 45}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{44, 45}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{46, 47}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{46, 48}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{46, 49}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{47, 48}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{48, 54}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{49, 50}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{49, 51}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{50, 51}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{50, 53}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{52, 53}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{52, 54}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{53, 54}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{55, 56}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{55, 57}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{55, 58}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{56, 57}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{57, 63}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{58, 59}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{58, 60}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{59, 60}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{59, 62}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{60, 78}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{61, 62}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{61, 63}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{61, 70}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{62, 63}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{64, 65}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{64, 66}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{64, 67}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{65, 66}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{65, 74}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{66, 72}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{67, 68}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{67, 69}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{68, 69}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{68, 71}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{70, 71}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{70, 72}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{71, 72}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{73, 74}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{73, 75}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{73, 76}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{74, 75}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{75, 81}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{76, 77}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{76, 78}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{77, 78}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{77, 80}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{79, 80}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{79, 81}, 0.079948960957173]}, 
+             {Arrowheads[0.], ArrowBox[{80, 81}, 0.079948960957173]}}, 
+            {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+             DiskBox[1, 0.079948960957173], DiskBox[2, 0.079948960957173], 
+             DiskBox[3, 0.079948960957173], DiskBox[4, 0.079948960957173], 
+             DiskBox[5, 0.079948960957173], DiskBox[6, 0.079948960957173], 
+             DiskBox[7, 0.079948960957173], DiskBox[8, 0.079948960957173], 
+             DiskBox[9, 0.079948960957173], DiskBox[10, 0.079948960957173], 
+             DiskBox[11, 0.079948960957173], DiskBox[12, 0.079948960957173], 
+             DiskBox[13, 0.079948960957173], DiskBox[14, 0.079948960957173], 
+             DiskBox[15, 0.079948960957173], DiskBox[16, 0.079948960957173], 
+             DiskBox[17, 0.079948960957173], DiskBox[18, 0.079948960957173], 
+             DiskBox[19, 0.079948960957173], DiskBox[20, 0.079948960957173], 
+             DiskBox[21, 0.079948960957173], DiskBox[22, 0.079948960957173], 
+             DiskBox[23, 0.079948960957173], DiskBox[24, 0.079948960957173], 
+             DiskBox[25, 0.079948960957173], DiskBox[26, 0.079948960957173], 
+             DiskBox[27, 0.079948960957173], DiskBox[28, 0.079948960957173], 
+             DiskBox[29, 0.079948960957173], DiskBox[30, 0.079948960957173], 
+             DiskBox[31, 0.079948960957173], DiskBox[32, 0.079948960957173], 
+             DiskBox[33, 0.079948960957173], DiskBox[34, 0.079948960957173], 
+             DiskBox[35, 0.079948960957173], DiskBox[36, 0.079948960957173], 
+             DiskBox[37, 0.079948960957173], DiskBox[38, 0.079948960957173], 
+             DiskBox[39, 0.079948960957173], DiskBox[40, 0.079948960957173], 
+             DiskBox[41, 0.079948960957173], DiskBox[42, 0.079948960957173], 
+             DiskBox[43, 0.079948960957173], DiskBox[44, 0.079948960957173], 
+             DiskBox[45, 0.079948960957173], DiskBox[46, 0.079948960957173], 
+             DiskBox[47, 0.079948960957173], DiskBox[48, 0.079948960957173], 
+             DiskBox[49, 0.079948960957173], DiskBox[50, 0.079948960957173], 
+             DiskBox[51, 0.079948960957173], DiskBox[52, 0.079948960957173], 
+             DiskBox[53, 0.079948960957173], DiskBox[54, 0.079948960957173], 
+             DiskBox[55, 0.079948960957173], DiskBox[56, 0.079948960957173], 
+             DiskBox[57, 0.079948960957173], DiskBox[58, 0.079948960957173], 
+             DiskBox[59, 0.079948960957173], DiskBox[60, 0.079948960957173], 
+             DiskBox[61, 0.079948960957173], DiskBox[62, 0.079948960957173], 
+             DiskBox[63, 0.079948960957173], DiskBox[64, 0.079948960957173], 
+             DiskBox[65, 0.079948960957173], DiskBox[66, 0.079948960957173], 
+             DiskBox[67, 0.079948960957173], DiskBox[68, 0.079948960957173], 
+             DiskBox[69, 0.079948960957173], DiskBox[70, 0.079948960957173], 
+             DiskBox[71, 0.079948960957173], DiskBox[72, 0.079948960957173], 
+             DiskBox[73, 0.079948960957173], DiskBox[74, 0.079948960957173], 
+             DiskBox[75, 0.079948960957173], DiskBox[76, 0.079948960957173], 
+             DiskBox[77, 0.079948960957173], DiskBox[78, 0.079948960957173], 
+             DiskBox[79, 0.079948960957173], DiskBox[80, 0.079948960957173], 
+             DiskBox[81, 0.079948960957173]}}]],
+         MouseAppearanceTag["NetworkGraphics"]],
+        AllowKernelInitialization->False]],
+      DefaultBaseStyle->{
+       "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> 
+        Hue[0.8, 1., 0.6]},
+      FormatType->TraditionalForm,
+      FrameTicks->None]}
+   },
+   AutoDelete->False,
+   GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "ExamplesOutput",
+ CellLabel->"Out[27]=",ExpressionUUID->"72d909f6-bced-45e9-9d6d-967e8728a257"]
+}, Open  ]],
+
+Cell["\:8bf7\:4e0d\:8981\:8f93\:5165\:5de8\:5927\:7684\:6574\:6570n, \:5f88\
+\:53ef\:80fd\:5bfc\:81f4\:524d\:7aef\:5954\:6e83, \:56e0\:4e3a\:8282\:70b9\
+\:6570\:76ee\:6307\:6570\:7ea7\:7684\:589e\:52a0.", "ExampleText",ExpressionUU\
+ID->"04261585-13aa-4b46-bd7f-95494bee3e66"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"gs", "=", 
+   RowBox[{"HanoiGraph", "/@", 
+    RowBox[{"Range", "[", "6", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"VertexCount", "/@", "gs"}], "\[IndentingNewLine]", 
+ RowBox[{"EdgeCount", "/@", "gs"}]}], "ExamplesInput",
+ CellLabel->"In[65]:=",ExpressionUUID->"3b7f5c83-a1a3-410c-a0a7-3022d9c01832"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"3", ",", "9", ",", "27", ",", "81", ",", "243", ",", "729"}], 
+  "}"}]], "ExamplesOutput",
+ CellLabel->"Out[66]=",ExpressionUUID->"d375a3ed-2e88-4f01-b59b-3d7e9d5449fd"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"3", ",", "12", ",", "39", ",", "120", ",", "363", ",", "1092"}], 
+  "}"}]], "ExamplesOutput",
+ CellLabel->"Out[67]=",ExpressionUUID->"aca7282c-be64-4816-9447-9f0e4a416e5c"]
+}, Open  ]],
+
+Cell["Wolfram \:6570\:636e\:5e93\:4e2d\:6709\:524d\:4e94\:9636\:7684\:6c49\
+\:8bfa\:56fe.", "ExampleText",ExpressionUUID->"79736cfa-0981-4968-b947-\
+897a20aca68e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GraphData", "[", "\"\<Hanoi\>\"", "]"}]], "ExamplesInput",
+ CellLabel->"In[33]:=",ExpressionUUID->"4c5fe9cb-9556-4e3b-9c97-b06a66de3b7a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"Hanoi\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hanoi\"\>", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hanoi\"\>", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hanoi\"\>", ",", "5"}], "}"}], 
+   ",", "\<\"TriangleGraph\"\>"}], "}"}]], "ExamplesOutput",
+ CellLabel->"Out[33]=",ExpressionUUID->"3907def9-c700-4021-9866-f9c39ca97679"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Mathworld", "ExampleSubsection",ExpressionUUID->"55408d8e-d34c-4026-94fd-69852d545cc9"],
+
+Cell["\:66f4\:591a\:6027\:8d28\:8be6\:89c1Mathworld.", "ExampleText",ExpressionUUID->"a635e7f0-d5a7-439c-9196-83dfc855b5c5"],
+
+Cell[TextData[Cell[BoxData[{
+ TemplateBox[{
+  "\"Mathworld::HanoiGraph\"","http://mathworld.wolfram.com/HanoiGraph.html"},
+  "HyperlinkURL"], "\n", 
+ TemplateBox[{
+  "\"Mathworld::HanoiGraph/nb\"",
+   "http://mathworld.wolfram.com/notebooks/GraphTheory/HanoiGraph.nb"},
+  "HyperlinkURL"]}], \
+"ExamplesInput",ExpressionUUID->"e828793d-52d2-4d00-add0-d2e5e6a1e513"]], \
+"ExampleText",ExpressionUUID->"27490d30-128f-4fb4-afc9-ef06b2314331"]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Definitions", "ExampleSection",ExpressionUUID->"02825f2d-1f31-4e8d-bab6-37f75ef4368d"],
+
+Cell["Examine all definitions:", "ExampleText",ExpressionUUID->"98b901e6-c63e-443f-a84c-537a067d01b2"],
+
+Cell[BoxData[
+ RowBox[{"GeneralUtilities`PrintDefinitionsLocal", "[", "Deus`HanoiGraph", 
+  "]"}]], "ExamplesInput",
+ CellLabel->"In[19]:=",ExpressionUUID->"d41951cb-af04-4430-9c92-bd40fbd8aa40"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["See Also", "SeeAlsoSection",ExpressionUUID->"7b842cfb-1dda-4ab2-8864-f42d790f3208"],
+
+Cell[CellGroupData[{
+
+Cell["HanoiGraph", "SeeAlso",ExpressionUUID->"a8e2797c-57fe-4929-a5c2-343d67088006"],
+
+Cell["HanoiSteps", "SeeAlso",ExpressionUUID->"5ed0e3e5-b176-489f-893f-3a67daee00f2"],
+
+Cell["HanoiMove", "SeeAlso",ExpressionUUID->"c72092bf-298c-42b6-9d43-8cd340b3950c"],
+
+Cell["HanoiShow", "SeeAlso",ExpressionUUID->"f7c4aa5e-3b9d-4415-a86a-c3ad7fadeeb9"],
+
+Cell["HanoiTower", "SeeAlso",ExpressionUUID->"9e8279c0-fe8b-410a-9c3a-a2c38a773048"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guide", "GuidesSection",ExpressionUUID->"1d52b2f0-62a8-4044-a1b2-b5370158e2fa"],
+
+Cell[CellGroupData[{
+
+Cell["Deus Overview | Deus", "RelatedGuide",ExpressionUUID->"fceba8ea-3472-4088-b86b-f95e7e8f1337"],
+
+Cell["HanoiTower Package | HanoiTowerPackage", "RelatedGuide",ExpressionUUID->"f3fb5655-803a-4a84-abc7-28b77e4ddd57"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Tutorials", "TutorialSection",ExpressionUUID->"311ad719-61ee-4006-97b4-5455e00cd251"],
+
+Cell["Deus Tutorial | DeusTutorial", "RelatedTutorial",ExpressionUUID->"48e1df08-f9f4-42c2-b420-cd5b38e14788"]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionSeparator",ExpressionUUID->"922fe25b-7ddf-4276-8934-46390476a603"],
+
+Cell[CellGroupData[{
+
+Cell["HanoiSteps", "DocSection",ExpressionUUID->"1d4687cb-9a49-4c7e-a439-35fd32ff9afc"],
+
+Cell[BoxData[
+ RowBox[{"HanoiSteps", "[", 
+  RowBox[{"n", ",", " ", "p"}], "]"}]], "UsageInput",ExpressionUUID->\
+"5843e4d7-d8d7-429f-9bb1-44c3d9024b50"],
+
+Cell["\:7ed9\:51fa\:6c49\:8bfa\:5854\:7684\:6700\:5c11\:79fb\:52a8\:6b65\:9aa4\
+, n>4 \:7684\:60c5\:51b5\:5c1a\:672a\:8bc1\:660e.", "UsageText",ExpressionUUID\
+->"4cf25292-f5b8-45fe-9e8d-216cf6ad94f9"],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",ExpressionUUID->"5702d56e-17b6-45b1-ac72-20962c7b2271"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiSteps", InlineRef]],ExpressionUUID->
+  "e1c77bbc-1a76-4d65-8936-febe90e0e361"],
+ " has ",
+ "1",
+ " call",
+ " pattern"
+}], "DetailsItem",ExpressionUUID->"1dc1c210-95ca-4b52-a629-48c9693f4b2b"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiSteps", InlineRef]],ExpressionUUID->
+  "6f347601-22f0-426d-a686-b5744c21cadc"],
+ " has an internal ",
+ Cell[BoxData[
+  FormBox["SubValues", InlineRef]],ExpressionUUID->
+  "7134f41a-d512-4ad9-8e65-a854aa9c2cbf"],
+ " pattern"
+}], "DetailsItem",ExpressionUUID->"14457e3a-74ed-4191-8fe3-e65bb24b6e73"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiSteps", InlineRef]],ExpressionUUID->
+  "50cbfcba-dd4d-4cc2-8508-753cc6b4c73a"],
+ " has the following ",
+ Cell[BoxData[
+  FormBox["Attributes", InlineRef]],ExpressionUUID->
+  "8fab89ac-fd47-412d-9632-4c2ba464e3c8"]
+}], "DetailsItem",ExpressionUUID->"b6cf2655-5129-4057-943d-9fce9b3839a1"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox["Protected", 
+  InlineRef]],ExpressionUUID->"9ff70e43-d893-4d9a-ad08-063e0f328e17"]], \
+"DetailsRow",ExpressionUUID->"35742d4a-aef4-4981-a7da-438c4c80d6f2"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox["ReadProtected", 
+  InlineRef]],ExpressionUUID->"875c61e3-c0c1-4e7b-b4e5-6b1b633e897c"]], \
+"DetailsRow",ExpressionUUID->"a84eaa78-2b92-4723-9103-fc62c04373ca"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiSteps", InlineRef]],ExpressionUUID->
+  "4817e030-c26a-48bc-a74a-511200f80854"],
+ " is a formatted symbol"
+}], "DetailsItem",ExpressionUUID->"dba3b378-5191-4a64-8896-5b517f072a3b"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Basic Examples", "ExampleSection",ExpressionUUID->"deebd640-45b3-45be-9572-01ab96793e0d"],
+
+Cell["Load Deus:", "ExampleText",ExpressionUUID->"d4cc5b5c-906c-430a-ada1-bc2b8f0b7e2f"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Deus`\>\"", "]"}]], "ExamplesInput",
+ InitializationCell->
+  True,ExpressionUUID->"9a51707e-9009-4b8f-a2f0-0eda19d369a0"],
+
+Cell[TextData[{
+ "From ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"HanoiSteps", "[", 
+    RowBox[{"n", ",", " ", "p"}], "]"}], InlineRef]],ExpressionUUID->
+  "9a601257-f2be-4f12-9a5d-2b2c90c05153"],
+ ":"
+}], "ExampleText",ExpressionUUID->"71260857-dd4d-4ab7-8e31-df68e371c90b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HanoiSteps", "[", "4", "]"}]], "ExamplesInput",
+ CellLabel->"In[23]:=",ExpressionUUID->"61682e6d-e9e7-44b1-978c-80c2416bec2f"],
+
+Cell[BoxData[
+ RowBox[{"HanoiSteps", "[", "4", "]"}]], "ExamplesOutput",
+ CellLabel->"Out[23]=",ExpressionUUID->"3192385f-91f2-4ce6-b1cf-47a6013870a9"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Definitions", "ExampleSection",ExpressionUUID->"d7c3e533-da59-494a-8312-eeaf1f552eb3"],
+
+Cell["Examine all definitions:", "ExampleText",ExpressionUUID->"fd5336d5-4d9e-4ed5-b104-569fba1cebc1"],
+
+Cell[BoxData[
+ RowBox[{"GeneralUtilities`PrintDefinitionsLocal", "[", "Deus`HanoiSteps", 
+  "]"}]], "ExamplesInput",ExpressionUUID->"fcf27549-9e37-47eb-b407-\
+ff7b70617fca"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["See Also", "SeeAlsoSection",ExpressionUUID->"c22fa61c-ec43-4faa-9c67-beb4d8002f66"],
+
+Cell[CellGroupData[{
+
+Cell["HanoiGraph", "SeeAlso",ExpressionUUID->"1d3e2db9-a533-4781-a98e-7f8823c5b534"],
+
+Cell["HanoiSteps", "SeeAlso",ExpressionUUID->"d59e0639-1f40-4e68-abad-cefc447a997e"],
+
+Cell["HanoiMove", "SeeAlso",ExpressionUUID->"40ae8448-9932-465c-98cc-ff91448fdeaa"],
+
+Cell["HanoiShow", "SeeAlso",ExpressionUUID->"da4006e6-185b-4799-b9f6-3afe880310a8"],
+
+Cell["HanoiTower", "SeeAlso",ExpressionUUID->"6f7615b2-8954-4f2c-8028-97fd3807a4b1"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guide", "GuidesSection",ExpressionUUID->"aff143d2-b0f6-4518-b4d8-68f6158a289e"],
+
+Cell[CellGroupData[{
+
+Cell["Deus Overview | Deus", "RelatedGuide",ExpressionUUID->"b433148a-a6d6-438a-9ec2-3195210a8703"],
+
+Cell["HanoiTower Package | HanoiTowerPackage", "RelatedGuide",ExpressionUUID->"fa5756db-bb4e-4b80-bdd3-36619810c973"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Tutorials", "TutorialSection",ExpressionUUID->"cb7eb358-3104-499d-992e-4ac48dfd98b4"],
+
+Cell["Deus Tutorial | DeusTutorial", "RelatedTutorial",ExpressionUUID->"825013e9-c39f-45db-b218-5d1e891f464b"]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionSeparator",ExpressionUUID->"e4c2fb6f-e2a7-43c6-9e00-8a01783da40f"],
+
+Cell[CellGroupData[{
+
+Cell["HanoiMove", "DocSection",ExpressionUUID->"50ab5dc1-5883-440d-b529-efd326003631"],
+
+Cell[BoxData[
+ RowBox[{"HanoiMove", "[", "n", "]"}]], "UsageInput",ExpressionUUID->"6de4dd26-b624-4b04-93dc-b496f5da2af0"],
+
+Cell["\:7ed9\:51fan\:4e2a\:76d8\:5b50\:7684\:6c49\:8bfa\:5854\:7684\:6700\
+\:4f18\:79fb\:52a8\:65b9\:5f0f.", "UsageText",ExpressionUUID->"d10af693-2719-\
+4ff3-bfa9-7e16000d5dbc"],
+
+Cell[BoxData[
+ RowBox[{"HanoiMove", "[", 
+  RowBox[{"start", ",", " ", "finish"}], "]"}]], "UsageInput",ExpressionUUID->\
+"54b8482b-51b9-4cdd-a1b7-12dd2f3dc600"],
+
+Cell["\<\
+\:7ed9\:51fa\:4e09\:67f1\:6c49\:8bfa\:5854\:72b6\:6001\:95f4\:7684\:6700\:4f18\
+\:79fb\:52a8\:65b9\:5f0f.
+\:8bf7\:4e0d\:8981\:8f93\:5165\:8fc7\:4e8e\:590d\:6742\:7684\:72b6\:6001, \
+\:56e0\:4e3a\:8def\:5f84\:957f\:5ea6\:6307\:6570\:589e\:52a0.\
+\>", "UsageText",ExpressionUUID->"f4080b58-2d7c-4cf4-b3e2-acc1f853ff28"],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",ExpressionUUID->"8407de13-cc74-419d-8634-e013f7688b68"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiMove", InlineRef]],ExpressionUUID->
+  "09912684-da3a-4bfc-8cd7-cbcdee5ebef7"],
+ " has ",
+ "2",
+ " call",
+ " patterns"
+}], "DetailsItem",ExpressionUUID->"863dd7fa-5c9f-465a-9a00-857798e0e677"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiMove", InlineRef]],ExpressionUUID->
+  "fe606d30-0500-44ac-a9b2-8b117053de6c"],
+ " has an internal ",
+ Cell[BoxData[
+  FormBox["SubValues", InlineRef]],ExpressionUUID->
+  "56281b33-b222-4994-a5d3-5bddb34bf881"],
+ " pattern"
+}], "DetailsItem",ExpressionUUID->"77e1f9e1-c495-47d2-8a7a-20afe3b7213a"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiMove", InlineRef]],ExpressionUUID->
+  "4bc141cc-b9fc-427c-897a-638f63ef008b"],
+ " has the following ",
+ Cell[BoxData[
+  FormBox["Options", InlineRef]],ExpressionUUID->
+  "7f339ae1-80df-4d56-8df0-caf69544dfdf"]
+}], "DetailsItem",ExpressionUUID->"d9feeeea-1368-40e6-9384-6e35d6cc4d52"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox["Deus`HanoiTower`Pillar", 
+  InlineRef]],ExpressionUUID->"dabada2f-ab3b-42aa-82ad-438bd2856b99"]], \
+"DetailsRow",ExpressionUUID->"16f3985d-b6d4-4b2e-ae4c-83a3e3b3dc47"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox["3", 
+  InlineRef]],ExpressionUUID->"799b7c46-7d03-4329-8320-66c121d27c8c"]], \
+"DetailsColumn",ExpressionUUID->"77efa127-5d27-4595-a55a-a5cb10b33e04"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiMove", InlineRef]],ExpressionUUID->
+  "abc76dc5-addb-4d3f-aea3-497dc8720376"],
+ " has the following ",
+ Cell[BoxData[
+  FormBox["Attributes", InlineRef]],ExpressionUUID->
+  "d53682f0-a1ff-4f88-a944-978aced84126"]
+}], "DetailsItem",ExpressionUUID->"5923b151-fd2c-42f7-8337-81c1393d3a79"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox["Protected", 
+  InlineRef]],ExpressionUUID->"6079eaaf-3e29-46cb-8100-ec77a31529f3"]], \
+"DetailsRow",ExpressionUUID->"9650e6f6-6a2f-46ee-ac1a-d5b3d900db51"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox["ReadProtected", 
+  InlineRef]],ExpressionUUID->"7afffdef-3908-4728-a2dc-0d9d7a09dcd8"]], \
+"DetailsRow",ExpressionUUID->"5cf1d6eb-c025-49eb-a401-48a9b4ed0138"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiMove", InlineRef]],ExpressionUUID->
+  "0c753681-3071-4ca4-94ba-7f1fdda2dd73"],
+ " is a formatted symbol"
+}], "DetailsItem",ExpressionUUID->"8186b855-254f-46a4-af07-664a7e72106c"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Basic Examples", "ExampleSection",ExpressionUUID->"f308094f-d6c5-49b2-bec0-fe84ab68e434"],
+
+Cell["Load Deus:", "ExampleText",ExpressionUUID->"691aa983-635b-46e1-99cd-e40bfd074ab7"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Deus`\>\"", "]"}]], "ExamplesInput",
+ InitializationCell->True,
+ CellLabel->"In[1]:=",ExpressionUUID->"93f9bd09-5178-48d3-b166-56419d48c2d6"],
+
+Cell["\:663e\:793a\:4e09\:67f1\:6c49\:8bfa\:5854\:56db\:4e2a\:76d8\:5b50\:65f6\
+\:7684\:6700\:4f18\:79fb\:52a8\:6b65\:9aa4", "ExampleText",ExpressionUUID->\
+"6fde87ea-bbb6-4e31-a03c-2d90c9fc40cf"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"HanoiMove", "[", "4", "]"}], "//", 
+  "MatrixForm"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Echo", "[", 
+   RowBox[{
+    RowBox[{"%", "//", "Length"}], ",", 
+    "\"\<\:6700\:5c11\:79fb\:52a8\:6b65\:6570: \>\""}], "]"}], 
+  ";"}]}], "ExamplesInput",
+ CellLabel->"In[8]:=",ExpressionUUID->"05d7dcfe-f963-4b05-ba55-3b2e8f1c592c"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}], 
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", "}"}]},
+     {
+      RowBox[{"{", 
+       RowBox[{"2", ",", "3", ",", "4"}], "}"}], 
+      RowBox[{"{", "1", "}"}], 
+      RowBox[{"{", "}"}]},
+     {
+      RowBox[{"{", 
+       RowBox[{"3", ",", "4"}], "}"}], 
+      RowBox[{"{", "1", "}"}], 
+      RowBox[{"{", "2", "}"}]},
+     {
+      RowBox[{"{", 
+       RowBox[{"3", ",", "4"}], "}"}], 
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}]},
+     {
+      RowBox[{"{", "4", "}"}], 
+      RowBox[{"{", "3", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}]},
+     {
+      RowBox[{"{", 
+       RowBox[{"1", ",", "4"}], "}"}], 
+      RowBox[{"{", "3", "}"}], 
+      RowBox[{"{", "2", "}"}]},
+     {
+      RowBox[{"{", 
+       RowBox[{"1", ",", "4"}], "}"}], 
+      RowBox[{"{", 
+       RowBox[{"2", ",", "3"}], "}"}], 
+      RowBox[{"{", "}"}]},
+     {
+      RowBox[{"{", "4", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2", ",", "3"}], "}"}], 
+      RowBox[{"{", "}"}]},
+     {
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2", ",", "3"}], "}"}], 
+      RowBox[{"{", "4", "}"}]},
+     {
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"2", ",", "3"}], "}"}], 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "4"}], "}"}]},
+     {
+      RowBox[{"{", "2", "}"}], 
+      RowBox[{"{", "3", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "4"}], "}"}]},
+     {
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}], 
+      RowBox[{"{", "3", "}"}], 
+      RowBox[{"{", "4", "}"}]},
+     {
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}], 
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"3", ",", "4"}], "}"}]},
+     {
+      RowBox[{"{", "2", "}"}], 
+      RowBox[{"{", "1", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"3", ",", "4"}], "}"}]},
+     {
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", "1", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"2", ",", "3", ",", "4"}], "}"}]},
+     {
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "ExamplesOutput",
+ CellLabel->
+  "Out[8]//MatrixForm=",ExpressionUUID->"17a193c3-e65a-423c-8eaf-\
+029f840e56cd"],
+
+Cell[BoxData[
+ RowBox[{
+  TagBox["\<\"\:6700\:5c11\:79fb\:52a8\:6b65\:6570: \"\>",
+   "EchoLabel"], " ", "16"}]], "Echo",ExpressionUUID->"1ee8bbbf-7f21-4cc5-\
+9983-7324ad54ddc1"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Advance", "ExampleSection",ExpressionUUID->"fe4a66a8-09ad-4260-9b41-b4105bbd5a2a"],
+
+Cell["\:663e\:793a\:4e24\:4e2a\:72b6\:6001\:95f4\:7684\:6700\:4f18\:79fb\:52a8\
+\:6b65\:9aa4.", "ExampleText",ExpressionUUID->"aa17c050-e987-4da8-b091-\
+e763cceeaf58"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", "}"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"finish", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"2", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "4"}], "}"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"HanoiMove", "[", 
+   RowBox[{"start", ",", "finish"}], "]"}], "//", 
+  "MatrixForm"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Echo", "[", 
+   RowBox[{
+    RowBox[{"%", "//", "Length"}], ",", 
+    "\"\<\:6700\:5c11\:79fb\:52a8\:6b65\:6570: \>\""}], "]"}], 
+  ";"}]}], "ExamplesInput",
+ CellLabel->"In[2]:=",ExpressionUUID->"ec8a2d0e-ba40-4ea8-a700-21e512ca3fa0"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}], 
+      RowBox[{"{", 
+       RowBox[{"3", ",", "4"}], "}"}], 
+      RowBox[{"{", "}"}]},
+     {
+      RowBox[{"{", "2", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "3", ",", "4"}], "}"}], 
+      RowBox[{"{", "}"}]},
+     {
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "3", ",", "4"}], "}"}], 
+      RowBox[{"{", "2", "}"}]},
+     {
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"3", ",", "4"}], "}"}], 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}]},
+     {
+      RowBox[{"{", "3", "}"}], 
+      RowBox[{"{", "4", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}]},
+     {
+      RowBox[{"{", "3", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "4"}], "}"}], 
+      RowBox[{"{", "2", "}"}]},
+     {
+      RowBox[{"{", 
+       RowBox[{"2", ",", "3"}], "}"}], 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "4"}], "}"}], 
+      RowBox[{"{", "}"}]},
+     {
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2", ",", "3"}], "}"}], 
+      RowBox[{"{", "4", "}"}], 
+      RowBox[{"{", "}"}]},
+     {
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2", ",", "3"}], "}"}], 
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", "4", "}"}]},
+     {
+      RowBox[{"{", 
+       RowBox[{"2", ",", "3"}], "}"}], 
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "4"}], "}"}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "ExamplesOutput",
+ CellLabel->
+  "Out[4]//MatrixForm=",ExpressionUUID->"5f81a891-e602-495f-a672-\
+f0f165ed3ab5"],
+
+Cell[BoxData[
+ RowBox[{
+  TagBox["\<\"\:6700\:5c11\:79fb\:52a8\:6b65\:6570: \"\>",
+   "EchoLabel"], " ", "10"}]], "Echo",ExpressionUUID->"acfdad7d-f4ac-4497-\
+88b4-5a4dda33bc5a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Options::Pillar", "ExampleSubsection",ExpressionUUID->"35dc06f1-9616-4b97-95f9-09095f63fd22"],
+
+Cell["Pillar\:9009\:9879\:6307\:660e\:6c49\:8bfa\:5854\:7684\:67f1\:6570.", \
+"ExampleText",ExpressionUUID->"9cbd78b8-e47e-448d-ab2f-c9c3aae7b4ca"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"HanoiMove", "[", 
+   RowBox[{"4", ",", 
+    RowBox[{"Pillar", " ", "->", " ", "4"}]}], "]"}], "//", 
+  "MatrixForm"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Echo", "[", 
+   RowBox[{
+    RowBox[{"%", "//", "Length"}], ",", 
+    "\"\<\:6700\:5c11\:79fb\:52a8\:6b65\:6570: \>\""}], "]"}], 
+  ";"}]}], "ExamplesInput",
+ CellLabel->"In[12]:=",ExpressionUUID->"7277632e-13de-4cf1-8d91-68d848d80799"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}], 
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", "}"}]},
+     {
+      RowBox[{"{", 
+       RowBox[{"2", ",", "3", ",", "4"}], "}"}], 
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", "1", "}"}]},
+     {
+      RowBox[{"{", 
+       RowBox[{"3", ",", "4"}], "}"}], 
+      RowBox[{"{", "2", "}"}], 
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", "1", "}"}]},
+     {
+      RowBox[{"{", 
+       RowBox[{"3", ",", "4"}], "}"}], 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}], 
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", "}"}]},
+     {
+      RowBox[{"{", "4", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}], 
+      RowBox[{"{", "3", "}"}], 
+      RowBox[{"{", "}"}]},
+     {
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}], 
+      RowBox[{"{", "3", "}"}], 
+      RowBox[{"{", "4", "}"}]},
+     {
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}], 
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"3", ",", "4"}], "}"}]},
+     {
+      RowBox[{"{", "1", "}"}], 
+      RowBox[{"{", "2", "}"}], 
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"3", ",", "4"}], "}"}]},
+     {
+      RowBox[{"{", "1", "}"}], 
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"2", ",", "3", ",", "4"}], "}"}]},
+     {
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", "}"}], 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "ExamplesOutput",
+ CellLabel->
+  "Out[12]//MatrixForm=",ExpressionUUID->"7d75b92e-d618-436f-a08e-\
+1aecf8e1dc54"],
+
+Cell[BoxData[
+ RowBox[{
+  TagBox["\<\"\:6700\:5c11\:79fb\:52a8\:6b65\:6570: \"\>",
+   "EchoLabel"], " ", "10"}]], "Echo",ExpressionUUID->"1b1f73f7-5557-4571-\
+b224-07a424db25e1"]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Definitions", "ExampleSection",ExpressionUUID->"179ae35e-6430-4aba-a109-f497d2e3f83d"],
+
+Cell["Examine all definitions:", "ExampleText",ExpressionUUID->"36dfdd44-58d6-4d95-96d9-1729537da614"],
+
+Cell[BoxData[
+ RowBox[{"GeneralUtilities`PrintDefinitionsLocal", "[", "Deus`HanoiMove", 
+  "]"}]], "ExamplesInput",ExpressionUUID->"638b3596-45d8-435b-93d4-\
+c389362bccf9"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["See Also", "SeeAlsoSection",ExpressionUUID->"03948b31-181b-4c00-9d0a-067579686029"],
+
+Cell[CellGroupData[{
+
+Cell["HanoiGraph", "SeeAlso",ExpressionUUID->"0522e45e-258e-498d-8a79-c457c5245a5e"],
+
+Cell["HanoiSteps", "SeeAlso",ExpressionUUID->"3960ee3a-5ed8-4b78-b2de-65d8d6efa712"],
+
+Cell["HanoiMove", "SeeAlso",ExpressionUUID->"f46e5832-955c-4da5-bd4b-ffb3f4b3d41f"],
+
+Cell["HanoiShow", "SeeAlso",ExpressionUUID->"7c054a31-39c6-40f6-8dd1-caeeacb3a26f"],
+
+Cell["HanoiTower", "SeeAlso",ExpressionUUID->"2c603f38-5e91-406c-9522-aef9441e9fa2"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guide", "GuidesSection",ExpressionUUID->"550683dd-5023-4c44-a3a8-547c60820ca2"],
+
+Cell[CellGroupData[{
+
+Cell["Deus Overview | Deus", "RelatedGuide",ExpressionUUID->"028a9568-39d3-4e28-8ddf-9ae86890413c"],
+
+Cell["HanoiTower Package | HanoiTowerPackage", "RelatedGuide",ExpressionUUID->"ead2354e-9550-4894-933c-01640cfd0bc5"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Tutorials", "TutorialSection",ExpressionUUID->"41fd805a-df2a-41ad-96eb-1b6b4ea27b38"],
+
+Cell["Deus Tutorial | DeusTutorial", "RelatedTutorial",ExpressionUUID->"04770786-3b2d-4dc6-8089-c498057560fe"]
+}, Open  ]]
+}, Closed]],
+
+Cell["", "SectionSeparator",ExpressionUUID->"cf03aaa7-0696-4ce2-8001-94978f7b07b5"],
+
+Cell[CellGroupData[{
+
+Cell["HanoiShow", "DocSection",ExpressionUUID->"915dde9c-c4f1-4cc6-8371-e2d6bff02a3d"],
+
+Cell[BoxData[
+ RowBox[{"HanoiShow", "[", 
+  RowBox[{"states", ",", " ", 
+   RowBox[{"OptionsPattern", "[", "]"}]}], "]"}]], "UsageInput",ExpressionUUID\
+->"9314cb96-c015-4bd8-a51a-89cff2074a6e"],
+
+Cell["\:53ef\:89c6\:5316\:5706\:76d8\:7684\:79fb\:52a8\:8fc7\:7a0b", \
+"UsageText",ExpressionUUID->"7514c3df-bb8f-4760-ae5e-fc5f9006d136"],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",ExpressionUUID->"1664e0db-2071-4792-9496-8bdd2dfb9430"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiShow", InlineRef]],ExpressionUUID->
+  "5e738f40-198a-4a05-b979-0893c5402d76"],
+ " has ",
+ "1",
+ " call",
+ " pattern"
+}], "DetailsItem",ExpressionUUID->"b42b5730-ce6a-4877-8c84-95566b45c8df"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiShow", InlineRef]],ExpressionUUID->
+  "c57bc2ae-8a00-49df-a81d-3455ca8b28cb"],
+ " has an internal ",
+ Cell[BoxData[
+  FormBox["SubValues", InlineRef]],ExpressionUUID->
+  "090f02a9-3b97-4c3d-b7b7-bb4a1f91758e"],
+ " pattern"
+}], "DetailsItem",ExpressionUUID->"66b95c99-f28c-4b0c-8fd2-d869b93c61f0"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiShow", InlineRef]],ExpressionUUID->
+  "640cd3de-2f87-41f6-906e-c6ff1f6f691e"],
+ " has the following ",
+ Cell[BoxData[
+  FormBox["Options", InlineRef]],ExpressionUUID->
+  "e155737b-dd92-4e3b-af21-900e4a45d78d"]
+}], "DetailsItem",ExpressionUUID->"f5b66dda-568d-498e-ab61-a921874d1dd5"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox["Deus`HanoiTower`TableStyle", 
+  InlineRef]],ExpressionUUID->"62283152-2b7e-4ac5-a6f3-3c642c2f955d"]], \
+"DetailsRow",ExpressionUUID->"27336c03-cc28-4cbe-bf95-b3318422c6c3"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{"RGBColor", "[", 
+    RowBox[{"0.6", ",", " ", "0.4", ",", " ", "0.2"}], "]"}], "}"}], 
+  InlineRef]],ExpressionUUID->"f48a71fd-f943-4d96-9683-31a41d7abd0a"]], \
+"DetailsColumn",ExpressionUUID->"4e28decf-7c98-44f0-9fab-06efb56cd5c5"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox["Deus`HanoiTower`PillarStyle", 
+  InlineRef]],ExpressionUUID->"8156abb3-8c8a-4f67-93b6-c4dc119c5b1b"]], \
+"DetailsRow",ExpressionUUID->"8cf3f725-6717-4b4a-992d-23a105ea69d5"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{"RGBColor", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"41", "/", "51"}], ",", " ", 
+      RowBox[{"79", "/", "255"}], ",", " ", 
+      RowBox[{"6", "/", "85"}]}], "}"}], "]"}], "}"}], 
+  InlineRef]],ExpressionUUID->"b0a425e9-f1d9-40f2-8468-bb5f376f9fc0"]], \
+"DetailsColumn",ExpressionUUID->"3345e692-53ad-4a18-9384-d8d802a28f6c"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox["Deus`HanoiTower`DiskColor", 
+  InlineRef]],ExpressionUUID->"08221e97-f4b9-48d5-a5ba-9fba2541e03a"]], \
+"DetailsRow",ExpressionUUID->"6647fbd2-d7c5-4776-b344-fc40d65e75a9"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{"ColorDataFunction", "[", 
+   RowBox[{"3", ",", " ", "\"\<Indexed\>\"", ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", " ", "10", ",", " ", "1"}], "}"}], ",", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"RGBColor", "[", 
+         RowBox[{"0.", ",", " ", "0.", ",", " ", "0."}], "]"}], ",", " ", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{
+         "0.996078431372549", ",", " ", "0.3607843137254902", ",", " ", 
+          "0.027450980392156862"}], "]"}], ",", " ", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{
+         "0.996078431372549", ",", " ", "0.9882352941176471", ",", " ", 
+          "0.03529411764705882"}], "]"}], ",", " ", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{
+         "0.5411764705882353", ",", " ", "0.7137254901960784", ",", " ", 
+          "0.027450980392156862"}], "]"}], ",", " ", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{
+         "0.1450980392156863", ",", " ", "0.43529411764705883", ",", " ", 
+          "0.3843137254901961"}], "]"}], ",", " ", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{
+         "0.00784313725490196", ",", " ", "0.5098039215686274", ",", " ", 
+          "0.9294117647058824"}], "]"}], ",", " ", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{
+         "0.15294117647058825", ",", " ", "0.11372549019607843", ",", " ", 
+          "0.49019607843137253"}], "]"}], ",", " ", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{
+         "0.47058823529411764", ",", " ", "0.2627450980392157", ",", " ", 
+          "0.5843137254901961"}], "]"}], ",", " ", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{
+         "0.8901960784313725", ",", " ", "0.011764705882352941", ",", " ", 
+          "0.49019607843137253"}], "]"}], ",", " ", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{
+         "0.9058823529411765", ",", " ", "0.027450980392156862", ",", " ", 
+          "0.12941176470588237"}], "]"}]}], "}"}], "[", 
+      RowBox[{"[", 
+       RowBox[{"Mod", "[", 
+        RowBox[{
+         RowBox[{"Floor", "[", "#1", "]"}], ",", " ", "10", ",", " ", "1"}], 
+        "]"}], "]"}], "]"}], " ", "&"}]}], " ", "]"}], 
+  InlineRef]],ExpressionUUID->"065948e4-9335-43ff-a2bc-d58e9354c8fe"]], \
+"DetailsColumn",ExpressionUUID->"6a6ddf67-61f2-4c3f-beca-99fd11310832"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiShow", InlineRef]],ExpressionUUID->
+  "0cdf6a6a-cf71-4ceb-81ed-605faf9db2dc"],
+ " has the following ",
+ Cell[BoxData[
+  FormBox["Attributes", InlineRef]],ExpressionUUID->
+  "9e36d675-5008-40a5-b304-a65c0536cd71"]
+}], "DetailsItem",ExpressionUUID->"f6d60b95-3eed-4e0d-acc3-d96982312f24"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox["Protected", 
+  InlineRef]],ExpressionUUID->"3549a508-84df-4832-9500-8d21c1a9fe66"]], \
+"DetailsRow",ExpressionUUID->"619513e1-6c1d-43c9-9c3f-70c776e4993a"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox["ReadProtected", 
+  InlineRef]],ExpressionUUID->"79278989-e070-460d-8adf-a2aec6e2e039"]], \
+"DetailsRow",ExpressionUUID->"cdae2571-6ffe-4a5e-8e88-23e078d18d66"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiShow", InlineRef]],ExpressionUUID->
+  "2211fb25-4deb-43f1-8a6c-d5ec91c35bd2"],
+ " is a formatted symbol"
+}], "DetailsItem",ExpressionUUID->"c02c0bfd-e844-435b-8c0c-18b2cb518c14"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Basic Examples", "ExampleSection",ExpressionUUID->"748eb44d-bd04-4c04-a6ee-a14a110a9447"],
+
+Cell["Load Deus:", "ExampleText",ExpressionUUID->"6cccbc1d-6794-457e-9816-4e6d3c8d52fd"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Deus`\>\"", "]"}]], "ExamplesInput",
+ InitializationCell->
+  True,ExpressionUUID->"4d7839c2-0bc5-4985-adf2-2865424bff94"],
+
+Cell[TextData[{
+ "From ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"HanoiShow", "[", 
+    RowBox[{"states", ",", " ", 
+     RowBox[{"OptionsPattern", "[", "]"}]}], "]"}], InlineRef]],
+  ExpressionUUID->"1f65a9f3-4dae-4dc0-a9f1-85ec26285b6f"],
+ ":"
+}], "ExampleText",ExpressionUUID->"c83178e3-d594-4e7f-b56a-80603fa73492"],
+
+Cell[BoxData[
+ RowBox[{"HanoiShow", "[", "states", "]"}]], "ExamplesInput",ExpressionUUID->"cf28fb70-e7de-459b-bc04-0104033b641d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Advance", "ExampleSection",ExpressionUUID->"43f30a1c-482b-4e59-bf24-9580fee25922"],
+
+Cell[CellGroupData[{
+
+Cell["Options::TableStyle", "ExampleSubsection",ExpressionUUID->"971766bf-0c77-4e6d-a266-7b36d0b50e23"],
+
+Cell[BoxData[
+ RowBox[{"HanoiShow", "[", 
+  RowBox[{"states", ",", " ", 
+   RowBox[{"Deus`HanoiTower`TableStyle", " ", "->", " ", 
+    RowBox[{"{", 
+     RowBox[{"RGBColor", "[", 
+      RowBox[{"0.6", ",", " ", "0.4", ",", " ", "0.2"}], "]"}], "}"}]}]}], 
+  "]"}]], "ExamplesInput",ExpressionUUID->"dc1a0516-7c71-4abb-aab9-\
+f0e956002c73"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Options::PillarStyle", "ExampleSubsection",ExpressionUUID->"6ccfe3fd-a555-4a43-9ec7-f51df0b47d35"],
+
+Cell[BoxData[
+ RowBox[{"HanoiShow", "[", 
+  RowBox[{"states", ",", " ", 
+   RowBox[{"Deus`HanoiTower`PillarStyle", " ", "->", " ", 
+    RowBox[{"{", 
+     RowBox[{"RGBColor", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"41", "/", "51"}], ",", " ", 
+        RowBox[{"79", "/", "255"}], ",", " ", 
+        RowBox[{"6", "/", "85"}]}], "}"}], "]"}], "}"}]}]}], 
+  "]"}]], "ExamplesInput",ExpressionUUID->"e22cbac0-86b9-46e6-b819-\
+721d94f14893"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Options::DiskColor", "ExampleSubsection",ExpressionUUID->"a9331d25-2419-432a-8dfa-f671fd3a9e7e"],
+
+Cell[BoxData[
+ RowBox[{"HanoiShow", "[", 
+  RowBox[{"states", ",", " ", 
+   RowBox[{"Deus`HanoiTower`DiskColor", " ", "->", " ", 
+    RowBox[{"ColorDataFunction", "[", 
+     RowBox[{"3", ",", " ", "\"\<Indexed\>\"", ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", " ", "10", ",", " ", "1"}], "}"}], ",", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"RGBColor", "[", 
+           RowBox[{"0.", ",", " ", "0.", ",", " ", "0."}], "]"}], ",", " ", 
+          RowBox[{"RGBColor", "[", 
+           RowBox[{
+           "0.996078431372549", ",", " ", "0.3607843137254902", ",", " ", 
+            "0.027450980392156862"}], "]"}], ",", " ", 
+          RowBox[{"RGBColor", "[", 
+           RowBox[{
+           "0.996078431372549", ",", " ", "0.9882352941176471", ",", " ", 
+            "0.03529411764705882"}], "]"}], ",", " ", 
+          RowBox[{"RGBColor", "[", 
+           RowBox[{
+           "0.5411764705882353", ",", " ", "0.7137254901960784", ",", " ", 
+            "0.027450980392156862"}], "]"}], ",", " ", 
+          RowBox[{"RGBColor", "[", 
+           RowBox[{
+           "0.1450980392156863", ",", " ", "0.43529411764705883", ",", " ", 
+            "0.3843137254901961"}], "]"}], ",", " ", 
+          RowBox[{"RGBColor", "[", 
+           RowBox[{
+           "0.00784313725490196", ",", " ", "0.5098039215686274", ",", " ", 
+            "0.9294117647058824"}], "]"}], ",", " ", 
+          RowBox[{"RGBColor", "[", 
+           RowBox[{
+           "0.15294117647058825", ",", " ", "0.11372549019607843", ",", " ", 
+            "0.49019607843137253"}], "]"}], ",", " ", 
+          RowBox[{"RGBColor", "[", 
+           RowBox[{
+           "0.47058823529411764", ",", " ", "0.2627450980392157", ",", " ", 
+            "0.5843137254901961"}], "]"}], ",", " ", 
+          RowBox[{"RGBColor", "[", 
+           RowBox[{
+           "0.8901960784313725", ",", " ", "0.011764705882352941", ",", " ", 
+            "0.49019607843137253"}], "]"}], ",", " ", 
+          RowBox[{"RGBColor", "[", 
+           RowBox[{
+           "0.9058823529411765", ",", " ", "0.027450980392156862", ",", " ", 
+            "0.12941176470588237"}], "]"}]}], "}"}], "[", 
+        RowBox[{"[", 
+         RowBox[{"Mod", "[", 
+          RowBox[{
+           RowBox[{"Floor", "[", "#1", "]"}], ",", " ", "10", ",", " ", "1"}],
+           "]"}], "]"}], "]"}], " ", "&"}]}], " ", "]"}]}]}], 
+  "]"}]], "ExamplesInput",ExpressionUUID->"ec31620b-b0be-4bea-acb0-\
+ef363473fe18"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Definitions", "ExampleSection",ExpressionUUID->"fc5be959-1033-4d5f-90fe-82507ffa4254"],
+
+Cell["Examine all definitions:", "ExampleText",ExpressionUUID->"8e0ae208-c07b-404a-84de-f106087c60c4"],
+
+Cell[BoxData[
+ RowBox[{"GeneralUtilities`PrintDefinitionsLocal", "[", "Deus`HanoiShow", 
+  "]"}]], "ExamplesInput",
+ CellLabel->"",ExpressionUUID->"180e1910-3706-45d1-af85-fdf77fb9bbb0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["See Also", "SeeAlsoSection",ExpressionUUID->"830f10ea-ff0e-4eef-b3c5-957d50b8f930"],
+
+Cell[CellGroupData[{
+
+Cell["HanoiGraph", "SeeAlso",ExpressionUUID->"0d2c75f2-9905-4678-b54f-cc57557ed60f"],
+
+Cell["HanoiSteps", "SeeAlso",ExpressionUUID->"cd5c5556-09e9-4fa3-a03d-aca23b47c8ef"],
+
+Cell["HanoiMove", "SeeAlso",ExpressionUUID->"cda072cf-85fb-4d19-a253-9a8a15ebe542"],
+
+Cell["HanoiShow", "SeeAlso",ExpressionUUID->"b2c66e37-a68a-4df4-9891-adba28e69afa"],
+
+Cell["HanoiTower", "SeeAlso",ExpressionUUID->"08c6a195-4d09-4db3-ac04-3d4d6e9472f8"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guide", "GuidesSection",ExpressionUUID->"bc183359-cd6d-445a-a7fc-e8741f89f8a1"],
+
+Cell[CellGroupData[{
+
+Cell["Deus Overview | Deus", "RelatedGuide",ExpressionUUID->"9e3357cb-b7b1-4b19-a340-7ab624800017"],
+
+Cell["HanoiTower Package | HanoiTowerPackage", "RelatedGuide",ExpressionUUID->"98c07eda-5077-40f7-b30e-1a2d36d993a8"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Tutorials", "TutorialSection",ExpressionUUID->"1b55e0a7-3fde-4d3f-b359-cc98d332cc63"],
+
+Cell["Deus Tutorial | DeusTutorial", "RelatedTutorial",ExpressionUUID->"344527f9-4f40-47ee-8370-3023e32ea71d"]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionSeparator",ExpressionUUID->"e06d66f5-2312-41a8-a5aa-90942678b921"],
+
+Cell[CellGroupData[{
+
+Cell["HanoiTower", "DocSection",ExpressionUUID->"0d968725-25fa-43e9-9151-6894d37421f9"],
+
+Cell[BoxData["HanoiTower"], "UsageInput",ExpressionUUID->"011d046c-269e-4a0c-84cb-dd83de7e9269"],
+
+Cell["\:6c49\:8bfa\:5854\:7a0b\:5e8f\:5305, \:5305\:62ec\:53ef\:89c6\:5316\
+\:548c\:6700\:77ed\:8def\:5f84\:7b49.", "UsageText",ExpressionUUID->"fc29a3f4-\
+65c4-4d9f-b706-351f43c0fcf5"],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",ExpressionUUID->"d667c7b9-0816-4c43-babf-25d4d1b8e17b"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiTower", InlineRef]],ExpressionUUID->
+  "5e4211b3-6b7e-41c8-a347-1f78d361fceb"],
+ " has an internal ",
+ Cell[BoxData[
+  FormBox["SubValues", InlineRef]],ExpressionUUID->
+  "50248db1-e325-4797-b7a5-1015bc626e94"],
+ " pattern"
+}], "DetailsItem",ExpressionUUID->"ff709109-c3ab-4bc4-b9c8-f0733a3218f3"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiTower", InlineRef]],ExpressionUUID->
+  "78e53c5b-dae0-4cc9-8bde-c6f0c740966d"],
+ " has the following ",
+ Cell[BoxData[
+  FormBox["Attributes", InlineRef]],ExpressionUUID->
+  "40a4abd9-0a49-4b23-9c21-f6b460cdfac9"]
+}], "DetailsItem",ExpressionUUID->"cca465f8-1d6b-407e-9d34-023b284f1ef2"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox["Protected", 
+  InlineRef]],ExpressionUUID->"dc5369a2-454f-4b37-9873-1d564f47a023"]], \
+"DetailsRow",ExpressionUUID->"8acf7b03-2556-458c-91b9-9a4367f50b01"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox["ReadProtected", 
+  InlineRef]],ExpressionUUID->"1fa09176-c57f-4ef5-b647-718f350a77d3"]], \
+"DetailsRow",ExpressionUUID->"bc044f85-2573-4180-9dc5-b3852a6693fe"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["HanoiTower", InlineRef]],ExpressionUUID->
+  "ad86eb3a-963e-48ba-972c-2aac2311a50e"],
+ " is a formatted symbol"
+}], "DetailsItem",ExpressionUUID->"130ca4ca-d99b-4271-a5d0-ec7ff4431d01"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Basic Examples", "ExampleSection",ExpressionUUID->"1c4f3bf6-f0bd-4b3d-9c8d-976fca419269"],
+
+Cell["Load Deus:", "ExampleText",ExpressionUUID->"762ef934-6787-46f1-a258-a0d0962905ac"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Deus`\>\"", "]"}]], "ExamplesInput",
+ InitializationCell->
+  True,ExpressionUUID->"d61068a5-af08-49a7-8751-247661c0ba2b"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Definitions", "ExampleSection",ExpressionUUID->"b9ef06f7-bdac-4de1-9af3-dc3f0943821b"],
+
+Cell["Examine all definitions:", "ExampleText",ExpressionUUID->"4fe5c3ac-a849-4b46-999e-e474fc1f5da5"],
+
+Cell[BoxData[
+ RowBox[{"GeneralUtilities`PrintDefinitionsLocal", "[", "Deus`HanoiTower", 
+  "]"}]], "ExamplesInput",ExpressionUUID->"64ddaf2e-9b82-46b8-bf61-\
+71fd25ac2142"],
+
+Cell[BoxData[
+ RowBox[{"Defer", "[", "HanoiTower", "]"}]], "ExamplesInput",ExpressionUUID->"706686ba-b5e6-44d5-a984-bf6835c93af5"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["See Also", "SeeAlsoSection",ExpressionUUID->"9380d6c9-3262-4735-875f-5e3efa9c7ec1"],
+
+Cell[CellGroupData[{
+
+Cell["HanoiGraph", "SeeAlso",ExpressionUUID->"933c9489-3b0e-4f17-b4a1-5c9f39b39475"],
+
+Cell["HanoiSteps", "SeeAlso",ExpressionUUID->"0c9c726c-8d9e-4407-b046-302699d8e622"],
+
+Cell["HanoiMove", "SeeAlso",ExpressionUUID->"f3e33f07-92a3-42a0-b62a-2244f1fc354b"],
+
+Cell["HanoiShow", "SeeAlso",ExpressionUUID->"be1aa3d6-84b4-45fb-814d-080539ee1a5a"],
+
+Cell["HanoiTower", "SeeAlso",ExpressionUUID->"b09f4a97-74dd-49f7-9c51-373570df9a7f"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guide", "GuidesSection",ExpressionUUID->"640dcfd8-6b49-475c-a3ea-b9bcd7da65f3"],
+
+Cell[CellGroupData[{
+
+Cell["Deus Overview | Deus", "RelatedGuide",ExpressionUUID->"bb994ba5-06d4-4c10-a835-e7efc09cb4bd"],
+
+Cell["HanoiTower Package | HanoiTowerPackage", "RelatedGuide",ExpressionUUID->"f8ee7cbf-2f36-4b08-a4a6-9657f932a250"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Tutorials", "TutorialSection",ExpressionUUID->"1ab36499-df2a-4cb6-aada-ae963152e2bf"],
+
+Cell["Deus Tutorial | DeusTutorial", "RelatedTutorial",ExpressionUUID->"f256d2cb-ec8b-4468-82c0-8cd1b252f5df"]
+}, Open  ]]
+}, Closed]],
+
+Cell["", "SectionSeparator",ExpressionUUID->"78131557-7fea-41b4-bfe6-f7aac376e5ce"]
+},
+WindowSize->{775, 873},
+WindowMargins->{{192, Automatic}, {Automatic, 31}},
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (2017\:5e7410\:67082\
+\:65e5)",
+StyleDefinitions->FrontEnd`FileName[{"BTools"}, "DocGen.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 105, 0, 97, "Title",ExpressionUUID->"b1fadaca-2b67-4e47-9fba-0bef5f3853d9"],
+Cell[688, 24, 104, 1, 28, "Input",ExpressionUUID->"23a55324-2cbb-45a9-baf9-1e96fd0afe48"],
+Cell[795, 27, 129, 1, 28, "Input",ExpressionUUID->"b5521474-f15e-4a1a-a1e8-4ae4b641c726"]
+}, Open  ]],
+Cell[939, 31, 81, 0, 43, "BlockSeparator",ExpressionUUID->"c2ec6056-fdf4-4998-9a1f-5247b980ef54"],
+Cell[CellGroupData[{
+Cell[1045, 35, 87, 0, 58, "DocSection",ExpressionUUID->"1defdecd-046e-474b-b130-8ce06ecbc869"],
+Cell[1135, 37, 123, 1, 41, "UsageInput",ExpressionUUID->"93af0506-757e-450d-ae54-fde84d6e700a"],
+Cell[1261, 40, 126, 0, 41, "UsageText",ExpressionUUID->"bbe2e772-d5bd-4003-b2c8-021f67ca6c8d"],
+Cell[CellGroupData[{
+Cell[1412, 44, 88, 0, 44, "DetailsSection",ExpressionUUID->"86bfb3b6-57c7-4a7a-89ed-87718cfc453c"],
+Cell[CellGroupData[{
+Cell[1525, 48, 238, 8, 31, "DetailsItem",ExpressionUUID->"8a0bb31b-8466-4946-aa7d-f7590eb9722c"],
+Cell[1766, 58, 344, 9, 31, "DetailsItem",ExpressionUUID->"28e9efd9-c500-4e71-95df-54845ff4dcc5"],
+Cell[2113, 69, 334, 8, 31, "DetailsItem",ExpressionUUID->"2449167c-3c2e-4d30-86b4-d4a5d40c7ae3"],
+Cell[2450, 79, 193, 3, 28, "DetailsRow",ExpressionUUID->"4587ad37-faa3-4610-8230-74c5e6b58363"],
+Cell[2646, 84, 197, 3, 28, "DetailsRow",ExpressionUUID->"1be71865-9ce8-4474-a96e-c6a5d2991714"],
+Cell[2846, 89, 226, 5, 31, "DetailsItem",ExpressionUUID->"a1fdfe70-4db9-408a-9603-1ad3c0a85b6b"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3121, 100, 95, 0, 44, "ExampleSection",ExpressionUUID->"0403e338-7517-4578-b124-6577ca925f24"],
+Cell[3219, 102, 88, 0, 34, "ExampleText",ExpressionUUID->"49249b9a-6aca-4435-ba8e-96eef3000886"],
+Cell[3310, 104, 163, 3, 43, "ExamplesInput",ExpressionUUID->"88e83576-8f71-4cc6-af20-73d06c070dc2",
+ InitializationCell->True],
+Cell[3476, 109, 118, 0, 34, "ExampleText",ExpressionUUID->"0b482cb2-ea82-4a57-93dd-3002169743db"],
+Cell[CellGroupData[{
+Cell[3619, 113, 238, 5, 27, "ExamplesInput",ExpressionUUID->"86534fc6-ac3d-4434-a969-21246e1e39ef"],
+Cell[3860, 120, 76217, 1112, 338, "ExamplesOutput",ExpressionUUID->"307f4b72-16ef-4127-9846-b52200e4757f"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[80126, 1238, 88, 0, 44, "ExampleSection",ExpressionUUID->"7c120ef9-1ed8-4ec2-9546-5099359bf85c"],
+Cell[80217, 1240, 141, 1, 34, "ExampleText",ExpressionUUID->"e537ccdb-e195-4b1d-9153-97c1e12f1a0d"],
+Cell[CellGroupData[{
+Cell[80383, 1245, 397, 11, 27, "ExamplesInput",ExpressionUUID->"9aec283a-605f-4984-9665-94cdd7e4d595"],
+Cell[80783, 1258, 38679, 626, 355, "ExamplesOutput",ExpressionUUID->"72d909f6-bced-45e9-9d6d-967e8728a257"]
+}, Open  ]],
+Cell[119477, 1887, 276, 3, 34, "ExampleText",ExpressionUUID->"04261585-13aa-4b46-bd7f-95494bee3e66"],
+Cell[CellGroupData[{
+Cell[119778, 1894, 347, 7, 64, "ExamplesInput",ExpressionUUID->"3b7f5c83-a1a3-410c-a0a7-3022d9c01832"],
+Cell[120128, 1903, 209, 4, 31, "ExamplesOutput",ExpressionUUID->"d375a3ed-2e88-4f01-b59b-3d7e9d5449fd"],
+Cell[120340, 1909, 212, 4, 31, "ExamplesOutput",ExpressionUUID->"aca7282c-be64-4816-9447-9f0e4a416e5c"]
+}, Open  ]],
+Cell[120567, 1916, 163, 2, 34, "ExampleText",ExpressionUUID->"79736cfa-0981-4968-b947-897a20aca68e"],
+Cell[CellGroupData[{
+Cell[120755, 1922, 161, 2, 27, "ExamplesInput",ExpressionUUID->"4c5fe9cb-9556-4e3b-9c97-b06a66de3b7a"],
+Cell[120919, 1926, 458, 12, 31, "ExamplesOutput",ExpressionUUID->"3907def9-c700-4021-9866-f9c39ca97679"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[121414, 1943, 93, 0, 31, "ExampleSubsection",ExpressionUUID->"55408d8e-d34c-4026-94fd-69852d545cc9"],
+Cell[121510, 1945, 124, 0, 34, "ExampleText",ExpressionUUID->"a635e7f0-d5a7-439c-9196-83dfc855b5c5"],
+Cell[121637, 1947, 438, 9, 48, "ExampleText",ExpressionUUID->"27490d30-128f-4fb4-afc9-ef06b2314331"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[122124, 1962, 92, 0, 36, "ExampleSection",ExpressionUUID->"02825f2d-1f31-4e8d-bab6-37f75ef4368d"],
+Cell[122219, 1964, 102, 0, 34, "ExampleText",ExpressionUUID->"98b901e6-c63e-443f-a84c-537a067d01b2"],
+Cell[122324, 1966, 195, 3, 27, "ExamplesInput",ExpressionUUID->"d41951cb-af04-4430-9c92-bd40fbd8aa40"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[122556, 1974, 89, 0, 45, "SeeAlsoSection",ExpressionUUID->"7b842cfb-1dda-4ab2-8864-f42d790f3208"],
+Cell[CellGroupData[{
+Cell[122670, 1978, 84, 0, 27, "SeeAlso",ExpressionUUID->"a8e2797c-57fe-4929-a5c2-343d67088006"],
+Cell[122757, 1980, 84, 0, 27, "SeeAlso",ExpressionUUID->"5ed0e3e5-b176-489f-893f-3a67daee00f2"],
+Cell[122844, 1982, 83, 0, 27, "SeeAlso",ExpressionUUID->"c72092bf-298c-42b6-9d43-8cd340b3950c"],
+Cell[122930, 1984, 83, 0, 27, "SeeAlso",ExpressionUUID->"f7c4aa5e-3b9d-4415-a86a-c3ad7fadeeb9"],
+Cell[123016, 1986, 84, 0, 27, "SeeAlso",ExpressionUUID->"9e8279c0-fe8b-410a-9c3a-a2c38a773048"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[123149, 1992, 93, 0, 53, "GuidesSection",ExpressionUUID->"1d52b2f0-62a8-4044-a1b2-b5370158e2fa"],
+Cell[CellGroupData[{
+Cell[123267, 1996, 99, 0, 31, "RelatedGuide",ExpressionUUID->"fceba8ea-3472-4088-b86b-f95e7e8f1337"],
+Cell[123369, 1998, 117, 0, 31, "RelatedGuide",ExpressionUUID->"f3fb5655-803a-4a84-abc7-28b77e4ddd57"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[123535, 2004, 99, 0, 53, "TutorialSection",ExpressionUUID->"311ad719-61ee-4006-97b4-5455e00cd251"],
+Cell[123637, 2006, 110, 0, 31, "RelatedTutorial",ExpressionUUID->"48e1df08-f9f4-42c2-b420-cd5b38e14788"]
+}, Open  ]]
+}, Open  ]],
+Cell[123774, 2010, 83, 0, 27, "SectionSeparator",ExpressionUUID->"922fe25b-7ddf-4276-8934-46390476a603"],
+Cell[CellGroupData[{
+Cell[123882, 2014, 87, 0, 58, "DocSection",ExpressionUUID->"1d4687cb-9a49-4c7e-a439-35fd32ff9afc"],
+Cell[123972, 2016, 153, 3, 41, "UsageInput",ExpressionUUID->"5843e4d7-d8d7-429f-9bb1-44c3d9024b50"],
+Cell[124128, 2021, 201, 2, 41, "UsageText",ExpressionUUID->"4cf25292-f5b8-45fe-9e8d-216cf6ad94f9"],
+Cell[CellGroupData[{
+Cell[124354, 2027, 88, 0, 44, "DetailsSection",ExpressionUUID->"5702d56e-17b6-45b1-ac72-20962c7b2271"],
+Cell[CellGroupData[{
+Cell[124467, 2031, 238, 8, 31, "DetailsItem",ExpressionUUID->"1dc1c210-95ca-4b52-a629-48c9693f4b2b"],
+Cell[124708, 2041, 344, 9, 31, "DetailsItem",ExpressionUUID->"14457e3a-74ed-4191-8fe3-e65bb24b6e73"],
+Cell[125055, 2052, 334, 8, 31, "DetailsItem",ExpressionUUID->"b6cf2655-5129-4057-943d-9fce9b3839a1"],
+Cell[125392, 2062, 193, 3, 28, "DetailsRow",ExpressionUUID->"35742d4a-aef4-4981-a7da-438c4c80d6f2"],
+Cell[125588, 2067, 197, 3, 28, "DetailsRow",ExpressionUUID->"a84eaa78-2b92-4723-9103-fc62c04373ca"],
+Cell[125788, 2072, 226, 5, 31, "DetailsItem",ExpressionUUID->"dba3b378-5191-4a64-8896-5b517f072a3b"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[126063, 2083, 95, 0, 44, "ExampleSection",ExpressionUUID->"deebd640-45b3-45be-9572-01ab96793e0d"],
+Cell[126161, 2085, 88, 0, 34, "ExampleText",ExpressionUUID->"d4cc5b5c-906c-430a-ada1-bc2b8f0b7e2f"],
+Cell[126252, 2087, 163, 3, 43, "ExamplesInput",ExpressionUUID->"9a51707e-9009-4b8f-a2f0-0eda19d369a0",
+ InitializationCell->True],
+Cell[126418, 2092, 274, 8, 34, "ExampleText",ExpressionUUID->"71260857-dd4d-4ab7-8e31-df68e371c90b"],
+Cell[CellGroupData[{
+Cell[126717, 2104, 150, 2, 27, "ExamplesInput",ExpressionUUID->"61682e6d-e9e7-44b1-978c-80c2416bec2f"],
+Cell[126870, 2108, 151, 2, 31, "ExamplesOutput",ExpressionUUID->"3192385f-91f2-4ce6-b1cf-47a6013870a9"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[127070, 2116, 92, 0, 44, "ExampleSection",ExpressionUUID->"d7c3e533-da59-494a-8312-eeaf1f552eb3"],
+Cell[127165, 2118, 102, 0, 34, "ExampleText",ExpressionUUID->"fd5336d5-4d9e-4ed5-b104-569fba1cebc1"],
+Cell[127270, 2120, 173, 3, 27, "ExamplesInput",ExpressionUUID->"fcf27549-9e37-47eb-b407-ff7b70617fca"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[127480, 2128, 89, 0, 45, "SeeAlsoSection",ExpressionUUID->"c22fa61c-ec43-4faa-9c67-beb4d8002f66"],
+Cell[CellGroupData[{
+Cell[127594, 2132, 84, 0, 27, "SeeAlso",ExpressionUUID->"1d3e2db9-a533-4781-a98e-7f8823c5b534"],
+Cell[127681, 2134, 84, 0, 27, "SeeAlso",ExpressionUUID->"d59e0639-1f40-4e68-abad-cefc447a997e"],
+Cell[127768, 2136, 83, 0, 27, "SeeAlso",ExpressionUUID->"40ae8448-9932-465c-98cc-ff91448fdeaa"],
+Cell[127854, 2138, 83, 0, 27, "SeeAlso",ExpressionUUID->"da4006e6-185b-4799-b9f6-3afe880310a8"],
+Cell[127940, 2140, 84, 0, 27, "SeeAlso",ExpressionUUID->"6f7615b2-8954-4f2c-8028-97fd3807a4b1"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[128073, 2146, 93, 0, 53, "GuidesSection",ExpressionUUID->"aff143d2-b0f6-4518-b4d8-68f6158a289e"],
+Cell[CellGroupData[{
+Cell[128191, 2150, 99, 0, 31, "RelatedGuide",ExpressionUUID->"b433148a-a6d6-438a-9ec2-3195210a8703"],
+Cell[128293, 2152, 117, 0, 31, "RelatedGuide",ExpressionUUID->"fa5756db-bb4e-4b80-bdd3-36619810c973"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[128459, 2158, 99, 0, 53, "TutorialSection",ExpressionUUID->"cb7eb358-3104-499d-992e-4ac48dfd98b4"],
+Cell[128561, 2160, 110, 0, 31, "RelatedTutorial",ExpressionUUID->"825013e9-c39f-45db-b218-5d1e891f464b"]
+}, Open  ]]
+}, Open  ]],
+Cell[128698, 2164, 83, 0, 27, "SectionSeparator",ExpressionUUID->"e4c2fb6f-e2a7-43c6-9e00-8a01783da40f"],
+Cell[CellGroupData[{
+Cell[128806, 2168, 86, 0, 58, "DocSection",ExpressionUUID->"50ab5dc1-5883-440d-b529-efd326003631"],
+Cell[128895, 2170, 122, 1, 41, "UsageInput",ExpressionUUID->"6de4dd26-b624-4b04-93dc-b496f5da2af0"],
+Cell[129020, 2173, 178, 2, 41, "UsageText",ExpressionUUID->"d10af693-2719-4ff3-bfa9-7e16000d5dbc"],
+Cell[129201, 2177, 161, 3, 41, "UsageInput",ExpressionUUID->"54b8482b-51b9-4cdd-a1b7-12dd2f3dc600"],
+Cell[129365, 2182, 327, 5, 63, "UsageText",ExpressionUUID->"f4080b58-2d7c-4cf4-b3e2-acc1f853ff28"],
+Cell[CellGroupData[{
+Cell[129717, 2191, 88, 0, 44, "DetailsSection",ExpressionUUID->"8407de13-cc74-419d-8634-e013f7688b68"],
+Cell[CellGroupData[{
+Cell[129830, 2195, 238, 8, 31, "DetailsItem",ExpressionUUID->"863dd7fa-5c9f-465a-9a00-857798e0e677"],
+Cell[130071, 2205, 343, 9, 31, "DetailsItem",ExpressionUUID->"77e1f9e1-c495-47d2-8a7a-20afe3b7213a"],
+Cell[130417, 2216, 330, 8, 31, "DetailsItem",ExpressionUUID->"d9feeeea-1368-40e6-9384-6e35d6cc4d52"],
+Cell[130750, 2226, 206, 3, 28, "DetailsRow",ExpressionUUID->"16f3985d-b6d4-4b2e-ae4c-83a3e3b3dc47"],
+Cell[130959, 2231, 188, 3, 24, "DetailsColumn",ExpressionUUID->"77efa127-5d27-4595-a55a-a5cb10b33e04"],
+Cell[131150, 2236, 333, 8, 31, "DetailsItem",ExpressionUUID->"5923b151-fd2c-42f7-8337-81c1393d3a79"],
+Cell[131486, 2246, 193, 3, 28, "DetailsRow",ExpressionUUID->"9650e6f6-6a2f-46ee-ac1a-d5b3d900db51"],
+Cell[131682, 2251, 197, 3, 28, "DetailsRow",ExpressionUUID->"5cf1d6eb-c025-49eb-a401-48a9b4ed0138"],
+Cell[131882, 2256, 225, 5, 31, "DetailsItem",ExpressionUUID->"8186b855-254f-46a4-af07-664a7e72106c"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[132156, 2267, 95, 0, 44, "ExampleSection",ExpressionUUID->"f308094f-d6c5-49b2-bec0-fe84ab68e434"],
+Cell[132254, 2269, 88, 0, 34, "ExampleText",ExpressionUUID->"691aa983-635b-46e1-99cd-e40bfd074ab7"],
+Cell[132345, 2271, 183, 3, 43, "ExamplesInput",ExpressionUUID->"93f9bd09-5178-48d3-b166-56419d48c2d6",
+ InitializationCell->True],
+Cell[132531, 2276, 196, 2, 34, "ExampleText",ExpressionUUID->"6fde87ea-bbb6-4e31-a03c-2d90c9fc40cf"],
+Cell[CellGroupData[{
+Cell[132752, 2282, 370, 10, 46, "ExamplesInput",ExpressionUUID->"05d7dcfe-f963-4b05-ba55-3b2e8f1c592c"],
+Cell[133125, 2294, 2882, 102, 300, "ExamplesOutput",ExpressionUUID->"17a193c3-e65a-423c-8eaf-029f840e56cd"],
+Cell[136010, 2398, 178, 4, 22, "Echo",ExpressionUUID->"1ee8bbbf-7f21-4cc5-9983-7324ad54ddc1"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[136237, 2408, 88, 0, 44, "ExampleSection",ExpressionUUID->"fe4a66a8-09ad-4260-9b41-b4105bbd5a2a"],
+Cell[136328, 2410, 167, 2, 34, "ExampleText",ExpressionUUID->"aa17c050-e987-4da8-b091-e763cceeaf58"],
+Cell[CellGroupData[{
+Cell[136520, 2416, 920, 29, 82, "ExamplesInput",ExpressionUUID->"ec8a2d0e-ba40-4ea8-a700-21e512ca3fa0"],
+Cell[137443, 2447, 2076, 72, 198, "ExamplesOutput",ExpressionUUID->"5f81a891-e602-495f-a672-f0f165ed3ab5"],
+Cell[139522, 2521, 178, 4, 22, "Echo",ExpressionUUID->"acfdad7d-f4ac-4497-88b4-5a4dda33bc5a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[139737, 2530, 99, 0, 31, "ExampleSubsection",ExpressionUUID->"35dc06f1-9616-4b97-95f9-09095f63fd22"],
+Cell[139839, 2532, 147, 1, 34, "ExampleText",ExpressionUUID->"9cbd78b8-e47e-448d-ab2f-c9c3aae7b4ca"],
+Cell[CellGroupData[{
+Cell[140011, 2537, 436, 12, 46, "ExamplesInput",ExpressionUUID->"7277632e-13de-4cf1-8d91-68d848d80799"],
+Cell[140450, 2551, 2311, 80, 198, "ExamplesOutput",ExpressionUUID->"7d75b92e-d618-436f-a08e-1aecf8e1dc54"],
+Cell[142764, 2633, 178, 4, 22, "Echo",ExpressionUUID->"1b1f73f7-5557-4571-b224-07a424db25e1"]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[143003, 2644, 92, 0, 36, "ExampleSection",ExpressionUUID->"179ae35e-6430-4aba-a109-f497d2e3f83d"],
+Cell[143098, 2646, 102, 0, 34, "ExampleText",ExpressionUUID->"36dfdd44-58d6-4d95-96d9-1729537da614"],
+Cell[143203, 2648, 172, 3, 27, "ExamplesInput",ExpressionUUID->"638b3596-45d8-435b-93d4-c389362bccf9"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[143412, 2656, 89, 0, 45, "SeeAlsoSection",ExpressionUUID->"03948b31-181b-4c00-9d0a-067579686029"],
+Cell[CellGroupData[{
+Cell[143526, 2660, 84, 0, 27, "SeeAlso",ExpressionUUID->"0522e45e-258e-498d-8a79-c457c5245a5e"],
+Cell[143613, 2662, 84, 0, 27, "SeeAlso",ExpressionUUID->"3960ee3a-5ed8-4b78-b2de-65d8d6efa712"],
+Cell[143700, 2664, 83, 0, 27, "SeeAlso",ExpressionUUID->"f46e5832-955c-4da5-bd4b-ffb3f4b3d41f"],
+Cell[143786, 2666, 83, 0, 27, "SeeAlso",ExpressionUUID->"7c054a31-39c6-40f6-8dd1-caeeacb3a26f"],
+Cell[143872, 2668, 84, 0, 27, "SeeAlso",ExpressionUUID->"2c603f38-5e91-406c-9522-aef9441e9fa2"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[144005, 2674, 93, 0, 53, "GuidesSection",ExpressionUUID->"550683dd-5023-4c44-a3a8-547c60820ca2"],
+Cell[CellGroupData[{
+Cell[144123, 2678, 99, 0, 31, "RelatedGuide",ExpressionUUID->"028a9568-39d3-4e28-8ddf-9ae86890413c"],
+Cell[144225, 2680, 117, 0, 31, "RelatedGuide",ExpressionUUID->"ead2354e-9550-4894-933c-01640cfd0bc5"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[144391, 2686, 99, 0, 53, "TutorialSection",ExpressionUUID->"41fd805a-df2a-41ad-96eb-1b6b4ea27b38"],
+Cell[144493, 2688, 110, 0, 31, "RelatedTutorial",ExpressionUUID->"04770786-3b2d-4dc6-8089-c498057560fe"]
+}, Open  ]]
+}, Closed]],
+Cell[144630, 2692, 83, 0, 21, "SectionSeparator",ExpressionUUID->"cf03aaa7-0696-4ce2-8001-94978f7b07b5"],
+Cell[CellGroupData[{
+Cell[144738, 2696, 86, 0, 58, "DocSection",ExpressionUUID->"915dde9c-c4f1-4cc6-8371-e2d6bff02a3d"],
+Cell[144827, 2698, 194, 4, 41, "UsageInput",ExpressionUUID->"9314cb96-c015-4bd8-a51a-89cff2074a6e"],
+Cell[145024, 2704, 138, 1, 41, "UsageText",ExpressionUUID->"7514c3df-bb8f-4760-ae5e-fc5f9006d136"],
+Cell[CellGroupData[{
+Cell[145187, 2709, 88, 0, 44, "DetailsSection",ExpressionUUID->"1664e0db-2071-4792-9496-8bdd2dfb9430"],
+Cell[CellGroupData[{
+Cell[145300, 2713, 237, 8, 70, "DetailsItem",ExpressionUUID->"b42b5730-ce6a-4877-8c84-95566b45c8df"],
+Cell[145540, 2723, 343, 9, 70, "DetailsItem",ExpressionUUID->"66b95c99-f28c-4b0c-8fd2-d869b93c61f0"],
+Cell[145886, 2734, 330, 8, 70, "DetailsItem",ExpressionUUID->"f5b66dda-568d-498e-ab61-a921874d1dd5"],
+Cell[146219, 2744, 210, 3, 70, "DetailsRow",ExpressionUUID->"27336c03-cc28-4cbe-bf95-b3318422c6c3"],
+Cell[146432, 2749, 298, 6, 70, "DetailsColumn",ExpressionUUID->"4e28decf-7c98-44f0-9fab-06efb56cd5c5"],
+Cell[146733, 2757, 211, 3, 70, "DetailsRow",ExpressionUUID->"8cf3f725-6717-4b4a-992d-23a105ea69d5"],
+Cell[146947, 2762, 405, 10, 70, "DetailsColumn",ExpressionUUID->"3345e692-53ad-4a18-9384-d8d802a28f6c"],
+Cell[147355, 2774, 209, 3, 70, "DetailsRow",ExpressionUUID->"6647fbd2-d7c5-4776-b344-fc40d65e75a9"],
+Cell[147567, 2779, 2355, 54, 70, "DetailsColumn",ExpressionUUID->"6a6ddf67-61f2-4c3f-beca-99fd11310832"],
+Cell[149925, 2835, 333, 8, 70, "DetailsItem",ExpressionUUID->"f6d60b95-3eed-4e0d-acc3-d96982312f24"],
+Cell[150261, 2845, 193, 3, 70, "DetailsRow",ExpressionUUID->"619513e1-6c1d-43c9-9c3f-70c776e4993a"],
+Cell[150457, 2850, 197, 3, 70, "DetailsRow",ExpressionUUID->"cdae2571-6ffe-4a5e-8e88-23e078d18d66"],
+Cell[150657, 2855, 225, 5, 70, "DetailsItem",ExpressionUUID->"c02c0bfd-e844-435b-8c0c-18b2cb518c14"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[150931, 2866, 95, 0, 36, "ExampleSection",ExpressionUUID->"748eb44d-bd04-4c04-a6ee-a14a110a9447"],
+Cell[151029, 2868, 88, 0, 34, "ExampleText",ExpressionUUID->"6cccbc1d-6794-457e-9816-4e6d3c8d52fd"],
+Cell[151120, 2870, 163, 3, 43, "ExamplesInput",ExpressionUUID->"4d7839c2-0bc5-4985-adf2-2865424bff94",
+ InitializationCell->True],
+Cell[151286, 2875, 317, 9, 34, "ExampleText",ExpressionUUID->"c83178e3-d594-4e7f-b56a-80603fa73492"],
+Cell[151606, 2886, 130, 1, 27, "ExamplesInput",ExpressionUUID->"cf28fb70-e7de-459b-bc04-0104033b641d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[151773, 2892, 88, 0, 44, "ExampleSection",ExpressionUUID->"43f30a1c-482b-4e59-bf24-9580fee25922"],
+Cell[CellGroupData[{
+Cell[151886, 2896, 103, 0, 31, "ExampleSubsection",ExpressionUUID->"971766bf-0c77-4e6d-a266-7b36d0b50e23"],
+Cell[151992, 2898, 339, 8, 70, "ExamplesInput",ExpressionUUID->"dc1a0516-7c71-4abb-aab9-f0e956002c73"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[152368, 2911, 104, 0, 25, "ExampleSubsection",ExpressionUUID->"6ccfe3fd-a555-4a43-9ec7-f51df0b47d35"],
+Cell[152475, 2913, 455, 12, 70, "ExamplesInput",ExpressionUUID->"e22cbac0-86b9-46e6-b819-721d94f14893"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[152967, 2930, 102, 0, 25, "ExampleSubsection",ExpressionUUID->"a9331d25-2419-432a-8dfa-f671fd3a9e7e"],
+Cell[153072, 2932, 2491, 56, 226, "ExamplesInput",ExpressionUUID->"ec31620b-b0be-4bea-acb0-ef363473fe18"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[155612, 2994, 92, 0, 44, "ExampleSection",ExpressionUUID->"fc5be959-1033-4d5f-90fe-82507ffa4254"],
+Cell[155707, 2996, 102, 0, 34, "ExampleText",ExpressionUUID->"8e0ae208-c07b-404a-84de-f106087c60c4"],
+Cell[155812, 2998, 186, 3, 27, "ExamplesInput",ExpressionUUID->"180e1910-3706-45d1-af85-fdf77fb9bbb0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[156035, 3006, 89, 0, 53, "SeeAlsoSection",ExpressionUUID->"830f10ea-ff0e-4eef-b3c5-957d50b8f930"],
+Cell[CellGroupData[{
+Cell[156149, 3010, 84, 0, 27, "SeeAlso",ExpressionUUID->"0d2c75f2-9905-4678-b54f-cc57557ed60f"],
+Cell[156236, 3012, 84, 0, 27, "SeeAlso",ExpressionUUID->"cd5c5556-09e9-4fa3-a03d-aca23b47c8ef"],
+Cell[156323, 3014, 83, 0, 27, "SeeAlso",ExpressionUUID->"cda072cf-85fb-4d19-a253-9a8a15ebe542"],
+Cell[156409, 3016, 83, 0, 27, "SeeAlso",ExpressionUUID->"b2c66e37-a68a-4df4-9891-adba28e69afa"],
+Cell[156495, 3018, 84, 0, 27, "SeeAlso",ExpressionUUID->"08c6a195-4d09-4db3-ac04-3d4d6e9472f8"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[156628, 3024, 93, 0, 53, "GuidesSection",ExpressionUUID->"bc183359-cd6d-445a-a7fc-e8741f89f8a1"],
+Cell[CellGroupData[{
+Cell[156746, 3028, 99, 0, 31, "RelatedGuide",ExpressionUUID->"9e3357cb-b7b1-4b19-a340-7ab624800017"],
+Cell[156848, 3030, 117, 0, 31, "RelatedGuide",ExpressionUUID->"98c07eda-5077-40f7-b30e-1a2d36d993a8"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[157014, 3036, 99, 0, 53, "TutorialSection",ExpressionUUID->"1b55e0a7-3fde-4d3f-b359-cc98d332cc63"],
+Cell[157116, 3038, 110, 0, 31, "RelatedTutorial",ExpressionUUID->"344527f9-4f40-47ee-8370-3023e32ea71d"]
+}, Open  ]]
+}, Open  ]],
+Cell[157253, 3042, 83, 0, 27, "SectionSeparator",ExpressionUUID->"e06d66f5-2312-41a8-a5aa-90942678b921"],
+Cell[CellGroupData[{
+Cell[157361, 3046, 87, 0, 58, "DocSection",ExpressionUUID->"0d968725-25fa-43e9-9151-6894d37421f9"],
+Cell[157451, 3048, 96, 0, 41, "UsageInput",ExpressionUUID->"011d046c-269e-4a0c-84cb-dd83de7e9269"],
+Cell[157550, 3050, 185, 2, 41, "UsageText",ExpressionUUID->"fc29a3f4-65c4-4d9f-b706-351f43c0fcf5"],
+Cell[CellGroupData[{
+Cell[157760, 3056, 88, 0, 44, "DetailsSection",ExpressionUUID->"d667c7b9-0816-4c43-babf-25d4d1b8e17b"],
+Cell[CellGroupData[{
+Cell[157873, 3060, 344, 9, 31, "DetailsItem",ExpressionUUID->"ff709109-c3ab-4bc4-b9c8-f0733a3218f3"],
+Cell[158220, 3071, 334, 8, 31, "DetailsItem",ExpressionUUID->"cca465f8-1d6b-407e-9d34-023b284f1ef2"],
+Cell[158557, 3081, 193, 3, 28, "DetailsRow",ExpressionUUID->"8acf7b03-2556-458c-91b9-9a4367f50b01"],
+Cell[158753, 3086, 197, 3, 28, "DetailsRow",ExpressionUUID->"bc044f85-2573-4180-9dc5-b3852a6693fe"],
+Cell[158953, 3091, 226, 5, 31, "DetailsItem",ExpressionUUID->"130ca4ca-d99b-4271-a5d0-ec7ff4431d01"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[159228, 3102, 95, 0, 36, "ExampleSection",ExpressionUUID->"1c4f3bf6-f0bd-4b3d-9c8d-976fca419269"],
+Cell[159326, 3104, 88, 0, 34, "ExampleText",ExpressionUUID->"762ef934-6787-46f1-a258-a0d0962905ac"],
+Cell[159417, 3106, 163, 3, 43, "ExamplesInput",ExpressionUUID->"d61068a5-af08-49a7-8751-247661c0ba2b",
+ InitializationCell->True]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[159617, 3114, 92, 0, 36, "ExampleSection",ExpressionUUID->"b9ef06f7-bdac-4de1-9af3-dc3f0943821b"],
+Cell[159712, 3116, 102, 0, 34, "ExampleText",ExpressionUUID->"4fe5c3ac-a849-4b46-999e-e474fc1f5da5"],
+Cell[159817, 3118, 173, 3, 27, "ExamplesInput",ExpressionUUID->"64ddaf2e-9b82-46b8-bf61-71fd25ac2142"],
+Cell[159993, 3123, 130, 1, 27, "ExamplesInput",ExpressionUUID->"706686ba-b5e6-44d5-a984-bf6835c93af5"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[160160, 3129, 89, 0, 45, "SeeAlsoSection",ExpressionUUID->"9380d6c9-3262-4735-875f-5e3efa9c7ec1"],
+Cell[CellGroupData[{
+Cell[160274, 3133, 84, 0, 27, "SeeAlso",ExpressionUUID->"933c9489-3b0e-4f17-b4a1-5c9f39b39475"],
+Cell[160361, 3135, 84, 0, 27, "SeeAlso",ExpressionUUID->"0c9c726c-8d9e-4407-b046-302699d8e622"],
+Cell[160448, 3137, 83, 0, 27, "SeeAlso",ExpressionUUID->"f3e33f07-92a3-42a0-b62a-2244f1fc354b"],
+Cell[160534, 3139, 83, 0, 27, "SeeAlso",ExpressionUUID->"be1aa3d6-84b4-45fb-814d-080539ee1a5a"],
+Cell[160620, 3141, 84, 0, 27, "SeeAlso",ExpressionUUID->"b09f4a97-74dd-49f7-9c51-373570df9a7f"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[160753, 3147, 93, 0, 53, "GuidesSection",ExpressionUUID->"640dcfd8-6b49-475c-a3ea-b9bcd7da65f3"],
+Cell[CellGroupData[{
+Cell[160871, 3151, 99, 0, 31, "RelatedGuide",ExpressionUUID->"bb994ba5-06d4-4c10-a835-e7efc09cb4bd"],
+Cell[160973, 3153, 117, 0, 31, "RelatedGuide",ExpressionUUID->"f8ee7cbf-2f36-4b08-a4a6-9657f932a250"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[161139, 3159, 99, 0, 53, "TutorialSection",ExpressionUUID->"1ab36499-df2a-4cb6-aada-ae963152e2bf"],
+Cell[161241, 3161, 110, 0, 31, "RelatedTutorial",ExpressionUUID->"f256d2cb-ec8b-4468-82c0-8cd1b252f5df"]
+}, Open  ]]
+}, Closed]],
+Cell[161378, 3165, 83, 0, 21, "SectionSeparator",ExpressionUUID->"78131557-7fea-41b4-bfe6-f7aac376e5ce"]
+}
+]
+*)
+
