@@ -23,10 +23,10 @@ ExampleFunction::usage = "这里应该填这个函数的说明,如果要换行�
 (*程序包正体*)
 (* ::Subsection::Closed:: *)
 (*主设置*)
+Nonograms::usage = "程序包的说明,这里抄一遍";
+Begin["`Private`"];
 Nonograms$Version="V1.0";
 Nonograms$LastUpdate="2016-11-11";
-ExNumber::usage = "程序包的说明,这里抄一遍";
-Begin["`Private`"];
 (* ::Subsection::Closed:: *)
 (*主体代码*)
 (* ::Subsubsection:: *)

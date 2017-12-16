@@ -43,9 +43,6 @@ missing::usage = "Locate values missing from a 'partial' solution to a given puz
 clues::usage = "Generate clues from a completed puzzle table (no unknowns), consisting of lists of the numbers of consecutive runs of black cells in each row and column.";
 table::usage = "Generate a puzzle table of given dimensions from lists of positions of 1s and of 0s. Positions with unspecified values are indicated as unknown.";
 
-cluesGCHQ::usage = "Example GCHQ clues, for demonstration purposes.";
-givenGCHQ::usage = "Example GCHQ given puzzle table, for demonstration purposes.";
-
 
 
 Begin["`Private`"];
@@ -152,43 +149,6 @@ table[dims_, knowns_ ] := Module[{const = table[dims]},
 
 (* TBD - Automate making harder/easier through knowns reduction/increase *)
 (* TBD - Generation directly from a bitmap *)
-
-
-(* ==================== Example: GCHQ Problem statement *)
-
-(* The 2015 GHCQ puzzle as an example:
-
-    showTable[givenGCHQ, cluesGCHQ]
-    solutionGCHQ = solve[cluesGCHQ, givenGCHQ];
-    showTable[solutionGCHQ, cluesGCHQ]
-    BarcodeRecognize[(1-solutionGCHQ)//Image]
-
-*)
-
-(* Define values for GCHQ 2015 puzzle *)
-
-(* The "clues" along the sides of the puzzle *)
-cluesGCHQ = {
-  {{7, 3, 1, 1, 7}, {1, 1, 2, 2, 1, 1}, {1, 3, 1, 3, 1, 1, 3, 1}, {1, 3, 1, 1, 6, 1, 3, 1},
-    {1, 3, 1, 5, 2, 1, 3, 1}, {1, 1, 2, 1, 1}, {7, 1, 1, 1, 1, 1, 7}, {3, 3}, {1, 2, 3, 1, 1, 3, 1, 1, 2},
-    {1, 1, 3, 2, 1, 1}, {4, 1, 4, 2, 1, 2}, {1, 1, 1, 1, 1, 4, 1, 3}, {2, 1, 1, 1, 2, 5}, {3, 2, 2, 6, 3, 1},
-    {1, 9, 1, 1, 2, 1}, {2, 1, 2, 2, 3, 1}, {3, 1, 1, 1, 1, 5, 1}, {1, 2, 2, 5}, {7, 1, 2, 1, 1, 1, 3},
-    {1, 1, 2, 1, 2, 2, 1}, {1, 3, 1, 4, 5, 1}, {1, 3, 1, 3, 10, 2}, {1, 3, 1, 1, 6, 6},
-    {1, 1, 2, 1, 1, 2}, {7, 2, 1, 2, 5}},
-  {{7, 2, 1, 1, 7}, {1, 1, 2, 2, 1, 1}, {1, 3, 1, 3, 1, 3, 1, 3, 1}, {1, 3, 1, 1, 5, 1, 3, 1},
-    {1, 3, 1, 1, 4, 1, 3, 1}, {1, 1, 1, 2, 1, 1}, {7, 1, 1, 1, 1, 1, 7}, {1, 1, 3}, {2, 1, 2, 1, 8, 2, 1},
-    {2, 2, 1, 2, 1, 1, 1, 2}, {1, 7, 3, 2, 1}, {1, 2, 3, 1, 1, 1, 1, 1}, {4, 1, 1, 2, 6}, {3, 3, 1, 1, 1, 3, 1},
-    {1, 2, 5, 2, 2}, {2, 2, 1, 1, 1, 1, 1, 2, 1}, {1, 3, 3, 2, 1, 8, 1}, {6, 2, 1}, {7, 1, 4, 1, 1, 3}, {1, 1, 1, 1, 4},
-    {1, 3, 1, 3, 7, 1}, {1, 3, 1, 1, 1, 2, 1, 1, 4}, {1, 3, 1, 4, 3, 3}, {1, 1, 2, 2, 2, 6, 1}, {7, 1, 3, 2, 1, 1}}
-};
-
-(* The givens from the known values *)
-givenGCHQ = table[Length /@ cluesGCHQ,
-  { {{4, 4}, {4, 5}, {4, 13}, {4, 14}, {4, 22}, {9, 7}, {9, 8}, {9, 11}, {9, 15}, {9, 16}, {9, 19},
-    {17, 7}, {17, 12}, {17, 17}, {17, 21}, {22, 4}, {22, 5}, {22, 10}, {22, 11}, {22, 16}, {22, 21}, {22, 22}},
-    {}
-  }];
-
 
 
 (* ******************** Internal supporting functions and definitions *)
