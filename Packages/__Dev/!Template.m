@@ -18,18 +18,17 @@
 (* ::Section:: *)
 (*函数说明*)
 BeginPackage["Example`"];
-ExampleFunction::usage = "这里应该填这个函数的说明,如果要换行用\"\r\"\r就像这样";
+ExampleFunction::usage = "这里应该填这个函数的说明,如果要换行用\"\\r\"\r就像这样";
 (* ::Section:: *)
 (*程序包正体*)
 (* ::Subsection::Closed:: *)
 (*主设置*)
-Example$Version="V1.0";
-Example$Environment="V11.0+";
-Example$LastUpdate="2016-11-11";
 ExNumber::usage = "程序包的说明,这里抄一遍";
 Begin["`Private`"];
 (* ::Subsection::Closed:: *)
 (*主体代码*)
+Example$Version="V1.0";
+Example$LastUpdate="2016-11-11";
 (* ::Subsubsection:: *)
 (*功能块 1*)
 ExampleFunction[1]="我就是个示例函数,什么功能都没有";
