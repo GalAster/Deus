@@ -1,10 +1,8 @@
 # Deus---Nogame Nolife
 
-[![Mathematica](https://img.shields.io/badge/Mathematica-%3E%3D10.0-brightgreen.svg)](https://www.wolfram.com/mathematica/) 
-
-[![CodeSize](https://img.shields.io/github/size/webcaetano/craft/build/phaser-craft.min.js.svg)](https://www.wolfram.com/mathematica/) 
-
-[![Uptime](https://img.shields.io/uptimerobot/ratio/m778918918-3e92c097147760ee39d02d36.svg)](https://www.wolfram.com/mathematica/) 
+[![Mathematica](https://img.shields.io/badge/Mathematica-%3E%3D10.0-brightgreen.svg)](https://www.wolfram.com/mathematica/)
+[![GitHub release](https://img.shields.io/badge/release-v0.3.2-ff69b4.svg)](https://github.com/GalAster/Deus/releases)
+[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/badges/shields.svg)](https://github.com/GalAster/Deus)
 
 ## 简介
 
@@ -12,6 +10,8 @@
 
 ## ![开发与部署](http://image.flaticon.com/icons/png/32/180/180012.png)开发与部署
 ### 开发环境
+
+InteliJ Idea
 
 ### 程序封装
 
