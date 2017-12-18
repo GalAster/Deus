@@ -96,9 +96,10 @@ Magic3DShow[n_]:={
 	Graph3D@GridGraph[{n,n,n},VertexLabels->Table[i->Flatten[Magic3D@n][[i]],{i,n^3}]],
 	MatrixForm/@Magic3D[n]
 };
+Magic[n_,"3D"]:=Magic3DShow@Magic3D[n];
 (* ::Subsubsection:: *)
 (*幻方判别过程*)
-MagicQ[input_,3D]:=Magic3DQ[input];
+MagicQ[input_,"3D"]:=Magic3DQ[input];
 MagicQ[matrix_]:=
 Block[{SRow,SCol},
 	Echo["该矩阵所有数字总和为"<>ToString@Total[Total/@matrix]];

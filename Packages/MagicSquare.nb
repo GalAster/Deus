@@ -581,8 +581,16 @@ Cell[BoxData[{
              RowBox[{"n", "^", "3"}]}], "}"}]}], "]"}]}]}], "]"}]}], ",", 
      "\n", "\t", 
      RowBox[{"MatrixForm", "/@", 
-      RowBox[{"Magic3D", "[", "n", "]"}]}]}], "\n", "}"}]}], 
-  ";"}]}], "Code",ExpressionUUID->"ab421779-c543-4b55-8463-7b8ba366fadc"]
+      RowBox[{"Magic3D", "[", "n", "]"}]}]}], "\n", "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Magic", "[", 
+    RowBox[{"n_", ",", "\"\<3D\>\""}], "]"}], ":=", 
+   RowBox[{"Magic3DShow", "@", 
+    RowBox[{"Magic3D", "[", "n", "]"}]}]}], ";"}]}], "Code",
+ CellChangeTimes->{{3.7225871419571085`*^9, 
+  3.7225871462685795`*^9}},ExpressionUUID->"ab421779-c543-4b55-8463-\
+7b8ba366fadc"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -591,6 +599,11 @@ Cell["\:5e7b\:65b9\:5224\:522b\:8fc7\:7a0b", \
 "Subsubsection",ExpressionUUID->"07eb8dc2-61f1-4a92-a98a-77fe42d1f307"],
 
 Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"MagicQ", "[", 
+    RowBox[{"input_", ",", "\"\<3D\>\""}], "]"}], ":=", 
+   RowBox[{"Magic3DQ", "[", "input", "]"}]}], ";"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"MagicQ", "[", "matrix_", "]"}], ":=", "\n", 
@@ -742,10 +755,12 @@ Cell[BoxData[{
       RowBox[{"If", "[", 
        RowBox[{
         RowBox[{"SameQ", "@@", "TF"}], ",", "True", ",", "False"}], "]"}]}]}],
-     "\n", "]"}]}], 
-  ";"}]}], "Code",ExpressionUUID->"e518d04b-984c-4900-9349-cd3085398448"]
+     "\n", "]"}]}], ";"}]}], "Code",
+ CellChangeTimes->{{3.7225871370400295`*^9, 
+  3.722587138426856*^9}},ExpressionUUID->"e518d04b-984c-4900-9349-\
+cd3085398448"]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -768,7 +783,7 @@ Cell[BoxData[{
  CellChangeTimes->{
   3.7224875390892735`*^9},ExpressionUUID->"6cfe6dd8-61d3-4db0-a439-\
 0ece3aa208a4"]
-}, Closed]]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -777,7 +792,7 @@ Cell["", "SectionSeparator",ExpressionUUID->"b3da729d-360d-4bfa-973b-\
 6c43c1b110e6"]
 },
 WindowSize->{775, 873},
-WindowMargins->{{265, Automatic}, {Automatic, 8}},
+WindowMargins->{{Automatic, 559}, {49, Automatic}},
 FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (2017\:5e7410\:67082\
 \:65e5)",
 StyleDefinitions->FrontEnd`FileName[{"BTools"}, "CodePackage.nb", 
