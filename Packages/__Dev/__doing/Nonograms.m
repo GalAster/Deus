@@ -8,13 +8,13 @@
 (*Created by Mathematica Plugin for IntelliJ IDEA*)
 (*Establish from GalAster's template*)
 (**)
-(*Author: 酱紫君*)
+(*Author: Roy Levien*)
 (*Creation Date: 2017.12.16*)
 (*Copyright:CC4.0 BY+NA+NC*)
 (**)
 (*该软件包遵从CC协议:署名、非商业性使用、相同方式共享*)
 (**)
-(*这里应该填这个函数的介绍*)
+(*这个项目移植自 Roy Levien 的 https://github.com/orome/qr-puzzles-ma*)
 (* ::Section:: *)
 (*函数说明*)
 BeginPackage["Nonograms`"];
@@ -26,13 +26,12 @@ ExampleFunction::usage = "这里应该填这个函数的说明,如果要换行�
 Nonograms::usage = "程序包的说明,这里抄一遍";
 Begin["`Private`"];
 Nonograms$Version="V1.0";
-Nonograms$LastUpdate="2016-11-11";
+Nonograms$LastUpdate="2017-12-18";
 (* ::Subsection::Closed:: *)
 (*主体代码*)
 (* ::Subsubsection:: *)
 (*功能块 1*)
 ExampleFunction[1]="我就是个示例函数,什么功能都没有";
-
 
 
 (* ::Subsubsection:: *)
