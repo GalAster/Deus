@@ -25,14 +25,27 @@ ExampleFunction::usage = "这里应该填这个函数的说明,如果要换行�
 (*主设置*)
 Nonograms::usage = "程序包的说明,这里抄一遍";
 Begin["`Private`"];
-Nonograms$Version="V1.0";
-Nonograms$LastUpdate="2017-12-18";
 (* ::Subsection::Closed:: *)
 (*主体代码*)
+Nonograms$Version="V1.0";
+Nonograms$LastUpdate="2017-12-18";
+$Unknown = "-";
+$CellGraphics = {
+	1 -> Graphics[{Black, Rectangle[]}, ImageSize -> 20],
+	0 -> Graphics[{White, Rectangle[]}, ImageSize -> 20],
+	unknown-> Graphics[{GrayLevel[.90], Rectangle[]}, ImageSize -> 20]
+};
+$GridSpecs = Sequence[ItemSize -> {5/4,5/4}, Spacings -> {1/4, -1/8}];
 (* ::Subsubsection:: *)
-(*功能块 1*)
-ExampleFunction[1]="我就是个示例函数,什么功能都没有";
-
+(*NonogramsShow*)
+NonogramsShow[t_, {cr_, cc_}] :=
+With[{lc = Max[Length/@cc], lr = Max[Length/@cr]},
+	Grid[Join[
+		Transpose@Join[ConstantArray["", {lr, lc}], (Style[#, Bold]& /@ PadLeft[#, lc, ""]& /@ cc)],
+		MapThread[Join, {(Style[#, Bold]& /@ PadLeft[#, lr, ""]& /@ cr), (t /. $CellGraphics)}]
+	],$GridSpecs]
+];
+NonogramsShow[t_] := Grid[t /. $CellGraphics, $GridSpecs];
 
 (* ::Subsubsection:: *)
 (*功能块 2*)
