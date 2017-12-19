@@ -1,0 +1,209 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6569,        199]
+NotebookOptionsPosition[      5944,        180]
+NotebookOutlinePosition[      6301,        196]
+CellTagsIndexPosition[      6258,        193]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"treeR", "[", "n_", "]"}], ":=", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"o", "[", 
+     RowBox[{
+      RowBox[{"trees", "[", "a", "]"}], ",", 
+      RowBox[{"trees", "[", 
+       RowBox[{"n", "-", "a"}], "]"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "1", ",", 
+      RowBox[{"n", "-", "1"}]}], "}"}]}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"treeR", "[", "1", "]"}], ":=", "n"}], "\n", 
+ RowBox[{
+  RowBox[{"tree", "[", "n_", "]"}], ":=", 
+  RowBox[{"Flatten", "[", 
+   RowBox[{
+    RowBox[{"treeR", "[", "n", "]"}], "//.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"o", "[", 
+        RowBox[{"a_List", ",", "b_"}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"o", "[", 
+           RowBox[{"#", ",", "b"}], "]"}], "&"}], "/@", "a"}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{"o", "[", 
+        RowBox[{"a_", ",", "b_List"}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"o", "[", 
+           RowBox[{"a", ",", "#"}], "]"}], "&"}], "/@", "b"}], ")"}]}]}], 
+     "}"}]}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"game24play", "[", "val_List", "]"}], ":=", 
+  RowBox[{"Union", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"StringReplace", "[", 
+      RowBox[{
+       RowBox[{"StringTake", "[", 
+        RowBox[{
+         RowBox[{"ToString", "[", 
+          RowBox[{"#", ",", "InputForm"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"10", ",", 
+           RowBox[{"-", "2"}]}], "}"}]}], "]"}], ",", 
+       RowBox[{
+        RowBox[{"\"\<-1*\>\"", "~~", "n_"}], "\[RuleDelayed]", 
+        RowBox[{"\"\<-\>\"", "<>", "n"}]}]}], "]"}], "&"}], "/@", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"HoldForm", "/@", 
+       RowBox[{"Select", "[", 
+        RowBox[{
+         RowBox[{"Union", "@", 
+          RowBox[{"Flatten", "[", 
+           RowBox[{"Outer", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"#", "/.", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"o", "[", "q_Integer", "]"}], "\[RuleDelayed]", 
+                  RowBox[{"#2", "[", 
+                   RowBox[{"[", "q", "]"}], "]"}]}], ",", 
+                 RowBox[{
+                  RowBox[{"n", "[", "q_", "]"}], "\[RuleDelayed]", 
+                  RowBox[{"#3", "[", 
+                   RowBox[{"[", "q", "]"}], "]"}]}]}], "}"}]}], "&"}], ",", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Block", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"O", "=", "1"}], ",", 
+                   RowBox[{"N", "=", "1"}]}], "}"}], ",", 
+                 RowBox[{"#", "/.", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"o", "\[RuleDelayed]", 
+                    RowBox[{"o", "[", 
+                    RowBox[{"O", "++"}], "]"}]}], ",", 
+                    RowBox[{"n", "\[RuleDelayed]", 
+                    RowBox[{"n", "[", 
+                    RowBox[{"N", "++"}], "]"}]}]}], "}"}]}]}], "]"}], "&"}], "/@", 
+              RowBox[{"tree", "[", "4", "]"}]}], ",", 
+             RowBox[{"Tuples", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                "Plus", ",", "Subtract", ",", "Times", ",", "Divide"}], "}"}],
+                ",", "3"}], "]"}], ",", 
+             RowBox[{"Permutations", "[", 
+              RowBox[{"Array", "[", 
+               RowBox[{"v", ",", "4"}], "]"}], "]"}], ",", "1"}], "]"}], 
+           "]"}]}], ",", 
+         RowBox[{
+          RowBox[{"Quiet", "[", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"#", "/.", 
+              RowBox[{
+               RowBox[{"v", "[", "q_", "]"}], "\[RuleDelayed]", 
+               RowBox[{"val", "[", 
+                RowBox[{"[", "q", "]"}], "]"}]}]}], ")"}], "\[Equal]", "24"}],
+            "]"}], "&"}]}], "]"}]}], "/.", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"v", "[", "q", "]"}], "\[Rule]", 
+         RowBox[{"val", "[", 
+          RowBox[{"[", "q", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"q", ",", "4"}], "}"}]}], "]"}]}], ")"}]}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.7226506470490503`*^9, 
+  3.722650647916032*^9}},ExpressionUUID->"635d6187-735e-4616-a324-\
+13e291f0ae25"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"game24play", "[", 
+  RowBox[{"RandomInteger", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1", ",", "9"}], "}"}], ",", "4"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.722650656327359*^9, 
+  3.722650656375836*^9}},ExpressionUUID->"7a4c0846-eaca-4287-8908-\
+a3b102a4386f"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{{3.7226506568704247`*^9, 
+  3.722650665858526*^9}},ExpressionUUID->"119580bc-33b4-41bf-ae52-\
+908c632105ae"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"https", ":"}], "//", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"rosettacode", ".", "org"}], "/", "wiki"}], "/", "24"}], 
+   RowBox[{"_game", "/", "Solve"}], "#Mathematica", "_.", "2", "F_Wolfram", 
+   "_Language"}]}]], "Input",
+ CellChangeTimes->{{3.7226506749501*^9, 
+  3.7226506749546027`*^9}},ExpressionUUID->"25f1080a-208f-4864-9268-\
+76bb054c43e2"]
+},
+WindowSize->{775, 873},
+WindowMargins->{{564, Automatic}, {Automatic, 54}},
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (2017\:5e7410\:67082\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4466, 126, 208, "Input",ExpressionUUID->"635d6187-735e-4616-a324-13e291f0ae25"],
+Cell[CellGroupData[{
+Cell[5049, 150, 304, 8, 27, "Input",ExpressionUUID->"7a4c0846-eaca-4287-8908-a3b102a4386f"],
+Cell[5356, 160, 173, 4, 31, "Output",ExpressionUUID->"119580bc-33b4-41bf-ae52-908c632105ae"]
+}, Open  ]],
+Cell[5544, 167, 396, 11, 27, "Input",ExpressionUUID->"25f1080a-208f-4864-9268-76bb054c43e2"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
