@@ -4,6 +4,8 @@
 [![Release Vision](https://img.shields.io/badge/release-v0.3.2-ff69b4.svg)](https://github.com/GalAster/Deus/releases)
 [![Repo Size](https://img.shields.io/github/repo-size/badges/shields.svg)](https://github.com/GalAster/Deus)
 
+![Background](https://raw.githubusercontent.com/GalAster/Deus/master/Resources/pic/MainPage.jpg)
+
 ## ![安装方式](https://raw.githubusercontent.com/GalAster/Deus/master/Resources/ico/board-game-blocks.png) Introduce
 
 Deus 
@@ -12,7 +14,7 @@ Deus
 
 #### 手动安装
 
-
+- 进入release下载最新的安装包
 
 #### 自动安装
 
@@ -61,6 +63,6 @@ https://www.zhihu.com/people/GalAster
 
 ## ![许可协议](https://raw.githubusercontent.com/GalAster/Deus/master/Resources/ico/board-gaming.png) License
 
-该软件包遵从CC 4.0协议: ![许可协议](https://raw.githubusercontent.com/GalAster/Deus/master/Resources/ico/CC40_BY+NC+SA.close.png)
+该软件包遵从CC 4.0协议: <img src="./xxx.png" width = "300" height = "200" alt="图片名称" align=center />　![许可协议](https://raw.githubusercontent.com/GalAster/Deus/master/Resources/ico/CC40_BY+NC+SA.close.png)
 
 **BY-NC-SA** (非商业性使用、相同方式共享）
