@@ -17,29 +17,32 @@
 (*这里应该填这个函数的介绍*)
 (* ::Section:: *)
 (*函数说明*)
-BeginPackage["Example`"];
+BeginPackage["DigitalMinato`"];
 Poker24::usage = "";
 
 (* ::Section:: *)
 (*程序包正体*)
 (* ::Subsection::Closed:: *)
 (*主设置*)
-ExNumber::usage = "程序包的说明,这里抄一遍";
+DigitalMinato::usage = "程序包的说明,这里抄一遍";
 Begin["`Private`"];
 (* ::Subsection::Closed:: *)
 (*主体代码*)
-Example$Version="V1.0";
-Example$LastUpdate="2016-11-11";
+DigitalMinato$Version="V1.0";
+DigitalMinato$LastUpdate="2017-12-22";
 (* ::Subsubsection:: *)
 (*运算符重载,减枝*)
-cc[a_,b_/;a>5]:=If[a>100,$Failed,Binomial[a,b]];
-aa[a_,b_/;a>5]:=If[a>20,$Failed,FactorialPower[a,b]];
+div[a_,0]:=Infinity;
+(*
 pow[a_,pow[b_,c_]]:=$Failed;
 pow[a_,b_/;b>10]:=$Failed;
 pow[a_,b_/;b<0]:=If[a<=0,$Failed,Power[a,b]];
 pow[a_,ComplexInfinity]:=$Failed;
-div[a_,0]:=$Failed;
-(*
+log[1,b_]:=$Failed;
+log[a_,b_/;b<0]:=$Failed;
+log[a_/;a<0,b_]:=$Failed;
+root[a_,0]:=$Failed;
+root[a_/;a<=0,b_]:=$Failed;
 div[a_,b_]:=$Failed/;b>10^3;
 log[a_,b_]:=$Failed/;a<0;
 root[a_,b_]:=$Failed;
@@ -51,11 +54,8 @@ div[a_,b_]:=Divide[a,b];
 pow[a_,b_]:=Power[a,b];
 log[a_,b_]:=Log[a,b];
 root[a_,b_]:=pow[a,1/b];
-aa[a_,b_]:=FactorialPower[a,b];
-cc[a_,b_]:=Binomial[a,b];
-
 name=Thread[{plus,minus,times,div,pow,log,root,aa,cc}->
-  {Plus,Subtract,Times,Divide,Power,Log,Surd,FactorialPower,Binomial}];
+	{Plus,Subtract,Times,Divide,Power,Log,Surd,FactorialPower,Binomial}];
 (* ::Subsubsection:: *)
 (*卡特兰树*)
 treeR[1]=n;
@@ -70,21 +70,45 @@ PokerFilter[l_Integer]:=Block[
 	ff=ReplacePart[#,Thread[Position[#,n]->nn]~Join~Thread[Position[#,o]->oo]]&;
 	Function[Evaluate@Join[oo,nn],Evaluate[HoldForm/@Evaluate[ff/@treeC[l]]]]
 ];
-Options[Poker24]={Number->24,Extension->Off};
-Poker24[nList_List,OptionsPattern[]]:=Block[
+Options[Poker24Off]={Rule->{Plus,Subtract,Times,div}};
+Poker24Off[nList_List,goal_Integer,OptionsPattern[]]:=Block[
 	{l=Length@nList,ops,filter,pts,cas},
-	ops=Switch[OptionValue[Extension],
-		Off,{Plus,Subtract,Times,Divide},
-		Min,{Plus,Subtract,Times,div,pow,log,root},
-		Full,Return[Echo["","该功能未完成"]],
-		test,{Plus,Subtract,Times,Divide,pow,log,root,Min,Max,aa,cc},
-		__,OptionValue[Extension]
-	];
+	ops=OptionValue[Rule];
 	filter=PokerFilter[l];
 	pts=Outer[filter@@Join[#1,#2]&,Tuples[ops,l-1],Permutations[nList],1];
-	cas=Cases[pts,e_/;ReleaseHold@e===OptionValue[Number],{3}];
+	cas=Cases[pts,e_/;ReleaseHold@e===goal,{3}];
 	DeleteDuplicatesBy[cas,ReleaseHold[#/.Thread[nList->CharacterRange[97,96+l]]]&]
-]
+];
+Poker24Min[nList_List,goal_Integer]:=Block[
+	{l=Length@nList,ops,filter,pts,ext},
+	ops={Plus,Subtract,Times,Divide,Power,Log,root};
+	filter=PokerFilter[l];
+	pts=Outer[filter@@Join[#1,#2]&,Tuples[ops,l-1],Permutations[nList],1];
+	ext=Extract[pts,Position[Chop[pts-goal//N//ReleaseHold,10^(-9)],0,{3}]];
+	DeleteDuplicatesBy[ext,ReleaseHold[#/.Thread[nList->CharacterRange[97,96+l]]]&]
+];
+Poker24Max[nList_List,goal_Integer]:=Block[
+	{l=Length@nList,ops,filter,pts,ext},
+	ops={Plus,Subtract,Times,Divide,pow,log,root,Min,Max,FactorialPower,Binomial,StirlingS2};
+	filter=PokerFilter[l];
+	pts=Outer[filter@@Join[#1,#2]&,Tuples[ops,l-1],Permutations[nList],1];
+	ext=Extract[pts,Position[Chop[pts-goal//N//ReleaseHold,10^(-9)],0,{3}]];
+	DeleteDuplicatesBy[ext,ReleaseHold[#/.Thread[nList->CharacterRange[97,96+l]]]&]
+];
+Options[Poker24]={Number->24,Extension->Off};
+Poker24[input_,OptionsPattern[]]:=Block[
+	{ans},
+	ans=Quiet@Switch[OptionValue[Extension],
+		Off,Poker24Off[input,OptionValue[Number]],
+		Min,Poker24Min[input,OptionValue[Number]],
+		Max,Poker24Max[input,OptionValue[Number]],
+		__,Poker24Off[input,OptionValue[Number],Rule->OptionValue[Extension]]
+	]/.name
+];
+
+
+
+
 (* ::Subsection::Closed:: *)
 (*附加设置*)
 End[] ;
