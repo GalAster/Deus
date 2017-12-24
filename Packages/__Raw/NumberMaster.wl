@@ -1,6 +1,6 @@
 (* ::Package:: *)
 (* ::Title:: *)
-(*Example(样板包)*)
+(*NumberMaster(珠玑妙算)*)
 (* ::Subchapter:: *)
 (*程序包介绍*)
 (* ::Text:: *)
@@ -8,8 +8,8 @@
 (*Created by Mathematica Plugin for IntelliJ IDEA*)
 (*Establish from GalAster's template*)
 (**)
-(*Author:我是作者*)
-(*Creation Date:我是创建日期*)
+(*Author:酱紫君*)
+(*Creation Date:2017-12-20*)
 (*Copyright:CC4.0 BY+NA+NC*)
 (**)
 (*该软件包遵从CC协议:署名、非商业性使用、相同方式共享*)
@@ -17,19 +17,20 @@
 (*这里应该填这个函数的介绍*)
 (* ::Section:: *)
 (*函数说明*)
-BeginPackage["DigitalMinato`"];
+BeginPackage["NumberMaster`"];
 Poker24::usage = "";
-
+Calculate100::usage = "";
+Proof1926::usage = "";
 (* ::Section:: *)
 (*程序包正体*)
 (* ::Subsection::Closed:: *)
 (*主设置*)
-DigitalMinato::usage = "程序包的说明,这里抄一遍";
+NumberMaster::usage = "程序包的说明,这里抄一遍";
 Begin["`Private`"];
 (* ::Subsection::Closed:: *)
 (*主体代码*)
-DigitalMinato$Version="V1.0";
-DigitalMinato$LastUpdate="2017-12-22";
+NumberMaster$Version="V1.4";
+NumberMaster$LastUpdate="2017-12-24";
 (* ::Subsubsection:: *)
 (*运算符重载,减枝*)
 div[a_,0]:=ComplexInfinity;
@@ -95,7 +96,7 @@ Poker24Min[nList_List,goal_Integer]:=Block[
 	ext=AbortProtect@Extract[pts,Position[Map[mc,pts,{3}],0,{3}]];
 	DeleteDuplicatesBy[ext,ReleaseHold[#/.Thread[nList->CharacterRange[97,96+l]]]&]
 ];
-Poker24Max[nList_List,goal_Integer]:=Block[
+Poker24All[nList_List,goal_Integer]:=Block[
 	{l=Length@nList,ops,filter,pts,ext,mc},
 	ops={Plus,Subtract,Times,Divide,pow,log,root,FactorialPower,Binomial};
 	filter=PokerFilter[l];
@@ -104,21 +105,80 @@ Poker24Max[nList_List,goal_Integer]:=Block[
 	ext=AbortProtect@Extract[pts,Position[Map[mc,pts,{3}],0,{3}]];
 	DeleteDuplicatesBy[ext,ReleaseHold[#/.Thread[nList->CharacterRange[97,96+l]]]&]
 ];
+Poker24::memb = "计算 `1` 的过程中不能含有 `1` !";
 Options[Poker24]={Number->24,Extension->Off};
 Poker24[input_,OptionsPattern[]]:=Block[
-	{ans},
+	{goal,ans},
+	goal=OptionValue[Number];
+	If[MemberQ[input, goal],Return@Message[Poker24::memb,goal]];
 	ans=Quiet@Switch[OptionValue[Extension],
-		Off,Poker24Off[input,OptionValue[Number]],
-		Min,Poker24Min[input,OptionValue[Number]],
-		Max,Poker24Max[input,OptionValue[Number]],
-		__,Poker24Off[input,OptionValue[Number],Rule->OptionValue[Extension]]
+		Off,Poker24Off[input,goal],
+		Min,Poker24Min[input,goal],
+		All,Poker24All[input,goal],
+		Max,Echo["","该函数尚未完成!"],
+		__,Poker24Off[input,goal,Rule->OptionValue[Extension]]
 	]/.opsName
 ];
 (* ::Subsubsection:: *)
-(*Poker24*)
-
-
-
+(*Calculate100*)
+next`ops=HoldForm/@{Plus,Times,Divide,Subtract};
+(nextOp[#1]=#2)&@@@Most@Transpose@{next`ops,RotateLeft@next`ops};
+next`children=True;
+SetAttributes[{next`Plus,next`Times},Flat];
+next[{i_}]:=False;
+next[l_List]:=HoldForm[Plus][{l[[1]]},l[[2;;]]];
+next[op_[arg1_,arg2_]]/;next`children:=With[{res=next[arg1]},op[res,arg2]/;res=!=False];
+next[op_[arg1_,arg2_]]/;next`children:=With[{res=next[arg2]},op[arg1,res]/;res=!=False];
+next[HoldForm[Subtract][arg1_,arg2:{_}]]:=False;
+next[op_[arg1_,arg2_]]:=Block[
+	{next`children=False},
+	next[op[flatten@arg1,flatten@arg2]]
+];
+next[op_[arg1_List,{arg2_}]]:=nextOp[op][{arg1[[1]]},arg1[[2;;]]~Append~arg2];
+next[op_[arg1_List,arg2_List]]:=op[arg1~Append~First@arg2,Rest@arg2];
+flatten[exp_]:=Flatten@Cases[exp,{_},{0,Infinity}];
+formattingRules={
+	i:{__Integer}:>FromDigits@i,
+	HoldForm[Plus]->next`Plus,
+	HoldForm[Times]->next`Times,
+	HoldForm[Subtract]->(next`Plus[#1,Times[-1,#2]]&),
+	HoldForm[Divide]->next`Divide
+};
+formattingRev={next`Plus->Plus,next`Times->Times,next`Divide->Divide};
+doMath[expr_]:=expr/.List->Composition[FromDigits,List]//ReleaseHold;
+Calculate100[input_List,target_Integer]:=Block[
+	{curr=input,ans={},dup},
+	CheckAbort[Quiet@While[curr=!=False,
+		If[doMath@curr==target,
+			PrintTemporary[curr/.formattingRules];
+			AppendTo[ans,curr/.formattingRules]];
+			curr=next@curr
+		];Echo["所有计算已完成!","运算: "], Echo["用户中断了计算!","运算: "]];
+	dup=ReleaseHold[#/.Thread[input->CharacterRange[97,96+Length@input]]]&;
+	DeleteDuplicatesBy[HoldForm/@ans/.formattingRev,dup]
+];
+(* ::Subsubsection:: *)
+(*Proof1926*)
+he=HoldForm[a_]==HoldForm[b_]:>HoldForm[InputForm[a==b]];
+Proof1926::ntime=" `1` s内找不到解, 请给 TimeConstraint +1s.";
+Options[Proof1926]={Number->Automatic,TimeConstraint->1};
+Proof1926[input_,target_,OptionsPattern[]]:=Block[
+	{inl=IntegerDigits@ToExpression[input],
+		str=StringPartition[ToString[target],1],
+		ops,tar,ans,out
+	},
+	ops=RandomChoice[{8,7,4,1}->{"+","-","*","^"},Length@str-1];
+	tar=If[OptionValue[Number]===Automatic,ToExpression@StringJoin@Riffle[str,ops],OptionValue[Number]];
+	ans=Calculate100TC[inl,tar,TimeConstraint->OptionValue[TimeConstraint]];
+	err=If[#=={},Return@Message[Proof1926::ntime,OptionValue[TimeConstraint]],RandomChoice@#]&;
+	If[OptionValue[Number]===Automatic,
+		tar=ToExpression[StringJoin@Riffle[str,ops],StandardForm,HoldForm],
+		tar=Calculate100TC[str//StringJoin//ToExpression//IntegerDigits,tar,TimeConstraint->OptionValue[TimeConstraint]];
+		tar=err@tar;
+	];
+	out=err@ans==tar/.he;
+	If[OptionValue[Number]===Automatic,Return[out],Return[out==OptionValue[Number]]]
+];
 (* ::Subsection::Closed:: *)
 (*附加设置*)
 End[] ;
