@@ -32,8 +32,14 @@ DigitalMinato$Version="V1.0";
 DigitalMinato$LastUpdate="2017-12-22";
 (* ::Subsubsection:: *)
 (*运算符重载,减枝*)
-div[a_,0]:=Infinity;
+div[a_,0]:=ComplexInfinity;
+log[a_,b_]:=Log[a,b];
+pow[a_,b_]:=Power[a,b];
+root[a_,b_]:=pow[a,1/b];
+reduceRule=log[a_,pow[b_,c_]]:>c+log[a,b];
 (*
+div[a_,b_]:=Indeterminate/;Abs[b]>10^10;
+root[a_,b_]:=Indeterminate/;Abs[a]>10^10;
 pow[a_,pow[b_,c_]]:=$Failed;
 pow[a_,b_/;b>10]:=$Failed;
 pow[a_,b_/;b<0]:=If[a<=0,$Failed,Power[a,b]];
@@ -54,8 +60,9 @@ div[a_,b_]:=Divide[a,b];
 pow[a_,b_]:=Power[a,b];
 log[a_,b_]:=Log[a,b];
 root[a_,b_]:=pow[a,1/b];
-name=Thread[{plus,minus,times,div,pow,log,root,aa,cc}->
-	{Plus,Subtract,Times,Divide,Power,Log,Surd,FactorialPower,Binomial}];
+opsName=Thread[ {plus,minus,times,div,pow,log,root,aa,cc}->
+				{Plus,Subtract,Times,Divide,Power,Log,Surd,FactorialPower,Binomial}
+];
 (* ::Subsubsection:: *)
 (*卡特兰树*)
 treeR[1]=n;
@@ -80,19 +87,21 @@ Poker24Off[nList_List,goal_Integer,OptionsPattern[]]:=Block[
 	DeleteDuplicatesBy[cas,ReleaseHold[#/.Thread[nList->CharacterRange[97,96+l]]]&]
 ];
 Poker24Min[nList_List,goal_Integer]:=Block[
-	{l=Length@nList,ops,filter,pts,ext},
-	ops={Plus,Subtract,Times,Divide,Power,Log,root};
+	{l=Length@nList,ops,filter,pts,ext,mc},
+	ops={Plus,Subtract,Times,Divide,pow,log,root};
 	filter=PokerFilter[l];
-	pts=Outer[filter@@Join[#1,#2]&,Tuples[ops,l-1],Permutations[nList],1];
-	ext=Extract[pts,Position[Chop[pts-goal//N//ReleaseHold,10^(-9)],0,{3}]];
+	pts=Outer[filter@@Join[#1,#2]&,Tuples[ops,l-1],Permutations[nList],1]/.reduceRule;
+	mc[pt_]:=MemoryConstrained[Chop[pt-goal//N//ReleaseHold,10^(-9)],10^4];
+	ext=AbortProtect@Extract[pts,Position[Map[mc,pts,{3}],0,{3}]];
 	DeleteDuplicatesBy[ext,ReleaseHold[#/.Thread[nList->CharacterRange[97,96+l]]]&]
 ];
 Poker24Max[nList_List,goal_Integer]:=Block[
-	{l=Length@nList,ops,filter,pts,ext},
-	ops={Plus,Subtract,Times,Divide,pow,log,root,Min,Max,FactorialPower,Binomial,StirlingS2};
+	{l=Length@nList,ops,filter,pts,ext,mc},
+	ops={Plus,Subtract,Times,Divide,pow,log,root,FactorialPower,Binomial};
 	filter=PokerFilter[l];
-	pts=Outer[filter@@Join[#1,#2]&,Tuples[ops,l-1],Permutations[nList],1];
-	ext=Extract[pts,Position[Chop[pts-goal//N//ReleaseHold,10^(-9)],0,{3}]];
+	pts=Outer[filter@@Join[#1,#2]&,Tuples[ops,l-1],Permutations[nList],1]/.reduceRule;
+	mc[pt_]:=MemoryConstrained[Chop[pt-goal//N//ReleaseHold,10^(-9)],10^4];
+	ext=AbortProtect@Extract[pts,Position[Map[mc,pts,{3}],0,{3}]];
 	DeleteDuplicatesBy[ext,ReleaseHold[#/.Thread[nList->CharacterRange[97,96+l]]]&]
 ];
 Options[Poker24]={Number->24,Extension->Off};
@@ -103,9 +112,10 @@ Poker24[input_,OptionsPattern[]]:=Block[
 		Min,Poker24Min[input,OptionValue[Number]],
 		Max,Poker24Max[input,OptionValue[Number]],
 		__,Poker24Off[input,OptionValue[Number],Rule->OptionValue[Extension]]
-	]/.name
+	]/.opsName
 ];
-
+(* ::Subsubsection:: *)
+(*Poker24*)
 
 
 
