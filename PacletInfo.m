@@ -1,17 +1,6 @@
-(* Paclet Info File *)
-
-(* created 2017/12/01*)
-(* updated 2017/12/07*)
-
-
-Paclet[
-	Name -> "Deus", 
-	Version -> "1.0.0", 
-	MathematicaVersion -> "11.0+",
-    Description -> "Mathematica Gaming Package",
-    Creator -> "GalAster <galaster@foxmail.com>",
-	Extensions -> {
-		{"Kernel", Root -> ".", Context -> {"Deus`"}},
-		{"Documentation" , Language -> "ChineseSimplified"},
-	}
-]
+(* Created with the Wolfram Language : www.wolfram.com *)
+Paclet[Name -> "Deus", Version -> "1.0.0", 
+ Extensions -> {{"Kernel", Root -> ".", Context -> {"Deus`"}}, 
+   {"Resource", "Root" -> "Resources", "Resources" -> 
+     {"cdf", "Change Log Full.md", "__Documentary", "Examples Full.md", 
+      "exe", "ico", "pic", "Todo List Full.md"}}}]

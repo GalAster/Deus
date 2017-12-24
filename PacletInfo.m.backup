@@ -12,6 +12,6 @@ Paclet[
     Creator -> "GalAster <galaster@foxmail.com>",
 	Extensions -> {
 		{"Kernel", Root -> ".", Context -> {"Deus`"}},
-		{"Documentation" , Language -> "ChineseSimplified"},
+		{"Documentation" , Language -> "ChineseSimplified"}
 	}
-]
+];

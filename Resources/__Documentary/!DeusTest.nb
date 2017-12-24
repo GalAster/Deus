@@ -10,29 +10,63 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     84213,       1336]
-NotebookOptionsPosition[     82720,       1299]
-NotebookOutlinePosition[     83425,       1323]
-CellTagsIndexPosition[     83338,       1318]
+NotebookDataLength[     85508,       1370]
+NotebookOptionsPosition[     84248,       1341]
+NotebookOutlinePosition[     84607,       1357]
+CellTagsIndexPosition[     84564,       1354]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell[BoxData[
- RowBox[{"Needs", "[", "\"\<Deus`\>\"", "]"}]], "Input",
- CellChangeTimes->{{3.722492471830044*^9, 
-  3.7224924867112894`*^9}},ExpressionUUID->"b9df9055-dde2-4043-b633-\
+Cell[BoxData["Quit"], "Input",
+ CellChangeTimes->{{3.722492471830044*^9, 3.7224924867112894`*^9}, 
+   3.7230929021006336`*^9, {3.72309309847643*^9, 
+   3.7230930996531906`*^9}},ExpressionUUID->"b9df9055-dde2-4043-b633-\
 291ef2f3eecd"],
 
 Cell[CellGroupData[{
 
-Cell[BoxData[
- RowBox[{"??", " ", "Deus`*"}]], "Input",
- CellChangeTimes->{{3.7224926368622074`*^9, 
-  3.722492641347437*^9}},ExpressionUUID->"d2b286b1-9fa0-4fe7-914b-\
+Cell[BoxData[{
+ RowBox[{"FindFile", "[", "\"\<Deus`\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<Deus`\>\"", "]"}], ";", 
+  RowBox[{
+  "Needs", "[", "\"\<BTools`\>\"", 
+   "]"}]}], "\[IndentingNewLine]", "$Context"}], "Input",
+ CellChangeTimes->{{3.7224926368622074`*^9, 3.722492641347437*^9}, {
+  3.7230929041393104`*^9, 3.723092910045311*^9}, {3.723093484771184*^9, 
+  3.7230935181157675`*^9}, {3.7230935967427397`*^9, 
+  3.723093613505068*^9}},ExpressionUUID->"d2b286b1-9fa0-4fe7-914b-\
 74407ab0f0d4"],
 
+Cell[BoxData["\<\"C:\\\\Users\\\\28059\\\\AppData\\\\Roaming\\\\Mathematica\\\
+\\Paclets\\\\Applications\\\\Deus\\\\Deus.wl\"\>"], "Output",
+ CellChangeTimes->{
+  3.7230929102790236`*^9, {3.723093096577697*^9, 3.7230931018394775`*^9}, 
+   3.7230932266824875`*^9, 3.7230933047763557`*^9, {3.723093469903268*^9, 
+   3.723093518639303*^9}, {3.7230936086287284`*^9, 3.7230936141362057`*^9}, 
+   3.7230938796885147`*^9, 
+   3.72309392038542*^9},ExpressionUUID->"4cde0111-4120-4348-8551-\
+48cee5948502"],
+
+Cell[BoxData["\<\"Global`\"\>"], "Output",
+ CellChangeTimes->{
+  3.7230929102790236`*^9, {3.723093096577697*^9, 3.7230931018394775`*^9}, 
+   3.7230932266824875`*^9, 3.7230933047763557`*^9, {3.723093469903268*^9, 
+   3.723093518639303*^9}, {3.7230936086287284`*^9, 3.7230936141362057`*^9}, 
+   3.7230938796885147`*^9, 
+   3.7230939220193424`*^9},ExpressionUUID->"7c14bd11-5a01-4b37-98a1-\
+40ddfb4a8448"]
+}, Open  ]],
+
 Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"??", "Deus`*"}]], "Input",
+ CellChangeTimes->{{3.7230934952558413`*^9, 3.723093524026847*^9}, {
+  3.723093556056315*^9, 3.723093557728738*^9}, {3.7230938826621914`*^9, 
+  3.723093882818836*^9}},ExpressionUUID->"53537140-067f-4092-9bd7-\
+8faf8aa68b18"],
 
 Cell[BoxData[
  DynamicModuleBox[{Typeset`open$$ = True}, 
@@ -48,51 +82,55 @@ Cell[BoxData[
        StyleBox["Deus`", "InfoHeading"]}]},
      {GridBox[{
         {
-         ButtonBox["HanoiGraph",
+         ButtonBox["Calculate100",
           BaseStyle->"InformationLinkLF",
-          ButtonData:>{"Info43722521441-9590364", {"HanoiGraph", "Deus`"}},
+          ButtonData:>{"Info53723122732-3571325", {"Calculate100", "Deus`"}},
           ButtonNote->"Deus`"], 
-         ButtonBox["HanoiShow",
-          BaseStyle->"InformationLinkLF",
-          ButtonData:>{"Info43722521441-9590364", {"HanoiShow", "Deus`"}},
-          ButtonNote->"Deus`"], 
-         ButtonBox["HanoiTower",
-          BaseStyle->"InformationLinkLF",
-          ButtonData:>{"Info43722521441-9590364", {"HanoiTower", "Deus`"}},
-          ButtonNote->"Deus`"], 
-         ButtonBox["Magic3D",
-          BaseStyle->"InformationLinkLF",
-          ButtonData:>{"Info43722521441-9590364", {"Magic3D", "Deus`"}},
-          ButtonNote->"Deus`"], 
-         ButtonBox["Magic3DShow",
-          BaseStyle->"InformationLinkLF",
-          ButtonData:>{"Info43722521441-9590364", {"Magic3DShow", "Deus`"}},
-          ButtonNote->"Deus`"], 
-         ButtonBox["MagicSquare",
-          BaseStyle->"InformationLinkLF",
-          ButtonData:>{"Info43722521441-9590364", {"MagicSquare", "Deus`"}},
-          ButtonNote->"Deus`"]},
-        {
          ButtonBox["HanoiMove",
           BaseStyle->"InformationLinkLF",
-          ButtonData:>{"Info43722521441-9590364", {"HanoiMove", "Deus`"}},
+          ButtonData:>{"Info53723122732-3571325", {"HanoiMove", "Deus`"}},
           ButtonNote->"Deus`"], 
          ButtonBox["HanoiSteps",
           BaseStyle->"InformationLinkLF",
-          ButtonData:>{"Info43722521441-9590364", {"HanoiSteps", "Deus`"}},
+          ButtonData:>{"Info53723122732-3571325", {"HanoiSteps", "Deus`"}},
           ButtonNote->"Deus`"], 
          ButtonBox["Magic",
           BaseStyle->"InformationLinkLF",
-          ButtonData:>{"Info43722521441-9590364", {"Magic", "Deus`"}},
+          ButtonData:>{"Info53723122732-3571325", {"Magic", "Deus`"}},
           ButtonNote->"Deus`"], 
-         ButtonBox["Magic3DQ",
+         ButtonBox["MagicSquare",
           BaseStyle->"InformationLinkLF",
-          ButtonData:>{"Info43722521441-9590364", {"Magic3DQ", "Deus`"}},
+          ButtonData:>{"Info53723122732-3571325", {"MagicSquare", "Deus`"}},
+          ButtonNote->"Deus`"], 
+         ButtonBox["Poker24",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info53723122732-3571325", {"Poker24", "Deus`"}},
+          ButtonNote->"Deus`"]},
+        {
+         ButtonBox["HanoiGraph",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info53723122732-3571325", {"HanoiGraph", "Deus`"}},
+          ButtonNote->"Deus`"], 
+         ButtonBox["HanoiShow",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info53723122732-3571325", {"HanoiShow", "Deus`"}},
+          ButtonNote->"Deus`"], 
+         ButtonBox["HanoiTower",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info53723122732-3571325", {"HanoiTower", "Deus`"}},
           ButtonNote->"Deus`"], 
          ButtonBox["MagicQ",
           BaseStyle->"InformationLinkLF",
-          ButtonData:>{"Info43722521441-9590364", {"MagicQ", "Deus`"}},
-          ButtonNote->"Deus`"], ""}
+          ButtonData:>{"Info53723122732-3571325", {"MagicQ", "Deus`"}},
+          ButtonNote->"Deus`"], 
+         ButtonBox["NumberMaster",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info53723122732-3571325", {"NumberMaster", "Deus`"}},
+          ButtonNote->"Deus`"], 
+         ButtonBox["Proof1926",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info53723122732-3571325", {"Proof1926", "Deus`"}},
+          ButtonNote->"Deus`"]}
        },
        DefaultBaseStyle->"InfoGrid",
        GridBoxItemSize->{"Columns" -> {{
@@ -102,65 +140,20 @@ Cell[BoxData[
    Dynamic[Typeset`open$$],
    ImageSize->Automatic]]], "Print", "InfoCell",
  CellChangeTimes->{
-  3.7224926417731786`*^9},ExpressionUUID->"8769b13f-2c0e-4d25-bcea-\
-e9396659ed0a"],
-
-Cell["Deus`MagicSquare", "Print", "PrintUsage",
- CellTags->
-  "Info43722521441-9590364",ExpressionUUID->"0d611f75-8592-4fcb-9420-\
-d5ab69ecb7e6"],
-
-Cell[BoxData[
- InterpretationBox[GridBox[{
-    {GridBox[{
-       {
-        RowBox[{
-         RowBox[{"HoldPattern", "[", "MagicSquare", "]"}], ":=", 
-         RowBox[{"Deus`Private`Package`PackageLoadPackage", "[", 
-          RowBox[{
-           RowBox[{"HoldPattern", "[", "MagicSquare", "]"}], 
-           ",", "\<\"Deus`\"\>", ",", 
-           
-           RowBox[{"\<\"C:\\\\Users\\\\28059\\\\AppData\\\\Roaming\\\\\
-Mathematica\\\\Paclets\\\\Applications\\\\Deus\\\\Packages\\\\MagicSquare.m\"\
-\>", "\[Rule]", 
-            RowBox[{"{", 
-             RowBox[{
-              RowBox[{"HoldPattern", "[", "Magic", "]"}], ",", 
-              RowBox[{"HoldPattern", "[", "Magic3D", "]"}], ",", 
-              RowBox[{"HoldPattern", "[", "Magic3DShow", "]"}], ",", 
-              RowBox[{"HoldPattern", "[", "MagicQ", "]"}], ",", 
-              RowBox[{"HoldPattern", "[", "Magic3DQ", "]"}], ",", 
-              RowBox[{"HoldPattern", "[", "MagicSquare", "]"}]}], "}"}]}]}], 
-          "]"}]}]}
-      },
-      BaselinePosition->{Baseline, {1, 1}},
-      GridBoxAlignment->{
-       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
-        "RowsIndexed" -> {}},
-      GridBoxItemSize->{"Columns" -> {{
-           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
-        "RowsIndexed" -> {}}]}
-   },
-   BaselinePosition->{Baseline, {1, 1}},
-   GridBoxAlignment->{
-    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
-     "RowsIndexed" -> {}}],
-  Definition[Deus`MagicSquare],
-  Editable->False]], "Print",
- CellTags->
-  "Info43722521441-9590364",ExpressionUUID->"dc521583-eb92-41b0-9408-\
-2953a9e0cb7b"]
-}, Open  ]]
+  3.72309393235931*^9},ExpressionUUID->"df9e1289-1bd6-413d-8c90-ec0ec46744a8"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[{
  RowBox[{"HanoiGraph", "[", "5", "]"}], "\[IndentingNewLine]", 
- RowBox[{"Magic", "[", "5", "]"}]}], "Input",
- CellChangeTimes->{{3.7224926485196896`*^9, 
-  3.7224926962714996`*^9}},ExpressionUUID->"fb445ecf-e19a-4c99-8642-\
+ RowBox[{"Magic", "[", "5", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Poker24", "[", 
+  RowBox[{"{", 
+   RowBox[{"1", ",", "9", ",", "2", ",", "6"}], "}"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.7224926485196896`*^9, 3.7224926962714996`*^9}, {
+   3.7230928665570893`*^9, 3.7230928954349537`*^9}, 
+   3.723093940899108*^9},ExpressionUUID->"fb445ecf-e19a-4c99-8642-\
 638c40e1635c"],
 
 Cell[BoxData[
@@ -1274,9 +1267,11 @@ fxehqM66p7h4iKCVV8adcxBBgkSyWxa+nfiU+5fT6ATx///eoKwFDYwCMZ+8
    "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
   FormatType->TraditionalForm,
   FrameTicks->None]], "Output",
- CellChangeTimes->{{3.722492656324294*^9, 
-  3.7224926976364436`*^9}},ExpressionUUID->"dd6fb97d-2b1c-408e-ad6d-\
-940aa0c867a8"],
+ CellChangeTimes->{{3.722492656324294*^9, 3.7224926976364436`*^9}, 
+   3.723092896119626*^9, 3.723093103432947*^9, 3.7230935260234766`*^9, {
+   3.723093933754796*^9, 
+   3.7230939415231843`*^9}},ExpressionUUID->"543873c3-cda6-4ce8-a5e6-\
+9c7968f1037d"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -1292,13 +1287,60 @@ Cell[BoxData[
    RowBox[{"{", 
     RowBox[{"11", ",", "18", ",", "25", ",", "2", ",", "9"}], "}"}]}], 
   "}"}]], "Output",
- CellChangeTimes->{{3.722492656324294*^9, 
-  3.722492697662963*^9}},ExpressionUUID->"45acef41-313c-4440-badf-\
-2790b6aab739"]
+ CellChangeTimes->{{3.722492656324294*^9, 3.7224926976364436`*^9}, 
+   3.723092896119626*^9, 3.723093103432947*^9, 3.7230935260234766`*^9, {
+   3.723093933754796*^9, 
+   3.7230939415561943`*^9}},ExpressionUUID->"5619fef8-8647-42d1-9ddb-\
+a05420bbf7ad"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[
+    RowBox[{
+     RowBox[{"9", " ", "2"}], "+", "6"}],
+    HoldForm], ",", 
+   TagBox[
+    RowBox[{
+     RowBox[{"1", " ", "6"}], "+", 
+     RowBox[{"9", " ", "2"}]}],
+    HoldForm], ",", 
+   TagBox[
+    RowBox[{
+     RowBox[{
+      FractionBox["9", "1"], " ", "2"}], "+", "6"}],
+    HoldForm], ",", 
+   TagBox[
+    RowBox[{
+     RowBox[{"9", " ", "2"}], "+", 
+     FractionBox["6", "1"]}],
+    HoldForm], ",", 
+   TagBox[
+    RowBox[{"1", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"9", " ", "2"}], "+", "6"}], ")"}]}],
+    HoldForm], ",", 
+   TagBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"9", "-", "1"}], ")"}], " ", 
+     FractionBox["6", "2"]}],
+    HoldForm], ",", 
+   TagBox[
+    FractionBox[
+     RowBox[{
+      RowBox[{"9", " ", "2"}], "+", "6"}], "1"],
+    HoldForm]}], "}"}]], "Output",
+ CellChangeTimes->{{3.722492656324294*^9, 3.7224926976364436`*^9}, 
+   3.723092896119626*^9, 3.723093103432947*^9, 3.7230935260234766`*^9, {
+   3.723093933754796*^9, 
+   3.7230939415591955`*^9}},ExpressionUUID->"e5e7f512-1094-4956-a191-\
+776efde1f00e"]
 }, Open  ]]
 },
-WindowSize->{759, 835},
-WindowMargins->{{500, Automatic}, {71, Automatic}},
+WindowSize->{847, 835},
+WindowMargins->{{335, Automatic}, {-157, Automatic}},
 FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (2017\:5e7410\:67082\
 \:65e5)",
 StyleDefinitions->"Default.nb"
@@ -1307,40 +1349,30 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{
- "Info43722521441-9590364"->{
-  Cell[3775, 107, 145, 3, 45, "Print",ExpressionUUID->"0d611f75-8592-4fcb-9420-d5ab69ecb7e6",
-   CellTags->"Info43722521441-9590364"],
-  Cell[3923, 112, 1656, 40, 73, "Print",ExpressionUUID->"dc521583-eb92-41b0-9408-2953a9e0cb7b",
-   CellTags->"Info43722521441-9590364"]}
- }
+CellTagsIndex->{}
 *)
 (*CellTagsIndex
-CellTagsIndex->{
- {"Info43722521441-9590364", 83042, 1310}
- }
+CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 198, 4, 27, "Input",ExpressionUUID->"b9df9055-dde2-4043-b633-291ef2f3eecd"],
+Cell[558, 20, 234, 4, 27, "Input",ExpressionUUID->"b9df9055-dde2-4043-b633-291ef2f3eecd"],
 Cell[CellGroupData[{
-Cell[781, 28, 183, 4, 27, "Input",ExpressionUUID->"d2b286b1-9fa0-4fe7-914b-74407ab0f0d4"],
-Cell[CellGroupData[{
-Cell[989, 36, 2783, 69, 102, "Print",ExpressionUUID->"8769b13f-2c0e-4d25-bcea-e9396659ed0a"],
-Cell[3775, 107, 145, 3, 45, "Print",ExpressionUUID->"0d611f75-8592-4fcb-9420-d5ab69ecb7e6",
- CellTags->"Info43722521441-9590364"],
-Cell[3923, 112, 1656, 40, 73, "Print",ExpressionUUID->"dc521583-eb92-41b0-9408-2953a9e0cb7b",
- CellTags->"Info43722521441-9590364"]
-}, Open  ]]
+Cell[817, 28, 535, 11, 64, "Input",ExpressionUUID->"d2b286b1-9fa0-4fe7-914b-74407ab0f0d4"],
+Cell[1355, 41, 497, 8, 31, "Output",ExpressionUUID->"4cde0111-4120-4348-8551-48cee5948502"],
+Cell[1855, 51, 402, 7, 31, "Output",ExpressionUUID->"7c14bd11-5a01-4b37-98a1-40ddfb4a8448"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5628, 158, 254, 5, 46, "Input",ExpressionUUID->"fb445ecf-e19a-4c99-8642-638c40e1635c"],
-Cell[5885, 165, 76173, 1113, 336, "Output",ExpressionUUID->"dd6fb97d-2b1c-408e-ad6d-940aa0c867a8"],
-Cell[82061, 1280, 643, 16, 31, "Output",ExpressionUUID->"45acef41-313c-4440-badf-2790b6aab739"]
+Cell[2294, 63, 275, 5, 27, "Input",ExpressionUUID->"53537140-067f-4092-9bd7-8faf8aa68b18"],
+Cell[2572, 70, 2966, 72, 80, "Print",ExpressionUUID->"df9e1289-1bd6-413d-8c90-ec0ec46744a8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5575, 147, 459, 9, 64, "Input",ExpressionUUID->"fb445ecf-e19a-4c99-8642-638c40e1635c"],
+Cell[6037, 158, 76298, 1115, 336, "Output",ExpressionUUID->"543873c3-cda6-4ce8-a5e6-9c7968f1037d"],
+Cell[82338, 1275, 770, 18, 31, "Output",ExpressionUUID->"5619fef8-8647-42d1-9ddb-a05420bbf7ad"],
+Cell[83111, 1295, 1121, 43, 49, "Output",ExpressionUUID->"e5e7f512-1094-4956-a191-776efde1f00e"]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 

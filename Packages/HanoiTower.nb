@@ -2,12 +2,12 @@ Notebook[{
 
 Cell[CellGroupData[{
 Cell["HanoiTower(\:6c49\:8bfa\:5854)", \
-"Title",ExpressionUUID->"721d2ddc-6589-4077-b401-495055c42bff"],
+"Title",ExpressionUUID->"5f251b67-6548-4dee-9013-e71206f23aa8"],
 
 Cell[CellGroupData[{
 
 Cell["\:7a0b\:5e8f\:5305\:4ecb\:7ecd", \
-"Subchapter",ExpressionUUID->"d5b8fe0c-1274-4a1d-91a3-a2e0fb632203"],
+"Subchapter",ExpressionUUID->"c7498e29-9ace-485f-a8aa-d15bb1ad8715"],
 
 Cell["\<\
 Mathematica Package
@@ -22,12 +22,12 @@ Copyright:CC4.0 BY+NA+NC
 \:5546\:4e1a\:6027\:4f7f\:7528\:3001\:76f8\:540c\:65b9\:5f0f\:5171\:4eab
 
 \:8fd9\:91cc\:5e94\:8be5\:586b\:8fd9\:4e2a\:51fd\:6570\:7684\:4ecb\:7ecd\
-\>", "Text",ExpressionUUID->"5183c0fc-961f-42cd-80f5-945bfa6e29e1"],
+\>", "Text",ExpressionUUID->"1d90aaa3-6bcc-4a11-bd5c-f5ceddeee41a"],
 
 Cell[CellGroupData[{
 
 Cell["\:51fd\:6570\:8bf4\:660e", \
-"Section",ExpressionUUID->"d33b00b8-1c84-4fe5-bec3-f09e2de1ac9a"],
+"Section",ExpressionUUID->"d83848eb-1f38-472f-ab2d-9ce8e8bff34f"],
 
 Cell[BoxData[{
  RowBox[{
@@ -50,20 +50,20 @@ Cell[BoxData[{
    RowBox[{"HanoiShow", "::", "usage"}], " ", "=", " ", 
    "\"\<\:53ef\:89c6\:5316\:5706\:76d8\:7684\:79fb\:52a8\:8fc7\:7a0b\>\""}], 
   ";"}]}], "Code",
- CellChangeTimes->{{3.7224789379407167`*^9, 
-  3.7224789382252007`*^9}},ExpressionUUID->"c4b44a9f-3c23-473d-84e1-\
-6af1b2d9e31f"]
+ CellChangeTimes->{{3.7230938375977707`*^9, 
+  3.723093837760092*^9}},ExpressionUUID->"d81da389-a224-412c-b0a6-\
+42b0fd0e9efa"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell["\:7a0b\:5e8f\:5305\:6b63\:4f53", \
-"Section",ExpressionUUID->"160d879b-bf46-4763-a1be-2fb83bb0cfa5"],
+"Section",ExpressionUUID->"96d6b67c-0248-4a0f-94e2-4b19d876e015"],
 
 Cell[CellGroupData[{
 
 Cell["\:4e3b\:8bbe\:7f6e", \
-"Subsection",ExpressionUUID->"edb56288-0232-4f4e-b149-77de891d6539"],
+"Subsection",ExpressionUUID->"3c6be4cb-2d05-48a6-825d-2be913482d03"],
 
 Cell[BoxData[{
  RowBox[{
@@ -73,28 +73,25 @@ Cell[BoxData[{
 \:548c\:6700\:77ed\:8def\:5f84\:7b49.\>\""}], ";"}], "\n", 
  RowBox[{
   RowBox[{"Begin", "[", "\"\<`HanoiTower`\>\"", "]"}], 
-  ";"}]}], "Code",ExpressionUUID->"94ffd245-87bd-4ad6-900c-f2737bc3e090"]
-}, Open  ]],
+  ";"}]}], "Code",ExpressionUUID->"26ad2409-2c3a-433b-96bc-b74a4c462206"]
+}, Closed]],
 
 Cell[CellGroupData[{
 
 Cell["\:4e3b\:4f53\:4ee3\:7801", \
-"Subsection",ExpressionUUID->"10c05efc-23bc-4e31-9183-620fa364e641"],
+"Subsection",ExpressionUUID->"809181f0-4309-489f-8e53-6328a355eef2"],
 
 Cell[BoxData[{
  RowBox[{
   RowBox[{"HanoiTower$Version", "=", "\"\<V1.0.2\>\""}], ";"}], "\n", 
  RowBox[{
   RowBox[{"HanoiTower$LastUpdate", "=", "\"\<2017-12-17\>\""}], 
-  ";"}]}], "Code",
- CellChangeTimes->{{3.7224790322751737`*^9, 
-  3.7224790324260902`*^9}},ExpressionUUID->"b6fb117b-e266-4f99-b020-\
-05804bb839b2"],
+  ";"}]}], "Code",ExpressionUUID->"0fa3b81a-b04e-4d65-a10a-887ce615be81"],
 
 Cell[CellGroupData[{
 
 Cell["HanoiGraph", \
-"Subsubsection",ExpressionUUID->"41622e17-f8ac-493c-9b1e-3a8dc0bd216e"],
+"Subsubsection",ExpressionUUID->"e357b709-c760-4df2-89ef-05c7fb306d5f"],
 
 Cell[BoxData[{
  RowBox[{
@@ -170,13 +167,13 @@ Cell[BoxData[{
      RowBox[{"Nest", "[", 
       RowBox[{"HanoiStep", ",", 
        RowBox[{"{", "}"}], ",", "n"}], "]"}], ",", "ops"}], "]"}]}], 
-  ";"}]}], "Code",ExpressionUUID->"4fd20f0e-3a86-40f9-b870-8f5c9597a785"]
-}, Closed]],
+  ";"}]}], "Code",ExpressionUUID->"d22fe9e2-0390-46e6-b443-943e69409f46"]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell["HanoiMove", \
-"Subsubsection",ExpressionUUID->"2be317e1-0a1c-4e52-a7af-ed4b8395f3e4"],
+"Subsubsection",ExpressionUUID->"2740ad47-1b01-4a2c-87db-c2502acf8478"],
 
 Cell[BoxData[{
  RowBox[{
@@ -662,16 +659,14 @@ Cell[BoxData[{
       RowBox[{"states", "=", 
        RowBox[{
         RowBox[{"HanoiAbc2Num", "/@", "path"}], "/.", "dec"}]}]}]}], "\n", 
-    "]"}]}], ";"}]}], "Code",
- CellChangeTimes->{{3.722481795556719*^9, 
-  3.7224818023862057`*^9}},ExpressionUUID->"e8920d3e-dd14-4be2-b44c-\
-93001db94d06"]
-}, Closed]],
+    "]"}]}], ";"}]}], \
+"Code",ExpressionUUID->"8998be3d-1462-48bd-8641-5afa141de7ba"]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell["HanoiShow", \
-"Subsubsection",ExpressionUUID->"e5dbdbc6-0f1c-4b67-8c83-964f62b5dceb"],
+"Subsubsection",ExpressionUUID->"9acfb98e-6981-491a-909c-b71fcaf718e7"],
 
 Cell[BoxData[{
  RowBox[{
@@ -936,13 +931,13 @@ Cell[BoxData[{
              RowBox[{"Flatten", "@", "disks"}], "//", "Graphics"}]}], 
            "]"}]}]}], "\n", "\t", "]"}]}], ";", "\n", "\t", 
       RowBox[{"DrawState", "/@", "newstates"}]}]}], "\n", "]"}]}], 
-  ";"}]}], "Code",ExpressionUUID->"3cdc3bad-5612-48e4-a2ef-37f55c659b68"]
-}, Closed]],
+  ";"}]}], "Code",ExpressionUUID->"30eb2af8-e4a4-40fd-a0a1-2778490c2510"]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell["HanoiSteps", \
-"Subsubsection",ExpressionUUID->"0e022188-0595-4e90-869a-6bf8ac46dd1e"],
+"Subsubsection",ExpressionUUID->"cf83a3a8-8ad0-4fd3-afc5-d4c24b323706"],
 
 Cell[BoxData[{
  RowBox[{
@@ -1045,14 +1040,14 @@ Cell[BoxData[{
      RowBox[{"H5", "[", "n", "]"}], ",", "\n", "\t    ", "_", ",", 
      RowBox[{"FrameStewartSteps", "[", 
       RowBox[{"n", ",", "p"}], "]"}]}], "\n", "]"}]}], 
-  ";"}]}], "Code",ExpressionUUID->"a2668bf7-024e-4ff5-8e3d-383d627509bf"]
-}, Closed]]
-}, Open  ]],
+  ";"}]}], "Code",ExpressionUUID->"bc618b1c-5360-42f1-90d0-40253caf405c"]
+}, Open  ]]
+}, Closed]],
 
 Cell[CellGroupData[{
 
 Cell["\:9644\:52a0\:8bbe\:7f6e", \
-"Subsection",ExpressionUUID->"8f7fec02-e92b-4125-9976-f00d8796305c"],
+"Subsection",ExpressionUUID->"523a69a9-9114-492b-bb5a-0ca9c3ad262a"],
 
 Cell[BoxData[{
  RowBox[{
@@ -1067,17 +1062,16 @@ Cell[BoxData[{
     RowBox[{"{", 
      RowBox[{"Protected", ",", "ReadProtected"}], "}"}]}], "\n", "]"}], 
   ";"}]}], "Code",
- CellChangeTimes->{{3.722478942397479*^9, 3.722478943338229*^9}, {
-  3.722479001291229*^9, 
-  3.7224790022876873`*^9}},ExpressionUUID->"0fe469f1-14dc-4e20-8ace-\
-d64951412b2c"]
+ CellChangeTimes->{
+  3.7230938403809147`*^9},ExpressionUUID->"e7ecbb78-8efc-458d-887d-\
+0560c2fddccb"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 
-Cell["", "SectionSeparator",ExpressionUUID->"c1c40d33-7577-4742-a9c1-\
-247c39a0432b"]
+Cell["", "SectionSeparator",ExpressionUUID->"c9e35681-8a28-411c-ba60-\
+c1138c4e3ef5"]
 },
 WindowSize->{775, 873},
 WindowMargins->{{564, Automatic}, {Automatic, 54}},

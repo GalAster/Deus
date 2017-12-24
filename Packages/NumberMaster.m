@@ -1,38 +1,20 @@
 (* ::Package:: *)
-(* ::Title:: *)
-(*NumberMaster(珠玑妙算)*)
-(* ::Subchapter:: *)
-(*程序包介绍*)
-(* ::Text:: *)
-(*Mathematica Package*)
-(*Created by Mathematica Plugin for IntelliJ IDEA*)
-(*Establish from GalAster's template*)
-(**)
-(*Author:酱紫君*)
-(*Creation Date:2017-12-20*)
-(*Copyright:CC4.0 BY+NA+NC*)
-(**)
-(*该软件包遵从CC协议:署名、非商业性使用、相同方式共享*)
-(**)
-(*这里应该填这个函数的介绍*)
-(* ::Section:: *)
-(*函数说明*)
-BeginPackage["NumberMaster`"];
-Poker24::usage = "经典问题,4张牌算24点";
-Calculate100::usage = "经典问题,9个数字添加符号计算100";
-Proof1926::usage = "经典问题, 某两个人物生日的数字论证";
-(* ::Section:: *)
-(*程序包正体*)
-(* ::Subsection::Closed:: *)
-(*主设置*)
-NumberMaster::usage = "程序包的说明,这里抄一遍";
-Begin["`Private`"];
-(* ::Subsection::Closed:: *)
-(*主体代码*)
+
+
+
+Poker24::usage = "\:7ecf\:5178\:95ee\:9898,4\:5f20\:724c\:7b9724\:70b9";
+Calculate100::usage = "\:7ecf\:5178\:95ee\:9898,9\:4e2a\:6570\:5b57\:6dfb\:52a0\:7b26\:53f7\:8ba1\:7b97100";
+Proof1926::usage = "\:7ecf\:5178\:95ee\:9898, \:67d0\:4e24\:4e2a\:4eba\:7269\:751f\:65e5\:7684\:6570\:5b57\:8bba\:8bc1";
+
+
+NumberMaster::usage = "\:7a0b\:5e8f\:5305\:7684\:8bf4\:660e,\:8fd9\:91cc\:6284\:4e00\:904d";
+Begin["`NumberMaster`"];
+
+
 NumberMaster$Version="V1.6";
 NumberMaster$LastUpdate="2017-12-24";
-(* ::Subsubsection:: *)
-(*运算符重载,减枝*)
+
+
 div[a_,0]:=ComplexInfinity;
 log[a_,b_]:=Log[a,b];
 pow[a_,b_]:=Power[a,b];
@@ -64,13 +46,13 @@ root[a_,b_]:=pow[a,1/b];
 opsName=Thread[ {plus,minus,times,div,pow,log,root,aa,cc}->
 				{Plus,Subtract,Times,Divide,Power,Log,Surd,FactorialPower,Binomial}
 ];
-(* ::Subsubsection:: *)
-(*卡特兰树*)
+
+
 treeR[1]=n;
 treeR[n_]:=treeR[n]=Table[o[treeR[a],treeR[n-a]],{a,1,n-1}];
 treeC[n_]:=Flatten[treeR[n]//.{o[a_List,b_]:>(o[#,b]&/@a),o[a_,b_List]:>(o[a,#]&/@b)}];
-(* ::Subsubsection:: *)
-(*Poker24*)
+
+
 PokerFilter[l_Integer]:=Block[
 	{nn,oo,ff,cal},
 	nn=Array[ToExpression["n"<>ToString@#]&,l];
@@ -105,7 +87,7 @@ Poker24All[nList_List,goal_Integer]:=Block[
 	ext=AbortProtect@Extract[pts,Position[Map[mc,pts,{3}],0,{3}]];
 	DeleteDuplicatesBy[ext,ReleaseHold[#/.Thread[nList->CharacterRange[97,96+l]]]&]
 ];
-Poker24::memb = "计算 `1` 的过程中不能含有 `1` !";
+Poker24::memb = "\:8ba1\:7b97 `1` \:7684\:8fc7\:7a0b\:4e2d\:4e0d\:80fd\:542b\:6709 `1` !";
 Options[Poker24]={Number->24,Extension->Off};
 Poker24[input_,OptionsPattern[]]:=Block[
 	{goal,ans},
@@ -115,12 +97,12 @@ Poker24[input_,OptionsPattern[]]:=Block[
 		Off,Poker24Off[input,goal],
 		Min,Poker24Min[input,goal],
 		All,Poker24All[input,goal],
-		Max,Echo["","该函数尚未完成!"],
+		Max,Echo["","\:8be5\:51fd\:6570\:5c1a\:672a\:5b8c\:6210!"],
 		__,Poker24Off[input,goal,Rule->OptionValue[Extension]]
 	]/.opsName
 ];
-(* ::Subsubsection:: *)
-(*Calculate100*)
+
+
 next`ops=HoldForm/@{Plus,Times,Divide,Subtract};
 (nextOp[#1]=#2)&@@@Most@Transpose@{next`ops,RotateLeft@next`ops};
 next`children=True;
@@ -153,12 +135,12 @@ Calculate100[input_List,target_Integer]:=Block[
 			PrintTemporary[curr/.formattingRules];
 			AppendTo[ans,curr/.formattingRules]];
 			curr=next@curr
-		];Echo["所有计算已完成!","运算: "], Echo["用户中断了计算!","运算: "]];
+		];Echo["\:6240\:6709\:8ba1\:7b97\:5df2\:5b8c\:6210!","\:8fd0\:7b97: "], Echo["\:7528\:6237\:4e2d\:65ad\:4e86\:8ba1\:7b97!","\:8fd0\:7b97: "]];
 	dup=ReleaseHold[#/.Thread[input->CharacterRange[97,96+Length@input]]]&;
 	DeleteDuplicatesBy[HoldForm/@ans/.formattingRev,dup]
 ];
-(* ::Subsubsection:: *)
-(*Proof1926*)
+
+
 Options[Calculate100TC]={TimeConstraint->2};
 Calculate100TC[input_List,target_Integer,OptionsPattern[]]:=Block[
 	{curr=input,ans={}},
@@ -170,7 +152,7 @@ Calculate100TC[input_List,target_Integer,OptionsPattern[]]:=Block[
 	DeleteDuplicatesBy[HoldForm/@ans/.formattingRev,ReleaseHold[#/.Thread[input->CharacterRange[97,96+Length@input]]]&]
 ];
 he=HoldForm[a_]==HoldForm[b_]:>HoldForm[InputForm[a==b]];
-Proof1926::ntime=" `1` s内找不到解, 请给 TimeConstraint +1s.";
+Proof1926::ntime=" `1` s\:5185\:627e\:4e0d\:5230\:89e3, \:8bf7\:7ed9 TimeConstraint +1s.";
 Options[Proof1926]={Number->Automatic,TimeConstraint->1};
 Proof1926[input_,target_,OptionsPattern[]]:=Block[
 	{inl=IntegerDigits@ToExpression[input],
@@ -189,11 +171,13 @@ Proof1926[input_,target_,OptionsPattern[]]:=Block[
 	out=err@ans==tar/.he;
 	If[OptionValue[Number]===Automatic,Return[out],Return[out==OptionValue[Number]]]
 ];
-(* ::Subsection::Closed:: *)
-(*附加设置*)
+
+
 End[] ;
 SetAttributes[
 	{Poker24,Calculate100,Proof1926},
 	{Protected,ReadProtected}
 ];
-EndPackage[];
+
+
+
