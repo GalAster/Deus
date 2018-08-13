@@ -8,7 +8,8 @@ module.exports = {
 		}
 	},
 	head: [
-		['link', {rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css'}]
+		['link', {rel: 'icon', href: '/favicon.png'}],
+		['link', {rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css'}]
 	],
 	themeConfig: {
 		repo: 'GalAster/Deus',
